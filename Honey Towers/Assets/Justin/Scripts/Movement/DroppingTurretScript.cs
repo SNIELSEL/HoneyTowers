@@ -24,13 +24,8 @@ public class DroppingTurretScript : MonoBehaviour
             {
                 Drop(hit.transform);
             }
-        }
-
-        
-
-        
+        }        
     }
-
     private void Drop(Transform gridDropPlace)
     {
         Instantiate(ball, new Vector3(gridDropPlace.position.x, transform.position.y, gridDropPlace.position.z), Quaternion.identity);       

@@ -4,15 +4,16 @@ using UnityEngine;
 
 public class BeeHive : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
+    public int hp;
 
-    // Update is called once per frame
-    void Update()
+    private void OnTriggerEnter(Collider other)
     {
-        
+        if (other.CompareTag("Enemy"))
+        {
+            hp -= other.GetComponent<EnemyBehaviour>().attackPower;
+            GameManager.Instance.CheckIfBeehiveDies(this);
+            GameManager.Instance.EnemyDie(other.gameObject);
+            Destroy(other.gameObject);
+        }
     }
 }

@@ -5,9 +5,13 @@ using UnityEngine;
 public class BallMovement : MonoBehaviour
 {
     public float speed;
-
-    private void Update()
+    public int attackPower;
+    private void Start()
     {
+        Destroy(gameObject, 2f);
+    }
+    private void Update()
+    {        
         transform.Translate(Vector3.forward * speed * Time.deltaTime);
     }
 
@@ -15,6 +19,7 @@ public class BallMovement : MonoBehaviour
     {
         if (other.CompareTag("Enemy"))
         {
+            other.GetComponent<EnemyBehaviour>().TakeHP(attackPower);
             Destroy(gameObject);
         }
     }

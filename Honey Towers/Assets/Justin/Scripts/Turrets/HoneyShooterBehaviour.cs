@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.XR;
 
-public class HoneyShooterBehaviour : MonoBehaviour
+public class HoneyShooterBehaviour : InheritTurretStats
 {
     public Transform enemyFolder;
 
@@ -19,7 +19,6 @@ public class HoneyShooterBehaviour : MonoBehaviour
     private void Start()
     {
         enemyFolder = GameObject.Find("EnemyFolder").transform;
-        lowestIndex = int.MaxValue;
         StartCoroutine(Shooting());
     }
     private void Update()
@@ -30,10 +29,21 @@ public class HoneyShooterBehaviour : MonoBehaviour
         }
         else
         {
+            CheckIfEnemyAlife();
             AttackEnemy();
         }
     }
 
+    private void CheckIfEnemyAlife()
+    {
+        enemiesSeen.RemoveAll(GameObject => GameObject == null);
+
+        if (enemiesSeen.Count != 0)
+        {
+            SeesEnemy();
+        }
+        
+    }
     private void ChecksForEnemy()
     {
         transform.Rotate(0, speed, 0);        
@@ -41,6 +51,7 @@ public class HoneyShooterBehaviour : MonoBehaviour
 
     private void SeesEnemy()
     {
+        lowestIndex = int.MaxValue;
         foreach (Transform enemy in enemiesSeen)
         {
             int index = enemy.GetSiblingIndex();
@@ -70,8 +81,9 @@ public class HoneyShooterBehaviour : MonoBehaviour
             yield return null;
             while (enemiesSeen.Count > 0)
             {
-                Instantiate(bullet, transform.position, transform.rotation);
-                yield return new WaitForSeconds(3f);
+                GameObject bulletClone = Instantiate(bullet, transform.position, transform.rotation);
+                bulletClone.GetComponent<BallMovement>().attackPower = attackPower;
+                yield return new WaitForSeconds(0.5f);
             }          
         }
     }
@@ -90,8 +102,12 @@ public class HoneyShooterBehaviour : MonoBehaviour
         if (other.CompareTag("Enemy"))
         {
             enemiesSeen.Remove(other.transform);
-            lowestIndex = int.MaxValue;           
-            SeesEnemy();
+            
+            if (enemiesSeen.Count != 0)
+            {
+                SeesEnemy();
+            }
+            
         }
     }
 }

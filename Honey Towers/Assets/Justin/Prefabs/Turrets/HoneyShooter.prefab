@@ -389,6 +389,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 83eee68ff6b5c744aac1ae33b3613754, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  turretStats: {fileID: 11400000, guid: 35ad5eb098963d74899d37f07554e018, type: 2}
+  attackPower: 0
+  intervalTime: 0
   enemyFolder: {fileID: 0}
   range: 10
   enemiesSeen: []

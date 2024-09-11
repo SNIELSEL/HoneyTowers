@@ -9,9 +9,8 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1324f34b7766d0b4f8d0528e9f3ce1be, type: 3}
-  m_Name: Ant
+  m_Script: {fileID: 11500000, guid: 9473e4cb5bd850f4bb8ff0489a7415b6, type: 3}
+  m_Name: HoneyShooter
   m_EditorClassIdentifier: 
-  hp: 0
-  speed: 10
   attackPower: 2
+  intervalSpeed: 0

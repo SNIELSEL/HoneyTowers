@@ -6,4 +6,5 @@ public class EnemyStats : ScriptableObject
 {
     public int hp;
     public float speed;
+    public int attackPower;
 }

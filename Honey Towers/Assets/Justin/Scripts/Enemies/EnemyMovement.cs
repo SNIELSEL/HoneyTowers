@@ -19,6 +19,8 @@ public class EnemyMovement : MonoBehaviour
     {
         agent = GetComponent<NavMeshAgent>();
         agent.speed = enemyStats.speed;
+
+        targetFolder = GameObject.Find("EnemyPath").transform;
         for (int i = 0; i < targetFolder.childCount; i++)
         {
             targets.Add(targetFolder.GetChild(i).transform);
@@ -34,7 +36,7 @@ public class EnemyMovement : MonoBehaviour
 
     private void Movement()
     {       
-        if (Vector3.Distance(transform.position, targets[currentIndex].position) < 0.01f)
+        if (currentIndex < targets.Count && Vector3.Distance(transform.position, targets[currentIndex].position) < 0.01f)
         {
             currentIndex++;
         }
