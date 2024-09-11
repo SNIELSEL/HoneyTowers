@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using UnityEditor.Experimental.GraphView;
 using UnityEngine;
 using UnityEngine.AI;
 
@@ -12,6 +13,8 @@ public class EnemyMovement : MonoBehaviour
     public EnemyStats enemyStats;
     public int currentIndex;
 
+    public Transform endPoint;
+
     private void Start()
     {
         agent = GetComponent<NavMeshAgent>();
@@ -20,14 +23,29 @@ public class EnemyMovement : MonoBehaviour
         {
             targets.Add(targetFolder.GetChild(i).transform);
         }
+        endPoint = GameObject.Find("EndPoint").transform;
+        agent.destination = targets[currentIndex].position;
+
     }
     private void Update()
     {
-        agent.destination = targets[currentIndex].position;
+        Movement();
+    }
 
+    private void Movement()
+    {       
         if (Vector3.Distance(transform.position, targets[currentIndex].position) < 0.01f)
         {
             currentIndex++;
+        }
+
+        if (currentIndex < targets.Count)
+        {
+            agent.destination = targets[currentIndex].position;
+        }
+        else
+        {
+            agent.destination = endPoint.position;
         }
     }
 }
