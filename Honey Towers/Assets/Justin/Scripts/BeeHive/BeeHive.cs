@@ -12,7 +12,7 @@ public class BeeHive : MonoBehaviour
         {
             hp -= other.GetComponent<EnemyBehaviour>().attackPower;
             GameManager.Instance.CheckIfBeehiveDies(this);
-            GameManager.Instance.EnemyDie(other.gameObject);
+            WaveHandler.Instance.EnemyDie(other.gameObject);
             Destroy(other.gameObject);
         }
     }

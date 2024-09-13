@@ -2,9 +2,10 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Grid : MonoBehaviour
+public class GridTile : MonoBehaviour
 {
-    public GameObject turret;
+
+    public bool turretAlreadyHere;
     public void LightUp()
     {
         GetComponent<MeshRenderer>().enabled = true;
@@ -15,11 +16,17 @@ public class Grid : MonoBehaviour
         GetComponent<MeshRenderer>().enabled = false;
     }
 
+    public void MakeTheTurretHere()
+    {
+        turretAlreadyHere = true;
+    }
+
     private void OnTriggerEnter(Collider other)
     {
         if (other.CompareTag("Ball"))
         {
-            Instantiate(turret, transform.position, Quaternion.identity);
+            Instantiate(PlayerStats.Instance.selectedTurret.turret, transform.position, Quaternion.identity);
+            Destroy(other.gameObject);
         }
     }
 }

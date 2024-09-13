@@ -396,6 +396,7 @@ MonoBehaviour:
   range: 10
   enemiesSeen: []
   speed: 5
+  rotateSpeed: 50
   bullet: {fileID: 337504288397111740, guid: e872d13c80ba70d48a5b64cd619cfd6c, type: 3}
 --- !u!135 &7459486619742677509
 SphereCollider:

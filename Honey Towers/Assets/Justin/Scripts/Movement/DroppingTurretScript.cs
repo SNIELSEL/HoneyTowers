@@ -12,22 +12,33 @@ public class DroppingTurretScript : MonoBehaviour
     
     private void Update()
     {
+        TurretCanLandHere();            
+    }
+
+    private void TurretCanLandHere()
+    {
         if (Physics.Raycast(transform.position, Vector3.down, out RaycastHit hit, Mathf.Infinity, highLightLayer))
         {
             if (selectedGrid != null & hit.transform != selectedGrid)
             {
-                selectedGrid.GetComponent<Grid>().LightDown();
+                selectedGrid.GetComponent<GridTile>().LightDown();
             }
             selectedGrid = hit.transform;
-            selectedGrid.GetComponent<Grid>().LightUp();
+            selectedGrid.GetComponent<GridTile>().LightUp();
             if (Input.GetKeyDown(KeyCode.R))
             {
                 Drop(hit.transform);
             }
-        }        
+        }
     }
     private void Drop(Transform gridDropPlace)
     {
-        Instantiate(ball, new Vector3(gridDropPlace.position.x, transform.position.y, gridDropPlace.position.z), Quaternion.identity);       
+        if (!gridDropPlace.GetComponent<GridTile>().turretAlreadyHere & PlayerStats.Instance.selectedTurret.amountOfThisTurret > 0)
+        {
+            PlayerStats.Instance.selectedTurret.amountOfThisTurret--;
+            gridDropPlace.GetComponent<GridTile>().MakeTheTurretHere();
+            Instantiate(ball, new Vector3(gridDropPlace.position.x, transform.position.y, gridDropPlace.position.z), Quaternion.identity);
+        }
+              
     }
 }

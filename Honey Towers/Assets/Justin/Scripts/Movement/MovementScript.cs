@@ -31,7 +31,6 @@ public class MovementScript : MonoBehaviour
         InputCheck();      
         Movement();
         RotationChange();
-        SineWave();
     }
 
     private void InputCheck()
@@ -55,10 +54,5 @@ public class MovementScript : MonoBehaviour
         {
             transform.rotation = Quaternion.Slerp(transform.rotation, cam.rotation, rotationSpeed * Time.deltaTime);
         }
-    }
-
-    private void SineWave()
-    {
-        animator.SetFloat("MoveSpeed", dir.magnitude);
     }
 }

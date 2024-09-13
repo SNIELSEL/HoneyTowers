@@ -1,0 +1,132 @@
+using System;
+using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
+using UnityEngine.SocialPlatforms.Impl;
+
+public enum EnemyLayouts
+{
+    NormalOrder,
+    Random
+}
+[Serializable]
+public struct EnemyGroups
+{
+    public string groupName;
+    public List<GameObject> availableEnemies;
+    public int minScoreCost;
+    public int maxScoreCost;
+    public int enemyCount;
+    public float enemyInterval;
+    public EnemyLayouts enemyLayouts;
+
+}
+public class WaveHandler : MonoBehaviour
+{
+    public static WaveHandler Instance;
+
+    public List<EnemyGroups> allGroups;
+    public List<EnemyGroups> availableGroups;
+    public EnemyGroups chosenEnemyGroup;
+    public int score = 0;
+
+    private int waveNumber;
+    private bool isWaveStarted;
+    public float enemiesCountMultiplier;
+    public float enemyIntervalMultiplier;
+
+    public Transform enemyFolder;
+    public Transform startPoint;
+    public List<GameObject> enemiesSpawned;
+
+    private float waveInterval;
+
+    private void Awake()
+    {
+        if (Instance == null)
+        {
+            Instance = this;
+        }
+    }
+    public void StartWave()
+    {
+        ChooseGroup();
+        EditGroupValues();
+        switch (chosenEnemyGroup.enemyLayouts)
+        {
+            case EnemyLayouts.NormalOrder:
+                StartCoroutine(HandleNormalOrder());
+                break;
+            case EnemyLayouts.Random:
+                StartCoroutine(HandleRandomOrder());
+                break;
+                
+        }
+    }
+
+    private void ChooseGroup()
+    {
+        availableGroups.Clear();
+        foreach (var group in allGroups)
+        {
+            if (score >= chosenEnemyGroup.minScoreCost && score <= chosenEnemyGroup.maxScoreCost)
+            {
+                availableGroups.Add(group);
+            }
+        }
+
+        chosenEnemyGroup = availableGroups[UnityEngine.Random.Range(0, availableGroups.Count)];
+
+
+    }
+
+    private void EditGroupValues()
+    {
+        score++;
+        enemiesCountMultiplier *= 1.1f;
+        enemyIntervalMultiplier /= 1.1f;
+        chosenEnemyGroup.enemyCount *= (int)enemiesCountMultiplier;
+        chosenEnemyGroup.enemyInterval /= enemyIntervalMultiplier;
+    }
+
+
+    private IEnumerator HandleNormalOrder()
+    {
+        int chosenEnemy = 0;
+        for (int i = 0; i < chosenEnemyGroup.enemyCount; i++)
+        {           
+            GameObject enemy = Instantiate(chosenEnemyGroup.availableEnemies[chosenEnemy],
+                startPoint.position, Quaternion.identity, enemyFolder);
+            enemiesSpawned.Add(enemy);
+
+            chosenEnemy++;
+            if (chosenEnemy >= chosenEnemyGroup.availableEnemies.Count)
+            {
+                chosenEnemy = 0;
+            }           
+            yield return new WaitForSeconds(chosenEnemyGroup.enemyInterval);
+        }
+
+    }
+
+    private IEnumerator HandleRandomOrder()
+    {
+        for (int i = 0; i < chosenEnemyGroup.enemyCount; i++)
+        {
+            GameObject enemy = Instantiate(chosenEnemyGroup.availableEnemies[UnityEngine.Random.Range(0, chosenEnemyGroup.availableEnemies.Count)],
+                startPoint.position, Quaternion.identity, enemyFolder);
+            enemiesSpawned.Add(enemy);
+            yield return new WaitForSeconds(chosenEnemyGroup.enemyInterval);
+        }
+    }
+
+    public IEnumerator HandleWaveLength()
+    {
+        yield return new WaitForSeconds(waveInterval);
+        StartWave();
+    }
+    public void EnemyDie(GameObject enemy)
+    {
+        enemiesSpawned.Remove(enemy);
+    }
+}

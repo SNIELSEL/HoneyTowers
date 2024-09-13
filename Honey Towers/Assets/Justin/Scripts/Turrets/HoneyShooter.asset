@@ -13,4 +13,4 @@ MonoBehaviour:
   m_Name: HoneyShooter
   m_EditorClassIdentifier: 
   attackPower: 2
-  intervalSpeed: 0
+  intervalSpeed: 1

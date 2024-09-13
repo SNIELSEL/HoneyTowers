@@ -1,6 +1,8 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+
 
 public class GameManager : MonoBehaviour
 {
@@ -10,11 +12,16 @@ public class GameManager : MonoBehaviour
     public Transform startPoint;
     public int maxWaves;
 
+    public List<GameObject> enemiesSpawned;
     public Transform enemyFolder;
-    private int chanceOfHarderEnemy;
-    private int waveNumber = 1;
 
-    private bool isWaveStarted;
+    public GameObject gameoverScreen;
+
+    public bool isWaveStarted;
+    private int waveNumber;
+
+
+
 
     private void Awake()
     {
@@ -23,30 +30,21 @@ public class GameManager : MonoBehaviour
             Instance = this;
         }
     }
-    private void Start()
-    {
-        StartWave();
-    }
 
-    private void StartWave()
-    {
-        StartCoroutine(StartSpawningEnemies());
-    }
 
-    private IEnumerator StartSpawningEnemies()
+    /*private IEnumerator StartSpawningEnemies()
     {
-        int amountOfEnemies = 10;
 
-        for (int i = 0; i < amountOfEnemies; i++)
-        {
-            GameObject enemy = Instantiate(enemiesToSpawn[0], startPoint.position, Quaternion.identity, enemyFolder);
-            enemiesToSpawn.Add(enemy);
-            yield return new WaitForSeconds(1);
-        }
+        //for (int i = 0; i < ; i++)
+        //{
+        //    GameObject enemy = Instantiate(enemiesToSpawn[0], startPoint.position, Quaternion.identity, enemyFolder);
+        //    enemiesSpawned.Add(enemy);
+        //    yield return new WaitForSeconds(1);
+        //}
 
         isWaveStarted = true;
 
-    }
+    }*/
 
     private void Update()
     {
@@ -58,10 +56,11 @@ public class GameManager : MonoBehaviour
 
     private void CheckIfEnemiesDie()
     {
-        if (enemiesToSpawn.Count == 0)
+        if (enemiesSpawned.Count == 0 && isWaveStarted)
         {
+            isWaveStarted = false;
             waveNumber++;
-            StartSpawningEnemies();
+            StartCoroutine(WaveHandler.Instance.HandleWaveLength());
         }
     }
 
@@ -69,13 +68,13 @@ public class GameManager : MonoBehaviour
     {
         if (beehive.hp <= 0)
         {
-            this.enabled = false;
-            print("You lose idiot haha");
+            GameOverFunction();
         }
     } 
 
-    public void EnemyDie(GameObject enemy)
+    private void GameOverFunction()
     {
-        enemiesToSpawn.Remove(enemy);
+        gameoverScreen.SetActive(true);
     }
+
 }

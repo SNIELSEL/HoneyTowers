@@ -1,37 +1,54 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UIElements;
 using UnityEngine.XR;
 
 public class HoneyShooterBehaviour : InheritTurretStats
 {
+    public TurretStats turretStats;
     public Transform enemyFolder;
 
     public float range;
     public List<Transform> enemiesSeen;
     public float speed;
 
+    public float rotateSpeed;
     private Transform enemyToAttack;
     private int lowestIndex;
 
     public GameObject bullet;
 
+    private float time;
+
+
     private void Start()
     {
         enemyFolder = GameObject.Find("EnemyFolder").transform;
-        StartCoroutine(Shooting());
     }
     private void Update()
     {
         if (enemiesSeen.Count == 0)
         {
+            PutCountDownToZero();
             ChecksForEnemy();
         }
         else
         {
+            TimeUp();
             CheckIfEnemyAlife();
             AttackEnemy();
         }
+    }
+
+    private void PutCountDownToZero()
+    {
+        time = 0;
+    }
+
+    private void TimeUp()
+    {
+        time += Time.deltaTime;
     }
 
     private void CheckIfEnemyAlife()
@@ -68,24 +85,22 @@ public class HoneyShooterBehaviour : InheritTurretStats
     private void AttackEnemy()
     {
         if (enemyToAttack == null) return;
-        Vector3 rotationToLook = enemyToAttack.position - transform.position;
-        Quaternion rotation = Quaternion.LookRotation(rotationToLook);
-        transform.rotation = Quaternion.Lerp(transform.rotation, rotation, speed * Time.deltaTime);
+        Vector3 directionToEnemy = (enemyToAttack.position - transform.position).normalized;
+        Quaternion lookRotation = Quaternion.LookRotation(directionToEnemy);
+        transform.rotation = Quaternion.Lerp(transform.rotation, lookRotation, rotateSpeed * Time.deltaTime);
 
+        if (time >= turretStats.intervalSpeed & Quaternion.Angle(transform.rotation, lookRotation) < 4f)
+        {
+            ShootAtEnemy();
+            time = 0;
+        }
     }
 
-    private IEnumerator Shooting()
+    private void ShootAtEnemy()
     {
-        while (true)
-        {
-            yield return null;
-            while (enemiesSeen.Count > 0)
-            {
-                GameObject bulletClone = Instantiate(bullet, transform.position, transform.rotation);
-                bulletClone.GetComponent<BallMovement>().attackPower = attackPower;
-                yield return new WaitForSeconds(0.5f);
-            }          
-        }
+        GameObject bulletClone = Instantiate(bullet, transform.position, transform.rotation, transform.parent);
+        bulletClone.GetComponent<BallMovement>().attackPower = attackPower;
+        bulletClone.GetComponent<BallMovement>().ObjectToGet(enemyToAttack);
     }
 
     private void OnTriggerEnter(Collider other)

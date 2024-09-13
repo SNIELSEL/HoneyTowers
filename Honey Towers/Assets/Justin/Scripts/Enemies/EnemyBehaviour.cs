@@ -24,7 +24,8 @@ public class EnemyBehaviour : MonoBehaviour
         
         if (hp <= 0)
         {
-            GameManager.Instance.EnemyDie(gameObject);
+            WaveHandler.Instance.EnemyDie(gameObject);
+            PlayerStats.Instance.GetCoins(5);
             Destroy(gameObject);
         }
     }
