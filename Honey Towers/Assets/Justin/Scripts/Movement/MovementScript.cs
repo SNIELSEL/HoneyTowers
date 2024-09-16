@@ -11,11 +11,11 @@ public class MovementScript : MonoBehaviour
     public float frequency;
     public float speed;
     public float accelerationSpeed;
-    public float decelerationSpeed;
     public float currentSpeed;
     public float rotationSpeed;
     public float hor, vert, upAndDown;
-
+    public float normalSpeed;
+    public float slowerSpeed;
     public Animator animator;
     private Transform cam;
     private Vector3 dir;
@@ -54,5 +54,15 @@ public class MovementScript : MonoBehaviour
         {
             transform.rotation = Quaternion.Slerp(transform.rotation, cam.rotation, rotationSpeed * Time.deltaTime);
         }
+    }
+
+    public void MakeSpeedSlower()
+    {
+        accelerationSpeed = slowerSpeed;
+    }
+
+    public void MakeSpeedNormal()
+    {
+        accelerationSpeed = normalSpeed;
     }
 }

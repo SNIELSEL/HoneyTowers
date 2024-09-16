@@ -1,6 +1,7 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using TMPro;
 using UnityEngine;
 using UnityEngine.SocialPlatforms.Impl;
 
@@ -29,9 +30,6 @@ public class WaveHandler : MonoBehaviour
     public List<EnemyGroups> availableGroups;
     public EnemyGroups chosenEnemyGroup;
     public int score = 0;
-
-    private int waveNumber;
-    private bool isWaveStarted;
     public float enemiesCountMultiplier;
     public float enemyIntervalMultiplier;
 
@@ -39,7 +37,9 @@ public class WaveHandler : MonoBehaviour
     public Transform startPoint;
     public List<GameObject> enemiesSpawned;
 
-    private float waveInterval;
+    public float waveInterval;
+
+    public TMP_Text battleText;
 
     private void Awake()
     {
@@ -48,8 +48,10 @@ public class WaveHandler : MonoBehaviour
             Instance = this;
         }
     }
+    [ContextMenu("StartWave")]
     public void StartWave()
     {
+        
         ChooseGroup();
         EditGroupValues();
         switch (chosenEnemyGroup.enemyLayouts)
@@ -62,6 +64,8 @@ public class WaveHandler : MonoBehaviour
                 break;
                 
         }
+
+        
     }
 
     private void ChooseGroup()
@@ -74,10 +78,7 @@ public class WaveHandler : MonoBehaviour
                 availableGroups.Add(group);
             }
         }
-
         chosenEnemyGroup = availableGroups[UnityEngine.Random.Range(0, availableGroups.Count)];
-
-
     }
 
     private void EditGroupValues()
@@ -106,6 +107,7 @@ public class WaveHandler : MonoBehaviour
             }           
             yield return new WaitForSeconds(chosenEnemyGroup.enemyInterval);
         }
+        GameManager.Instance.isWaveStarted = true;
 
     }
 
@@ -120,13 +122,33 @@ public class WaveHandler : MonoBehaviour
         }
     }
 
+    public void FirstWaveStart()
+    {
+
+    }
+
     public IEnumerator HandleWaveLength()
     {
+        StartCoroutine(TextChanging());
         yield return new WaitForSeconds(waveInterval);
         StartWave();
     }
     public void EnemyDie(GameObject enemy)
     {
         enemiesSpawned.Remove(enemy);
+    }
+
+    private IEnumerator TextChanging()
+    {
+        float time = waveInterval;
+
+        while (time > 0)
+        {
+            time -= Time.deltaTime;
+            battleText.text = "Next wave is starting in " + time.ToString("0");
+            yield return null;
+        }
+
+        battleText.text = "Wave " + GameManager.Instance.waveNumber + " is starting";
     }
 }

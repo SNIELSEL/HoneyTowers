@@ -2,7 +2,7 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
+using UnityEngine.Playables;
 
 public class GameManager : MonoBehaviour
 {
@@ -18,36 +18,21 @@ public class GameManager : MonoBehaviour
     public GameObject gameoverScreen;
 
     public bool isWaveStarted;
-    private int waveNumber;
+    public int waveNumber;
 
-
-
-
+    public PlayableDirector playableDirector;
     private void Awake()
     {
         if (Instance == null)
         {
             Instance = this;
         }
+        
     }
-
-
-    /*private IEnumerator StartSpawningEnemies()
-    {
-
-        //for (int i = 0; i < ; i++)
-        //{
-        //    GameObject enemy = Instantiate(enemiesToSpawn[0], startPoint.position, Quaternion.identity, enemyFolder);
-        //    enemiesSpawned.Add(enemy);
-        //    yield return new WaitForSeconds(1);
-        //}
-
-        isWaveStarted = true;
-
-    }*/
 
     private void Update()
     {
+        HandleWin();
         if (isWaveStarted)
         {
             CheckIfEnemiesDie();
@@ -56,7 +41,7 @@ public class GameManager : MonoBehaviour
 
     private void CheckIfEnemiesDie()
     {
-        if (enemiesSpawned.Count == 0 && isWaveStarted)
+        if (WaveHandler.Instance.enemiesSpawned.Count == 0 && isWaveStarted)
         {
             isWaveStarted = false;
             waveNumber++;
@@ -75,6 +60,15 @@ public class GameManager : MonoBehaviour
     private void GameOverFunction()
     {
         gameoverScreen.SetActive(true);
+    }
+
+    private void HandleWin()
+    {
+        if (waveNumber > maxWaves)
+        {
+            playableDirector.Play();
+            this.enabled = false;
+        }
     }
 
 }

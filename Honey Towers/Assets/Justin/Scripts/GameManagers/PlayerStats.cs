@@ -7,7 +7,6 @@ public class PlayerStats : MonoBehaviour
 {
     public static PlayerStats Instance;
     public int coins;
-    public TurretInfo selectedTurret;
     public TMP_Text coinText;
 
     private void Awake()
@@ -37,8 +36,5 @@ public class PlayerStats : MonoBehaviour
         coinText.text = "Coins: " + coins.ToString();
     }
 
-    public void TurretChange(TurretInfo turret)
-    {
-        selectedTurret = turret;
-    }
+    
 }

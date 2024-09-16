@@ -2,12 +2,10 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class BallMovement : MonoBehaviour
+public class HoneyBlastBall : BaseBullet
 {
-    public float speed;
-    public int attackPower;
-
-    private Transform objToChase;
+    
+    public GameObject explosion;
     private void Update()
     {
         if (objToChase != null)
@@ -15,14 +13,9 @@ public class BallMovement : MonoBehaviour
             Vector3 directionToEnemy = (objToChase.position - transform.position).normalized;
             Quaternion lookRotation = Quaternion.LookRotation(directionToEnemy);
             transform.rotation = Quaternion.Lerp(transform.rotation, lookRotation, 50 * Time.deltaTime);
-            
+
         }
         transform.Translate(Vector3.forward * speed * Time.deltaTime);
-    }
-
-    public void ObjectToGet(Transform obj)
-    {
-        objToChase = obj;
     }
 
     private void OnTriggerEnter(Collider other)
@@ -30,15 +23,9 @@ public class BallMovement : MonoBehaviour
         if (other.CompareTag("Enemy"))
         {
             other.GetComponent<EnemyBehaviour>().TakeHP(attackPower);
-            Destroy(gameObject);
+            Instantiate(explosion, transform.position, Quaternion.identity);
         }
     }
 
-    private void OnTriggerExit(Collider other)
-    {
-        if (other == transform.parent)
-        {
-            Destroy(gameObject);
-        }
-    }
+   
 }

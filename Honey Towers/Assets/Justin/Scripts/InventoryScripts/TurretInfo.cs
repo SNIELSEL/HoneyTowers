@@ -8,4 +8,6 @@ public class TurretInfo
 {
     public GameObject turret;
     public int amountOfThisTurret;
+
+    public GameObject showTurret;
 }

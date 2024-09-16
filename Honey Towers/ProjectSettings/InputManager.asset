@@ -489,8 +489,8 @@ InputManager:
     m_Name: UpAndDown
     descriptiveName: 
     descriptiveNegativeName: 
-    negativeButton: q
-    positiveButton: e
+    negativeButton: left shift
+    positiveButton: space
     altNegativeButton: 
     altPositiveButton: 
     gravity: 1000

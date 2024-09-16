@@ -6,6 +6,7 @@ public class GridTile : MonoBehaviour
 {
 
     public bool turretAlreadyHere;
+    public GameObject turret;
     public void LightUp()
     {
         GetComponent<MeshRenderer>().enabled = true;
@@ -25,8 +26,15 @@ public class GridTile : MonoBehaviour
     {
         if (other.CompareTag("Ball"))
         {
-            Instantiate(PlayerStats.Instance.selectedTurret.turret, transform.position, Quaternion.identity);
+            turret = Instantiate(DroppingTurretScript.Instance.selectedTurret.turret, transform.position, Quaternion.identity);
             Destroy(other.gameObject);
+        }
+
+        if (other.GetComponent<Rigidbody>() != null & other.CompareTag("Turret"))
+        {
+            turret = other.gameObject;
+            other.transform.position = transform.position;
+            Destroy(other.GetComponent<Rigidbody>());
         }
     }
 }

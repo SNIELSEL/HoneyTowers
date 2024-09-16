@@ -8,7 +8,7 @@ public class InventoryScript : MonoBehaviour
     public TurretInfo turret;
     public void ChangingTurret()
     {
-        PlayerStats.Instance.TurretChange(turret);
+        DroppingTurretScript.Instance.TurretChange(turret);
     }
 
     public void AmountGoesUp()

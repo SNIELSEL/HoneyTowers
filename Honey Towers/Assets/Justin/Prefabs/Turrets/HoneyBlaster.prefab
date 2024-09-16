@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 3175070987902075804}
   - component: {fileID: 8131914026526744805}
   m_Layer: 0
-  m_Name: HoneyShooter
+  m_Name: HoneyBlaster
   m_TagString: Turret
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -63,7 +63,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 9a60badbd1aadc747aaab8222448b6ec, type: 2}
+  - {fileID: 2100000, guid: 7897ddaebf4572d47998904d63926338, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -367,15 +367,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 83eee68ff6b5c744aac1ae33b3613754, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  turretStats: {fileID: 11400000, guid: 35ad5eb098963d74899d37f07554e018, type: 2}
+  attackPower: 0
+  intervalTime: 0
   enemyFolder: {fileID: 0}
   range: 10
   enemiesSeen: []
   speed: 5
-  rotateSpeed: 10
-  bullet: {fileID: 337504288397111740, guid: e872d13c80ba70d48a5b64cd619cfd6c, type: 3}
-  turretStats: {fileID: 11400000, guid: 35ad5eb098963d74899d37f07554e018, type: 2}
-  attackPower: 0
-  intervalTime: 0
+  rotateSpeed: 50
+  bullet: {fileID: 337504288397111740, guid: 30ab5e0e5b26f5046ad64e318d76990d, type: 3}
 --- !u!135 &7459486619742677509
 SphereCollider:
   m_ObjectHideFlags: 0
