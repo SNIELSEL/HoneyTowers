@@ -27,7 +27,6 @@ public class GridSystem : MonoBehaviour
 
                 if (hitColliders.Length > 0)
                 {
-                    print("There is no such place as a gridtile for this place man. Place: " + tileClone.transform.position);
                     Destroy(tileClone);
                 }
             }

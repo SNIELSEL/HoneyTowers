@@ -63,7 +63,8 @@ public class DroppingTurretScript : MonoBehaviour
                 showTurretClone = Instantiate(selectedTurret.showTurret);
             }
             showTurretClone.transform.position = hit.transform.position;
-            showTurretClone.transform.rotation = Quaternion.Euler(0, transform.rotation.y, 0);
+            float roundToDegrees = Mathf.Round(transform.eulerAngles.y / 90) * 90;
+            showTurretClone.transform.rotation = Quaternion.Euler(0, roundToDegrees, 0);
 
             HandleTurretPlacement(hit);
         }
@@ -116,7 +117,9 @@ public class DroppingTurretScript : MonoBehaviour
         {
             selectedTurret.amountOfThisTurret--;
             gridDropPlace.GetComponent<GridTile>().MakeTheTurretHere();
-            Instantiate(ball, new Vector3(gridDropPlace.position.x, transform.position.y, gridDropPlace.position.z), transform.rotation);
+
+            float roundToDegrees = Mathf.Round(transform.eulerAngles.y / 90) * 90;
+            Instantiate(ball, new Vector3(gridDropPlace.position.x, transform.position.y, gridDropPlace.position.z), Quaternion.Euler(0,roundToDegrees,0));
         }
         
     }
@@ -124,6 +127,7 @@ public class DroppingTurretScript : MonoBehaviour
     private void PickUpTurret(GameObject turret)
     {
         turret.transform.position = Vector3.MoveTowards(turret.transform.position, transform.position, 0.5f);
+        turret.transform.rotation = transform.rotation;
         
     }
 }

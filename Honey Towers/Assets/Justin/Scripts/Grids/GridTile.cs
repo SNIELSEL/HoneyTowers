@@ -26,7 +26,7 @@ public class GridTile : MonoBehaviour
     {
         if (other.CompareTag("Ball"))
         {
-            turret = Instantiate(DroppingTurretScript.Instance.selectedTurret.turret, transform.position, Quaternion.identity);
+            turret = Instantiate(DroppingTurretScript.Instance.selectedTurret.turret, transform.position, other.transform.rotation);
             Destroy(other.gameObject);
         }
 

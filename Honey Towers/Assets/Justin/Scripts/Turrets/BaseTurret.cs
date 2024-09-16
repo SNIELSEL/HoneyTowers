@@ -28,14 +28,14 @@ public class BaseTurret : MonoBehaviour
         intervalTime = turretStats.intervalSpeed;
     }
 
-    protected void Start()
+    protected virtual void Start()
     {
         time = intervalTime;
 
         enemyFolder = GameObject.Find("EnemyFolder").transform;
     }
 
-    private void Update()
+    protected virtual void Update()
     {
         time -= Time.deltaTime;
 
@@ -59,7 +59,6 @@ public class BaseTurret : MonoBehaviour
 
     protected virtual void Reload()
     {
-
         if (time <= 0)
         {
             ShootAtEnemy();
@@ -109,7 +108,7 @@ public class BaseTurret : MonoBehaviour
 
     }
 
-    private void OnTriggerEnter(Collider other)
+    protected virtual void OnTriggerEnter(Collider other)
     {
         if (other.CompareTag("Enemy"))
         {
@@ -118,7 +117,7 @@ public class BaseTurret : MonoBehaviour
         }
     }
 
-    private void OnTriggerExit(Collider other)
+    protected virtual void OnTriggerExit(Collider other)
     {
         if (other.CompareTag("Enemy"))
         {
