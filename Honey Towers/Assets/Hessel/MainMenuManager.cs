@@ -4,9 +4,13 @@ using UnityEngine;
 using UnityEngine.SceneManagement;
 public class MainMenuManager : MonoBehaviour
 {
-    public void PlayGame()
+    public void PlayMap1()
     {
-        SceneManager.LoadScene("Game");
+        SceneManager.LoadScene("Map1");
+    }
+    public void PlayMap2()
+    {
+        SceneManager.LoadScene("Map2");
     }
     public void Quit()
     {
