@@ -16,4 +16,14 @@ public class MainMenuManager : MonoBehaviour
     {
         Application.Quit();
     }
+
+    public void RetryLevel()
+    {
+        SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+    }
+
+    public void QuitLevel()
+    {
+        SceneManager.LoadScene("Hessel");
+    }
 }

@@ -25,8 +25,16 @@ public class GridTile : MonoBehaviour
     private void OnTriggerEnter(Collider other)
     {
         if (other.CompareTag("Ball"))
-        {
-            turret = Instantiate(DroppingTurretScript.Instance.selectedTurret.turret, transform.position, other.transform.rotation);
+        { 
+            if (turret == null)
+            {
+                turret = Instantiate(DroppingTurretScript.Instance.selectedTurret.turret, transform.position, other.transform.rotation);
+            }
+            else
+            {
+                turret.GetComponentInChildren<BaseTurret>().UpgradePoints();
+            }
+            
             Destroy(other.gameObject);
         }
 

@@ -30,8 +30,9 @@ public class WaveHandler : MonoBehaviour
     public List<EnemyGroups> availableGroups;
     public EnemyGroups chosenEnemyGroup;
     public int score = 0;
-    public float enemiesCountMultiplier;
-    public float enemyIntervalMultiplier;
+
+    public float enemyHpMultiplier;
+    public float enemySpeedMultiplier;
 
     public Transform enemyFolder;
     public Transform startPoint;
@@ -50,8 +51,7 @@ public class WaveHandler : MonoBehaviour
     }
     [ContextMenu("StartWave")]
     public void StartWave()
-    {
-        
+    {    
         ChooseGroup();
         EditGroupValues();
         switch (chosenEnemyGroup.enemyLayouts)
@@ -63,9 +63,7 @@ public class WaveHandler : MonoBehaviour
                 StartCoroutine(HandleRandomOrder());
                 break;
                 
-        }
-
-        
+        }      
     }
 
     private void ChooseGroup()
@@ -83,11 +81,7 @@ public class WaveHandler : MonoBehaviour
 
     private void EditGroupValues()
     {
-        score++;
-        enemiesCountMultiplier *= 1.1f;
-        enemyIntervalMultiplier /= 1.1f;
-        chosenEnemyGroup.enemyCount *= (int)enemiesCountMultiplier;
-        chosenEnemyGroup.enemyInterval /= enemyIntervalMultiplier;
+        score++;   
     }
 
 
@@ -120,11 +114,6 @@ public class WaveHandler : MonoBehaviour
             enemiesSpawned.Add(enemy);
             yield return new WaitForSeconds(chosenEnemyGroup.enemyInterval);
         }
-    }
-
-    public void FirstWaveStart()
-    {
-
     }
 
     public IEnumerator HandleWaveLength()

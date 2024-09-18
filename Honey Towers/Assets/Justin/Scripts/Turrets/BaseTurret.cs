@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using TMPro;
 using UnityEngine;
 
 public class BaseTurret : MonoBehaviour
@@ -19,13 +20,19 @@ public class BaseTurret : MonoBehaviour
 
     public int attackPower;
     public float intervalTime;
+    public int price;
 
     protected float time;
+
+    public float upgradePoints;
+    public float maxUpgradePoint;
+    public TMP_Text upgradeText;
 
     protected virtual void Awake()
     {
         attackPower = turretStats.attackPower;
         intervalTime = turretStats.intervalSpeed;
+        price = turretStats.price;
     }
 
     protected virtual void Start()
@@ -129,6 +136,23 @@ public class BaseTurret : MonoBehaviour
             }
 
         }
+    }
+
+    public virtual void UpgradePoints()
+    {
+        upgradePoints++;
+
+        upgradeText.text = "Next upgrade: " + upgradePoints.ToString() + "/" + maxUpgradePoint.ToString();
+        if (upgradePoints >= maxUpgradePoint)
+        {
+            UpgradeTurret();
+        }
+    }
+
+    protected virtual void UpgradeTurret()
+    {
+        attackPower *= 2;
+        intervalTime /= 2;
     }
 
     

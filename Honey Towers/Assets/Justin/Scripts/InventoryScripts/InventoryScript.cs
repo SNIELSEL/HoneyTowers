@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using Unity.VisualScripting;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class InventoryScript : MonoBehaviour
 {
@@ -13,6 +14,16 @@ public class InventoryScript : MonoBehaviour
 
     public void AmountGoesUp()
     {
-        turret.amountOfThisTurret++;
+        turret.turretAmount++;
+    }
+
+    public void SelectedColor(Image image)
+    {
+        image.color = Color.red;
+    }
+    
+    public void DeSelectedColor(Image image)
+    {
+        image.color = Color.white;
     }
 }

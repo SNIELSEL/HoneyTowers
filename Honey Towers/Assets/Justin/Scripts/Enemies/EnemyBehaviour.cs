@@ -27,6 +27,7 @@ public class EnemyBehaviour : MonoBehaviour
     {
         hp -= damage;
         hpBar.value = hp;
+        ShowEnemyDamage(damage);
         
         if (hp <= 0)
         {
@@ -34,6 +35,11 @@ public class EnemyBehaviour : MonoBehaviour
             PlayerStats.Instance.GetCoins(5);
             Destroy(gameObject);
         }
+    }
+
+    public void ShowEnemyDamage(int damage)
+    {
+        
     }
 
     

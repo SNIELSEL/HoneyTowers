@@ -89,12 +89,15 @@ public class DroppingTurretScript : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.R))
         {
-            if (!hit.transform.GetComponent<GridTile>().turretAlreadyHere & selectedTurret.amountOfThisTurret > 0)
+            if (selectedTurret.turretAmount > 0)
             {
                 DropTurret(hit.transform);
-            }
+            }         
+        }
 
-            else if (hit.transform.GetComponent<GridTile>().turretAlreadyHere & hit.transform.GetComponent<GridTile>().turret != null)
+        if (Input.GetKeyDown(KeyCode.Q))
+        {
+            if (hit.transform.GetComponent<GridTile>().turretAlreadyHere & hit.transform.GetComponent<GridTile>().turret != null)
             {
                 holdingThisTurret = hit.transform.GetComponent<GridTile>().turret;
                 holdingThisTurret.GetComponentInChildren<BaseTurret>().attackPower /= 2;
@@ -111,11 +114,13 @@ public class DroppingTurretScript : MonoBehaviour
             isHoldingTurret = false;
             holdingThisTurret.transform.position = new Vector3(gridDropPlace.position.x, holdingThisTurret.transform.position.y, gridDropPlace.position.z);
             holdingThisTurret.AddComponent<Rigidbody>();
-            holdingThisTurret.GetComponentInChildren<BaseTurret>().attackPower *= 2;           
+            holdingThisTurret.GetComponentInChildren<BaseTurret>().attackPower *= 2;
+            holdingThisTurret = null;
         }
         else
         {
-            selectedTurret.amountOfThisTurret--;
+            selectedTurret.turretAmount--;
+            selectedTurret.turretAmountText.text = selectedTurret.turretAmount.ToString();
             gridDropPlace.GetComponent<GridTile>().MakeTheTurretHere();
 
             float roundToDegrees = Mathf.Round(transform.eulerAngles.y / 90) * 90;
@@ -127,7 +132,10 @@ public class DroppingTurretScript : MonoBehaviour
     private void PickUpTurret(GameObject turret)
     {
         turret.transform.position = Vector3.MoveTowards(turret.transform.position, transform.position, 0.5f);
-        turret.transform.rotation = transform.rotation;
-        
+        turret.transform.rotation = transform.rotation;      
     }
+
+    
+    
+    
 }

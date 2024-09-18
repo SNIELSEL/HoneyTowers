@@ -12,6 +12,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1324f34b7766d0b4f8d0528e9f3ce1be, type: 3}
   m_Name: Ant
   m_EditorClassIdentifier: 
-  hp: 4
-  speed: 2
-  attackPower: 2
+  hp: 100
+  speed: 999
+  attackPower: 10

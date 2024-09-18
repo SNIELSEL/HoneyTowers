@@ -23,7 +23,7 @@ public class PlayerStats : MonoBehaviour
         if (coins >= price)
         {
             coins -= price;
-            coinText.text = "Coins: " + coins.ToString();
+            coinText.text = "Honey: " + coins.ToString();
             return true;
         }
 
@@ -33,8 +33,6 @@ public class PlayerStats : MonoBehaviour
     public void GetCoins(int coinsCollected)
     {
         coins += coinsCollected;
-        coinText.text = "Coins: " + coins.ToString();
-    }
-
-    
+        coinText.text = "Honey" + coins.ToString();
+    }  
 }

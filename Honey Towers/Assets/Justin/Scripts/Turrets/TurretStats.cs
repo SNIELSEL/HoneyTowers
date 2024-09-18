@@ -7,4 +7,5 @@ public class TurretStats : ScriptableObject
 {
     public int attackPower;
     public float intervalSpeed;
+    public int price;
 }

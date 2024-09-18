@@ -20,7 +20,8 @@ public class GameManager : MonoBehaviour
     public bool isWaveStarted;
     public int waveNumber;
 
-    public PlayableDirector playableDirector;
+    public PlayableDirector winDirector;
+    public PlayableDirector loseDirector;
     private void Awake()
     {
         if (Instance == null)
@@ -59,14 +60,14 @@ public class GameManager : MonoBehaviour
 
     private void GameOverFunction()
     {
-        gameoverScreen.SetActive(true);
+        loseDirector.Play();
     }
 
     private void HandleWin()
     {
         if (waveNumber > maxWaves)
         {
-            playableDirector.Play();
+            winDirector.Play();
             this.enabled = false;
         }
     }
