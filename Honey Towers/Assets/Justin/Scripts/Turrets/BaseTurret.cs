@@ -61,7 +61,7 @@ public class BaseTurret : MonoBehaviour
 
     protected virtual void CheckingForEnemy()
     {
-        transform.Rotate(0, rotateSpeed, 0);
+        transform.Rotate(0, rotateSpeed * Time.deltaTime, 0);
     }
 
     protected virtual void Reload()

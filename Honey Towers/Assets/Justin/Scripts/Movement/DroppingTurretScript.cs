@@ -37,6 +37,7 @@ public class DroppingTurretScript : MonoBehaviour
             if (showTurretClone != null)
             {
                 Destroy(showTurretClone);
+                selectedGrid.GetComponent<GridTile>().LightDown();
             }
 
             return;
