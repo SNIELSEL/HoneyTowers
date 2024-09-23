@@ -12,6 +12,7 @@ public class BaseTurret : MonoBehaviour
     public float speed;
 
     public float rotateSpeed;
+    public float targetEnemySpeed;
     protected Transform enemyToAttack;
     protected int lowestIndex;
 
@@ -85,7 +86,7 @@ public class BaseTurret : MonoBehaviour
         if (enemyToAttack == null) return;
         Vector3 directionToEnemy = (enemyToAttack.position - transform.position).normalized;
         Quaternion lookRotation = Quaternion.LookRotation(directionToEnemy);
-        transform.rotation = Quaternion.Lerp(transform.rotation, lookRotation, rotateSpeed * Time.deltaTime);
+        transform.rotation = Quaternion.Lerp(transform.rotation, lookRotation, targetEnemySpeed * Time.deltaTime);
     }
 
     protected virtual void SeesEnemy()

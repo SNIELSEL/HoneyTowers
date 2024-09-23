@@ -24,6 +24,7 @@ public class HoneyBlastBall : BaseBullet
         {
             other.GetComponent<EnemyBehaviour>().TakeHP(attackPower);
             Instantiate(explosion, transform.position, Quaternion.identity);
+            Destroy(gameObject);
         }
     }
 

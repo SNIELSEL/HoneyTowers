@@ -177,43 +177,8 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents:
-    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: c9791f35d07d1dd45985ad993c802033,
-        type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 1303454764049571337}
+    m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c9791f35d07d1dd45985ad993c802033, type: 3}
---- !u!1 &1646741983791688471 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: c9791f35d07d1dd45985ad993c802033,
-    type: 3}
-  m_PrefabInstance: {fileID: 1881113546757838406}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &1303454764049571337
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1646741983791688471}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 83eee68ff6b5c744aac1ae33b3613754, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  enemyFolder: {fileID: 0}
-  range: 10
-  enemiesSeen: []
-  speed: 5
-  rotateSpeed: 50
-  bullet: {fileID: 337504288397111740, guid: 30ab5e0e5b26f5046ad64e318d76990d, type: 3}
-  turretStats: {fileID: 11400000, guid: 35ad5eb098963d74899d37f07554e018, type: 2}
-  attackPower: 0
-  intervalTime: 0
-  price: 0
-  upgradePoints: 0
-  maxUpgradePoint: 0
-  upgradeText: {fileID: 0}
 --- !u!4 &2130686067916960173 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: c9791f35d07d1dd45985ad993c802033,

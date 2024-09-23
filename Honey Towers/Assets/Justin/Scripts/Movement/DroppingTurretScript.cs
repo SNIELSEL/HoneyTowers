@@ -99,7 +99,7 @@ public class DroppingTurretScript : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.R))
         {
-            if (selectedTurret.turretAmount > 0)
+            if (selectedTurret.turretAmount > 0 || holdingThisTurret != null)
             {
                 DropTurret(hit.transform);
             }         

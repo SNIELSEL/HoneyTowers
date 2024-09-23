@@ -12,6 +12,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9473e4cb5bd850f4bb8ff0489a7415b6, type: 3}
   m_Name: HoneyFlameThrower
   m_EditorClassIdentifier: 
-  attackPower: 99
+  attackPower: 10
   intervalSpeed: 0.5
   price: 0

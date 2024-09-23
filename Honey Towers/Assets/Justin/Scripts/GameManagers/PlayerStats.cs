@@ -33,6 +33,6 @@ public class PlayerStats : MonoBehaviour
     public void GetCoins(int coinsCollected)
     {
         coins += coinsCollected;
-        coinText.text = "Honey" + coins.ToString();
+        coinText.text = "Honey: " + coins.ToString();
     }  
 }

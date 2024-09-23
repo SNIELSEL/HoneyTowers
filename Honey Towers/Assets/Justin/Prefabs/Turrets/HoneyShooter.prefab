@@ -801,7 +801,7 @@ ParticleSystem:
     startSize:
       serializedVersion: 2
       minMaxState: 0
-      scalar: 0.7
+      scalar: 0.3
       minScalar: 1
       maxCurve:
         serializedVersion: 2
@@ -5360,7 +5360,8 @@ MonoBehaviour:
   range: 10
   enemiesSeen: []
   speed: 5
-  rotateSpeed: 0.25
+  rotateSpeed: 100
+  targetEnemySpeed: 1000
   bullet: {fileID: 337504288397111740, guid: e872d13c80ba70d48a5b64cd619cfd6c, type: 3}
   turretStats: {fileID: 11400000, guid: 35ad5eb098963d74899d37f07554e018, type: 2}
   attackPower: 0

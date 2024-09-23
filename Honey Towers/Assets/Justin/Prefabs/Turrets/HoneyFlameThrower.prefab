@@ -625,13 +625,14 @@ MonoBehaviour:
   enemiesSeen: []
   speed: 0
   rotateSpeed: 0
+  targetEnemySpeed: 0
   bullet: {fileID: 0}
   turretStats: {fileID: 11400000, guid: e74c059129fbd5a47909f3bc3b3f3a4e, type: 2}
   attackPower: 0
   intervalTime: 0
   price: 0
   upgradePoints: 0
-  maxUpgradePoint: 0
+  maxUpgradePoint: 3
   upgradeText: {fileID: 2863128100986103891}
   distance: 0
   enemy:
