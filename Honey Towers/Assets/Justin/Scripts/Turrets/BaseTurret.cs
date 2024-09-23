@@ -142,17 +142,22 @@ public class BaseTurret : MonoBehaviour
     {
         upgradePoints++;
 
-        upgradeText.text = "Next upgrade: " + upgradePoints.ToString() + "/" + maxUpgradePoint.ToString();
+        
         if (upgradePoints >= maxUpgradePoint)
         {
             UpgradeTurret();
         }
+
+        upgradeText.text = "Next upgrade: " + upgradePoints.ToString() + "/" + maxUpgradePoint.ToString();
     }
 
     protected virtual void UpgradeTurret()
     {
         attackPower *= 2;
         intervalTime /= 2;
+
+        maxUpgradePoint *= 2;
+        upgradePoints = 0;
     }
 
     

@@ -26,4 +26,17 @@ public class InventoryScript : MonoBehaviour
     {
         image.color = Color.white;
     }
+
+    private void Bullshit()
+    {
+        int epic = 0;
+
+        for (int i = 0; i < 10; i++)
+        {
+            if (epic == 0)
+            {
+                break;
+            }
+        }
+    }
 }

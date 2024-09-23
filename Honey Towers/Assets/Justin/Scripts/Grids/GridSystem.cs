@@ -6,24 +6,14 @@ using UnityEngine.UIElements;
 public class GridSystem : MonoBehaviour
 {
     public GameObject grid;
-    public GameObject highLight;
 
     public LayerMask path;
     private GameObject tileClone;
 
     public Bounds bounds;
-
-    public int damage;
-
-    public int kaas;
-    public float kaasMultiplier;
     private void Start()
     {
-        var middleman = kaas * kaasMultiplier;
-        damage = (int)middleman;
-        print(damage);
         bounds = GetComponent<Collider>().bounds;
-        print(bounds.max.y);
         for (int x = 0; x < transform.localScale.x; x++)
         {
             for (int z = 0; z < transform.localScale.z; z++)

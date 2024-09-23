@@ -8,6 +8,7 @@ TagManager:
   - Ball
   - Turret
   - Path
+  - Flower
   layers:
   - Default
   - TransparentFX
@@ -18,7 +19,7 @@ TagManager:
   - HighLight
   - Ground
   - Path
-  - 
+  - Flower
   - 
   - 
   - 

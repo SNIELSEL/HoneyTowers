@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using Unity.VisualScripting;
+using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -12,6 +13,9 @@ public class EnemyBehaviour : MonoBehaviour
 
     public Slider hpBar;
     public EnemyStats stats;
+
+    public Transform damageNumberSpawnPlace;
+    public GameObject damageNumberPrefab;
 
     private void Awake()
     {
@@ -37,9 +41,15 @@ public class EnemyBehaviour : MonoBehaviour
         }
     }
 
-    public void ShowEnemyDamage(int damage)
+    private void ShowEnemyDamage(int damage)
     {
-        
+        GameObject damageNumber = Instantiate(damageNumberPrefab, damageNumberSpawnPlace.position, Quaternion.identity, transform);
+
+        if (hp <= 0)
+        {
+            damageNumber.transform.SetParent(transform.parent);
+        }
+        damageNumber.GetComponentInChildren<TMP_Text>().text = "-" + damage.ToString();
     }
 
     

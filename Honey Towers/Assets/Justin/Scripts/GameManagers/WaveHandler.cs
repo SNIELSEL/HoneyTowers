@@ -71,7 +71,7 @@ public class WaveHandler : MonoBehaviour
         availableGroups.Clear();
         foreach (var group in allGroups)
         {
-            if (score >= chosenEnemyGroup.minScoreCost && score <= chosenEnemyGroup.maxScoreCost)
+            if (score >= group.minScoreCost && score <= group.maxScoreCost)
             {
                 availableGroups.Add(group);
             }
@@ -134,7 +134,7 @@ public class WaveHandler : MonoBehaviour
         while (time > 0)
         {
             time -= Time.deltaTime;
-            battleText.text = "Next wave is starting in " + time.ToString("0");
+            battleText.text = "Next wave is starting in " + (int)time;
             yield return null;
         }
 

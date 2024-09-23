@@ -32,6 +32,15 @@ public class DroppingTurretScript : MonoBehaviour
 
     private void Update()
     {
+        if (MovementScript.Instance.isWalking)
+        {
+            if (showTurretClone != null)
+            {
+                Destroy(showTurretClone);
+            }
+
+            return;
+        }
         CheckIfTurretCanLandHere();
 
         if (isHoldingTurret)

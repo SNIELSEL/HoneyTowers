@@ -13,5 +13,5 @@ MonoBehaviour:
   m_Name: Ant
   m_EditorClassIdentifier: 
   hp: 100
-  speed: 999
+  speed: 2
   attackPower: 10
