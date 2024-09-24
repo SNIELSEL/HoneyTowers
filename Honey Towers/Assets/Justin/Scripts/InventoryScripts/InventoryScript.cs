@@ -15,35 +15,29 @@ public class InventoryScript : MonoBehaviour
     public void AmountGoesUp()
     {
         turret.turretAmount++;
+        turret.turretAmountText.text = turret.turretAmount.ToString();
     }
 
     public void SelectedColor(Image selectedImage)
     {
         Image[] images = transform.parent.GetComponentsInChildren<Image>();
 
+
         foreach (Image image in images)
         {
-            if (image == selectedImage)
+            if (image != transform.parent.GetComponent<Image>())
             {
-                image.color = Color.red;
+                if (image == selectedImage)
+                {
+                    image.color = Color.red;
+                }
+                else
+                {
+                    image.color = Color.white;
+                }
             }
-            else
-            {
-                image.color = Color.white;
-            }
-        }
-    }
-
-    private void Bullshit()
-    {
-        int epic = 0;
-
-        for (int i = 0; i < 10; i++)
-        {
-            if (epic == 0)
-            {
-                break;
-            }
+            
+            
         }
     }
 }
