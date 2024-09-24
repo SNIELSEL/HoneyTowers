@@ -1,6 +1,5 @@
 using System.Collections;
 using System.Collections.Generic;
-using UnityEditor.ShaderKeywordFilter;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -22,9 +21,10 @@ public class PollinateFlower : MonoBehaviour
                 canvasSlider.enabled = false;
                 return;
             }
+
+            canvasSlider.enabled = true;
             if (Input.GetMouseButton(0)) 
             {
-                canvasSlider.enabled = true;
                 hit.transform.GetComponent<Flower>().Pollinate(canvasSlider.GetComponentInChildren<Slider>());
             }
 

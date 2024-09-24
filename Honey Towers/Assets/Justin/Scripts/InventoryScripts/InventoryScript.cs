@@ -17,14 +17,21 @@ public class InventoryScript : MonoBehaviour
         turret.turretAmount++;
     }
 
-    public void SelectedColor(Image image)
+    public void SelectedColor(Image selectedImage)
     {
-        image.color = Color.red;
-    }
-    
-    public void DeSelectedColor(Image image)
-    {
-        image.color = Color.white;
+        Image[] images = transform.parent.GetComponentsInChildren<Image>();
+
+        foreach (Image image in images)
+        {
+            if (image == selectedImage)
+            {
+                image.color = Color.red;
+            }
+            else
+            {
+                image.color = Color.white;
+            }
+        }
     }
 
     private void Bullshit()

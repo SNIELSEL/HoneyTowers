@@ -1938,8 +1938,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b90440eb4a62c0b42b10596140aa63d6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  shopCanvas: {fileID: 0}
+  normalCanvas: {fileID: 0}
   isShopping: 0
   shopCamera: {fileID: 5805879748023667990}
+  cameraMoveSpeed: 40
 --- !u!4 &8762285608596242671 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: c497c952983a1f24d93b953657c99e98,

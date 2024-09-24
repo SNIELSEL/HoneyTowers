@@ -8,7 +8,6 @@ public class Flower : MonoBehaviour
 {
     
     public bool canBePollinated;
-    private Slider pollinated;
 
     public float currentValue;
     public ParticleSystem showPollinatedFlower;

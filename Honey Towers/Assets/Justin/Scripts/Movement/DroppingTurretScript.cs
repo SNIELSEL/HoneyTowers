@@ -123,6 +123,7 @@ public class DroppingTurretScript : MonoBehaviour
             gridDropPlace.GetComponent<GridTile>().MakeTheTurretHere();
             isHoldingTurret = false;
             holdingThisTurret.transform.position = new Vector3(gridDropPlace.position.x, holdingThisTurret.transform.position.y, gridDropPlace.position.z);
+            holdingThisTurret.transform.rotation = Quaternion.identity;
             holdingThisTurret.AddComponent<Rigidbody>();
             holdingThisTurret.GetComponentInChildren<BaseTurret>().attackPower *= 2;
             holdingThisTurret = null;
@@ -141,7 +142,9 @@ public class DroppingTurretScript : MonoBehaviour
 
     private void PickUpTurret(GameObject turret)
     {
-        turret.transform.position = Vector3.MoveTowards(turret.transform.position, transform.position, 0.5f);
+        float minY = GetComponent<Collider>().bounds.min.y - turret.transform.localScale.y;
+        Vector3 newPos = new Vector3(transform.position.x, minY, transform.position.z);
+        turret.transform.position = Vector3.MoveTowards(turret.transform.position, newPos, 0.5f);
         turret.transform.rotation = transform.rotation;      
     }
 

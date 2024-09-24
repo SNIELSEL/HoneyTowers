@@ -14,6 +14,8 @@ public class ShowShopMenu : MonoBehaviour
     public bool isShopping;
     public Transform shopCamera;
 
+    public float cameraMoveSpeed;
+
 
     private void Awake()
     {
@@ -28,10 +30,19 @@ public class ShowShopMenu : MonoBehaviour
     {
         Cursor.lockState = CursorLockMode.None;
         Camera.main.GetComponent<CameraMovement>().enabled = false;
-        Camera.main.transform.position = shopCamera.position;
+        StartCoroutine(MoveTheCamera());
         Camera.main.transform.rotation = shopCamera.rotation;
         shopCanvas.SetActive(true);
         normalCanvas.SetActive(false);
+    }
+
+    private IEnumerator MoveTheCamera()
+    {
+        while (Camera.main.transform.position != shopCamera.position && isShopping)
+        {
+            Camera.main.transform.position = Vector3.MoveTowards(Camera.main.transform.position, shopCamera.position, cameraMoveSpeed * Time.deltaTime);
+            yield return null;
+        }
     }
 
     private void PositionNormalCamera()
@@ -45,13 +56,15 @@ public class ShowShopMenu : MonoBehaviour
     {
         if (other.CompareTag("Player"))
         {
+            isShopping = true;
             PositionShopCamera();
         }
     }
     private void OnTriggerExit(Collider other)
     {
         if (other.CompareTag("Player"))
-        { 
+        {
+            isShopping = false;
             PositionNormalCamera();
         }
     }
