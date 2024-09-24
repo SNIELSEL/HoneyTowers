@@ -11,10 +11,13 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Justin.unity
     guid: 99c9720ab356a0642a771bea13969a05
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/Hessel.unity
     guid: 490877ab7d717bf4ca9965bc6023a733
   - enabled: 1
     path: Assets/Scenes/Map2.unity
     guid: 59fb81b9cfe334048b69117a70929f0e
+  - enabled: 1
+    path: Assets/Scenes/MainMenu.unity
+    guid: 6fc0d4e8a5d32f8438a6fdf4f709ceff
   m_configObjects: {}
