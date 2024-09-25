@@ -29,6 +29,8 @@ public class BaseTurret : MonoBehaviour
     public float maxUpgradePoint;
     public TMP_Text upgradeText;
 
+    public Transform spawnPoint;
+
     protected virtual void Awake()
     {
         attackPower = turretStats.attackPower;
@@ -76,7 +78,7 @@ public class BaseTurret : MonoBehaviour
 
     protected virtual void ShootAtEnemy()
     {
-        GameObject bulletClone = Instantiate(bullet, transform.position, transform.rotation, transform.parent);
+        GameObject bulletClone = Instantiate(bullet, spawnPoint.position, transform.rotation, transform.parent);
         bulletClone.GetComponent<BaseBullet>().attackPower = attackPower;
         bulletClone.GetComponent<BaseBullet>().ObjectToGet(enemyToAttack);
     }
@@ -85,6 +87,7 @@ public class BaseTurret : MonoBehaviour
     {
         if (enemyToAttack == null) return;
         Vector3 directionToEnemy = (enemyToAttack.position - transform.position).normalized;
+        directionToEnemy.y = 0;
         Quaternion lookRotation = Quaternion.LookRotation(directionToEnemy);
         transform.rotation = Quaternion.Lerp(transform.rotation, lookRotation, targetEnemySpeed * Time.deltaTime);
     }
