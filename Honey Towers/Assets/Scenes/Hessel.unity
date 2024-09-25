@@ -936,45 +936,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 730311932721630411, guid: 8f37b5589a7b3114e8abceecdee70d1b,
-        type: 3}
-      propertyPath: m_Name
-      value: Gaming-Panel
-      objectReference: {fileID: 0}
-    - target: {fileID: 2965321696360512049, guid: 8f37b5589a7b3114e8abceecdee70d1b,
-        type: 3}
-      propertyPath: m_AnchorMax.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2965321696360512049, guid: 8f37b5589a7b3114e8abceecdee70d1b,
-        type: 3}
-      propertyPath: m_AnchorMax.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3222456667744666673, guid: 8f37b5589a7b3114e8abceecdee70d1b,
-        type: 3}
-      propertyPath: m_AnchorMax.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3222456667744666673, guid: 8f37b5589a7b3114e8abceecdee70d1b,
-        type: 3}
-      propertyPath: m_AnchorMax.y
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 3972989262350734728, guid: 8f37b5589a7b3114e8abceecdee70d1b,
         type: 3}
       propertyPath: m_Name
       value: in game menu
-      objectReference: {fileID: 0}
-    - target: {fileID: 3972989262350734728, guid: 8f37b5589a7b3114e8abceecdee70d1b,
-        type: 3}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8217932231290509679, guid: 8f37b5589a7b3114e8abceecdee70d1b,
-        type: 3}
-      propertyPath: m_AnchoredPosition.y
-      value: -0.000030517578
       objectReference: {fileID: 0}
     - target: {fileID: 8393731230794019007, guid: 8f37b5589a7b3114e8abceecdee70d1b,
         type: 3}
@@ -1107,7 +1072,7 @@ PrefabInstance:
     - target: {fileID: 3301001010628264812, guid: 55989c4caaf6a55409211dc16926375f,
         type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6334382372624476698, guid: 55989c4caaf6a55409211dc16926375f,
         type: 3}
@@ -1128,7 +1093,7 @@ PrefabInstance:
         type: 3}
       propertyPath: m_audioClip
       value: 
-      objectReference: {fileID: 8300000, guid: 021a149dc93294f4f93834d48b9d5512, type: 3}
+      objectReference: {fileID: 8300000, guid: b4d77f3cdd222304b99487cf51bfa40f, type: 3}
     - target: {fileID: 8884889931731698226, guid: 55989c4caaf6a55409211dc16926375f,
         type: 3}
       propertyPath: m_AnchorMax.x

@@ -9,8 +9,13 @@ public class OpenMenu : MonoBehaviour
     {
         if (Input.GetButtonDown("esc"))
         {
+            Time.timeScale = 0;
             menu.SetActive(true);
         }
+    }
+    public void CloseTheMenu()
+    {
+        Time.timeScale = 1;
     }
 }
 
