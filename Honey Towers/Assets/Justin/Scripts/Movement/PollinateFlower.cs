@@ -23,6 +23,7 @@ public class PollinateFlower : MonoBehaviour
             }
 
             canvasSlider.enabled = true;
+            hit.transform.GetComponent<Flower>().ShowValueOnSlider(canvasSlider.GetComponentInChildren<Slider>());
             if (Input.GetMouseButton(0)) 
             {
                 hit.transform.GetComponent<Flower>().Pollinate(canvasSlider.GetComponentInChildren<Slider>());

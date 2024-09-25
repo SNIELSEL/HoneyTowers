@@ -35,7 +35,7 @@ public class EnemyMovement : MonoBehaviour
 
     private void Movement()
     {       
-        if (currentIndex < targets.Count && Vector3.Distance(transform.position, targets[currentIndex].position) < 0.01f)
+        if (currentIndex < targets.Count && Vector3.Distance(transform.position, targets[currentIndex].position) < 0.03f)
         {
             currentIndex++;
         }

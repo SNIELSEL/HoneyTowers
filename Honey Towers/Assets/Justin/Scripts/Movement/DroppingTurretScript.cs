@@ -123,7 +123,7 @@ public class DroppingTurretScript : MonoBehaviour
             gridDropPlace.GetComponent<GridTile>().MakeTheTurretHere();
             isHoldingTurret = false;
             holdingThisTurret.transform.position = new Vector3(gridDropPlace.position.x, holdingThisTurret.transform.position.y, gridDropPlace.position.z);
-            holdingThisTurret.transform.rotation = Quaternion.identity;
+            holdingThisTurret.transform.rotation = Quaternion.Euler(0, holdingThisTurret.transform.rotation.y, 0);
             holdingThisTurret.AddComponent<Rigidbody>();
             holdingThisTurret.GetComponentInChildren<BaseTurret>().attackPower *= 2;
             holdingThisTurret = null;

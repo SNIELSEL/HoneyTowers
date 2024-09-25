@@ -13,7 +13,7 @@ public class ExplosionEffect : MonoBehaviour
     {
         if (other.CompareTag("Enemy"))
         {
-            other.GetComponent<EnemyBehaviour>().TakeHP(3);
+            other.GetComponent<EnemyBehaviour>().TakeHP(50);
         }
     }
 }

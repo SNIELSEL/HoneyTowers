@@ -22,7 +22,6 @@ public class Flower : MonoBehaviour
     {
         if (canBePollinated)
         {
-            pollinatingFlower.value = currentValue;
             currentValue += Time.deltaTime;
 
             if (pollinatingFlower.value == pollinatingFlower.maxValue)
@@ -33,6 +32,11 @@ public class Flower : MonoBehaviour
             }
         }
         
+    }
+
+    public void ShowValueOnSlider(Slider pollinatingSlider)
+    {
+        pollinatingSlider.value = currentValue;
     }
 
     public void EnablePollinating()

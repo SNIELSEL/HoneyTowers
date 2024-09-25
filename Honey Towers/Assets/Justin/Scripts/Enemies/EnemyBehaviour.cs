@@ -44,7 +44,6 @@ public class EnemyBehaviour : MonoBehaviour
     private void ShowEnemyDamage(int damage)
     {
         GameObject damageNumber = Instantiate(damageNumberPrefab, damageNumberSpawnPlace.position, Quaternion.identity, transform);
-
         if (hp <= 0)
         {
             damageNumber.transform.SetParent(transform.parent);
