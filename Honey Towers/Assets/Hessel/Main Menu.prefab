@@ -2441,6 +2441,13 @@ MonoBehaviour:
 
     Q
 
+    E
+
+    Left click
+
+    Right
+    click
+
 '
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 3cc12dd3eefb1b34a92e741a3e879a31, type: 2}
@@ -2469,7 +2476,7 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 72
+  m_fontSize: 51.6
   m_fontSizeBase: 36
   m_fontWeight: 400
   m_enableAutoSizing: 1
@@ -2671,7 +2678,7 @@ AudioSource:
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: -5981188774154756905, guid: f4db7cd128caaa0478593895c9d75099,
     type: 2}
-  m_audioClip: {fileID: 8300000, guid: 56726c9874e99d241a62e3ebf9e8b56b, type: 3}
+  m_audioClip: {fileID: 8300000, guid: b4d77f3cdd222304b99487cf51bfa40f, type: 3}
   m_PlayOnAwake: 1
   m_Volume: 1
   m_Pitch: 1
@@ -8164,6 +8171,12 @@ MonoBehaviour:
     Pick
     Up
 
+    Inventory
+
+    Pollinate
+
+    Move camara
+
 '
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 3cc12dd3eefb1b34a92e741a3e879a31, type: 2}
@@ -8192,7 +8205,7 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 72
+  m_fontSize: 51.6
   m_fontSizeBase: 36
   m_fontWeight: 400
   m_enableAutoSizing: 1
