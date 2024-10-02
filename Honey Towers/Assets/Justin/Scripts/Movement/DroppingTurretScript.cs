@@ -66,7 +66,7 @@ public class DroppingTurretScript : MonoBehaviour
                 selectedGrid.GetComponent<GridTile>().LightDown();
             }
             selectedGrid = hit.transform;
-            selectedGrid.GetComponent<GridTile>().LightUp();
+            HandleColorOfTile();
 
             if (showTurretClone == null)
             {
@@ -89,6 +89,18 @@ public class DroppingTurretScript : MonoBehaviour
 
     }
 
+    private void HandleColorOfTile()
+    {
+        if (selectedGrid.GetComponent<GridTile>().turretAlreadyHere)
+        {
+            selectedGrid.GetComponent<GridTile>().LightUp(Color.red);
+        }
+        else
+        {
+            selectedGrid.GetComponent<GridTile>().LightUp(Color.green);
+        }
+    }
+
     private void PutTileOff()
     {
         selectedGrid.GetComponent<GridTile>().LightDown();
@@ -109,6 +121,7 @@ public class DroppingTurretScript : MonoBehaviour
         {
             if (hit.transform.GetComponent<GridTile>().turretAlreadyHere & hit.transform.GetComponent<GridTile>().turret != null)
             {
+                GetComponentInChildren<Animator>().SetTrigger("PutBack");
                 holdingThisTurret = hit.transform.GetComponent<GridTile>().turret;
                 holdingThisTurret.GetComponentInChildren<BaseTurret>().attackPower /= 2;
                 hit.transform.GetComponent<GridTile>().turretAlreadyHere = false;
@@ -120,6 +133,8 @@ public class DroppingTurretScript : MonoBehaviour
     {
         if (isHoldingTurret)
         {
+            if (gridDropPlace.GetComponent<GridTile>().turretAlreadyHere) return;
+            GetComponentInChildren<Animator>().SetTrigger("PutFront");
             gridDropPlace.GetComponent<GridTile>().MakeTheTurretHere();
             isHoldingTurret = false;
             holdingThisTurret.transform.position = new Vector3(gridDropPlace.position.x, holdingThisTurret.transform.position.y, gridDropPlace.position.z);

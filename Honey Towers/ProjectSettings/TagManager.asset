@@ -9,6 +9,8 @@ TagManager:
   - Turret
   - Path
   - Flower
+  - PathFolder
+  - StartPoint
   layers:
   - Default
   - TransparentFX

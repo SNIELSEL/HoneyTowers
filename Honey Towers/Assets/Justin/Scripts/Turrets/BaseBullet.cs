@@ -9,6 +9,10 @@ public class BaseBullet : MonoBehaviour
 
     protected Transform objToChase;
 
+    private void Start()
+    {
+        Destroy(gameObject, 1f);
+    }
     public virtual void ObjectToGet(Transform obj)
     {
         objToChase = obj;

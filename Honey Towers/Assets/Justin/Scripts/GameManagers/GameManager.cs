@@ -61,6 +61,10 @@ public class GameManager : MonoBehaviour
     private void GameOverFunction()
     {
         loseDirector.Play();
+        WaveHandler.Instance.StopAllCoroutines();
+        WaveHandler.Instance.enabled = false;
+        WaveHandler.Instance.battleText.enabled = false;
+        this.enabled = false;
     }
 
     private void HandleWin()
@@ -68,6 +72,9 @@ public class GameManager : MonoBehaviour
         if (waveNumber > maxWaves)
         {
             winDirector.Play();
+            WaveHandler.Instance.StopAllCoroutines();
+            WaveHandler.Instance.enabled = false;
+            WaveHandler.Instance.battleText.enabled = false;
             this.enabled = false;
         }
     }

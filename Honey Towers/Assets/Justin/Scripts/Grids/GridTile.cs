@@ -7,9 +7,10 @@ public class GridTile : MonoBehaviour
 
     public bool turretAlreadyHere;
     public GameObject turret;
-    public void LightUp()
+    public void LightUp(Color color)
     {
         GetComponent<MeshRenderer>().enabled = true;
+        GetComponent<MeshRenderer>().material.color = color;
     }
 
     public void LightDown()

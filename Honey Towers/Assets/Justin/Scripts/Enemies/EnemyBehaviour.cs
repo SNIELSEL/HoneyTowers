@@ -17,6 +17,10 @@ public class EnemyBehaviour : MonoBehaviour
     public Transform damageNumberSpawnPlace;
     public GameObject damageNumberPrefab;
 
+    private GameObject damageNumberClone;
+
+    private int totalDamageNumber;
+
     private void Awake()
     {
         hp = stats.hp;
@@ -43,12 +47,18 @@ public class EnemyBehaviour : MonoBehaviour
 
     private void ShowEnemyDamage(int damage)
     {
-        GameObject damageNumber = Instantiate(damageNumberPrefab, damageNumberSpawnPlace.position, Quaternion.identity, transform);
+        if (damageNumberClone == null)
+        {
+            damageNumberClone = Instantiate(damageNumberPrefab, damageNumberSpawnPlace.position, Quaternion.identity, transform);
+            totalDamageNumber = 0;
+        }
+
+        totalDamageNumber += damage;
         if (hp <= 0)
         {
-            damageNumber.transform.SetParent(transform.parent);
+            damageNumberClone.transform.SetParent(transform.parent);
         }
-        damageNumber.GetComponentInChildren<TMP_Text>().text = "-" + damage.ToString();
+        damageNumberClone.GetComponentInChildren<TMP_Text>().text = "-" + totalDamageNumber.ToString();
     }
 
     

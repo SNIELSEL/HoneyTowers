@@ -686,10 +686,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   turret:
-    turret: {fileID: 0}
+    turret: {fileID: 4362010024795580479, guid: 1d03ebb77ac9fa6468653f083d6e3150,
+      type: 3}
     turretAmount: 99
-    turretAmountText: {fileID: 0}
-    showTurret: {fileID: 0}
+    turretAmountText: {fileID: 1618775737012417322}
+    showTurret: {fileID: 3609459842569676402, guid: f20a6d5146cca8f4eb9a8c9a0db52ba3,
+      type: 3}
 --- !u!1 &1090484026535415073
 GameObject:
   m_ObjectHideFlags: 0
@@ -2255,7 +2257,7 @@ RectTransform:
   m_Children: []
   m_Father: {fileID: 3841079083862235363}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.81900007, y: 0}
+  m_AnchorMin: {x: 0.791, y: 0}
   m_AnchorMax: {x: 1, y: 0.27712098}
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
@@ -3088,7 +3090,7 @@ RectTransform:
   m_Children: []
   m_Father: {fileID: 30262998882521452}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.8205841, y: 0}
+  m_AnchorMin: {x: 0.7925782, y: 0}
   m_AnchorMax: {x: 1, y: 0.33334073}
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
@@ -6851,7 +6853,7 @@ RectTransform:
   m_Children: []
   m_Father: {fileID: 2846175195265413343}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.818, y: 0}
+  m_AnchorMin: {x: 0.7838946, y: 0}
   m_AnchorMax: {x: 1, y: 0.3333333}
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
@@ -7120,7 +7122,7 @@ RectTransform:
   m_Children: []
   m_Father: {fileID: 987887604083644331}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.8182514, y: 0}
+  m_AnchorMin: {x: 0.7933672, y: 0}
   m_AnchorMax: {x: 1, y: 0.33283964}
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
