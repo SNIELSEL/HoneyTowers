@@ -179,7 +179,7 @@ RectTransform:
   m_GameObject: {fileID: 5121529318384957668}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 0.034959998, y: 0.034959998, z: 0.034959998}
+  m_LocalScale: {x: 0.02, y: 0.034959998, z: 0.034959998}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 7677159155578072190}
@@ -796,6 +796,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: ant
       objectReference: {fileID: 0}
+    - target: {fileID: 7859700700568881072, guid: 9798627836e26e54f842b6d8120ae256,
+        type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 2b583100c5671f34ca051f1b301c5f1a, type: 2}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []

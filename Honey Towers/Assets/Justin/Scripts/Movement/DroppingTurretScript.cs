@@ -145,6 +145,8 @@ public class DroppingTurretScript : MonoBehaviour
         }
         else
         {
+            if (gridDropPlace.GetComponent<GridTile>().turretAlreadyHere &&
+                gridDropPlace.GetComponent<GridTile>().turret.transform.GetChild(0).name != selectedTurret.turret.transform.GetChild(0).name) return;
             selectedTurret.turretAmount--;
             selectedTurret.turretAmountText.text = selectedTurret.turretAmount.ToString();
             gridDropPlace.GetComponent<GridTile>().MakeTheTurretHere();

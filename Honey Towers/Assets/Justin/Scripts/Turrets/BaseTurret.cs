@@ -27,15 +27,22 @@ public class BaseTurret : MonoBehaviour
 
     public float upgradePoints;
     public float maxUpgradePoint;
-    public TMP_Text upgradeText;
 
     public Transform spawnPoint;
 
+    public int timesUpgraded;
+    public int maxUpgradeTimes;
+    public TMP_Text attackPowerText, intervalTimeText, upgradeText;
+
     protected virtual void Awake()
     {
+        CheckTurretStats.Instance.AddTurret(transform.parent.gameObject);
         attackPower = turretStats.attackPower;
         intervalTime = turretStats.intervalSpeed;
         price = turretStats.price;
+        maxUpgradeTimes = 2;
+        attackPowerText.text = "AttackPower: " + attackPower;
+        intervalTimeText.text = "IntervalTime: " + intervalTime;
     }
 
     protected virtual void Start()
@@ -150,18 +157,32 @@ public class BaseTurret : MonoBehaviour
         if (upgradePoints >= maxUpgradePoint)
         {
             UpgradeTurret();
+            timesUpgraded++;
         }
 
-        upgradeText.text = "Next upgrade: " + upgradePoints.ToString() + "/" + maxUpgradePoint.ToString();
+        if (timesUpgraded >= maxUpgradeTimes)
+        {
+            upgradeText.text = "Max upgraded!";
+        }
+
+        else
+        {
+            upgradeText.text = "Next upgrade: " + upgradePoints.ToString() + "/" + maxUpgradePoint.ToString();
+        }
+
+        upgradeText.text = "UpgradePoints: " + upgradePoints + "/" + maxUpgradePoint;
+
+
     }
 
     protected virtual void UpgradeTurret()
     {
         attackPower *= 2;
         intervalTime /= 2;
-
         maxUpgradePoint *= 2;
         upgradePoints = 0;
+        attackPowerText.text = "AttackPower: " + attackPower;
+        intervalTimeText.text = "IntervalTime: " + intervalTime;
     }
 
     

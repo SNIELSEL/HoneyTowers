@@ -56,6 +56,10 @@ public class ShowShopMenu : MonoBehaviour
     {
         if (other.CompareTag("Player"))
         {
+            foreach (Renderer renderer in other.GetComponentsInChildren<Renderer>())
+            {
+                renderer.enabled = false;
+            }
             isShopping = true;
             PositionShopCamera();
         }
@@ -64,6 +68,10 @@ public class ShowShopMenu : MonoBehaviour
     {
         if (other.CompareTag("Player"))
         {
+            foreach (Renderer renderer in other.GetComponentsInChildren<Renderer>())
+            {
+                renderer.enabled = true;
+            }
             isShopping = false;
             PositionNormalCamera();
         }

@@ -5,6 +5,7 @@ using UnityEngine.UIElements;
 
 public class GridSystem : MonoBehaviour
 {
+    public List<Transform> grounds = new List<Transform>();
     public GameObject grid;
 
     public LayerMask path;
@@ -13,20 +14,25 @@ public class GridSystem : MonoBehaviour
     public Bounds bounds;
     private void Start()
     {
-        bounds = GetComponent<Collider>().bounds;
-        for (int x = 0; x < transform.localScale.x; x++)
+
+        foreach (Transform ground in grounds)
         {
-            for (int z = 0; z < transform.localScale.z; z++)
+            bounds = ground.GetComponent<Collider>().bounds;
+            for (int x = 0; x < ground.localScale.x; x++)
             {
-                tileClone = Instantiate(grid, new Vector3(bounds.min.x + x, bounds.max.y, bounds.min.z + z), Quaternion.identity);
-
-                Collider[] hitColliders = Physics.OverlapBox(tileClone.transform.position, tileClone.transform.lossyScale, Quaternion.identity, path);
-
-                if (hitColliders.Length > 0)
+                for (int z = 0; z < ground.localScale.z; z++)
                 {
-                    Destroy(tileClone);
+                    tileClone = Instantiate(grid, new Vector3(bounds.min.x + x, bounds.max.y, bounds.min.z + z), Quaternion.identity);
+
+                    Collider[] hitColliders = Physics.OverlapBox(tileClone.transform.position, tileClone.transform.lossyScale, Quaternion.identity, path);
+
+                    if (hitColliders.Length > 0)
+                    {
+                        Destroy(tileClone);
+                    }
                 }
             }
         }
+        
     }
 }

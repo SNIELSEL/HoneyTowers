@@ -32,9 +32,9 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
+  - {fileID: 4491840892942070120}
   - {fileID: 7051356148177575956}
   - {fileID: 7715765036016264377}
-  - {fileID: 4491840892942070120}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!33 &2068799399499868997
@@ -419,6 +419,9 @@ MonoBehaviour:
   upgradePoints: 0
   maxUpgradePoint: 3
   upgradeText: {fileID: 2863128100986103891}
+  spawnPoint: {fileID: 0}
+  timesUpgraded: 0
+  maxUpgradeTimes: 0
   distance: 0
   enemy:
     serializedVersion: 2

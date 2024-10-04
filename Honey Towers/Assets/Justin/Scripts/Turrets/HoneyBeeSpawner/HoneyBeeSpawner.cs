@@ -24,7 +24,7 @@ public class HoneyBeeSpawner : BaseTurret
         {
             for (int i = 0; i < beeAmount; i++)
             {
-                GameObject beeClone = Instantiate(bee, beeSpawnPlace.position, Quaternion.identity);
+                GameObject beeClone = Instantiate(bee, beeSpawnPlace.position, Quaternion.identity, transform);
                 beeClone.GetComponent<HoneyBee>().attackPower = attackPower;
                 yield return new WaitForSeconds(0.1f);
             }
