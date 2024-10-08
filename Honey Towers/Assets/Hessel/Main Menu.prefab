@@ -3869,7 +3869,7 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 4812518924609561568}
+      - m_Target: {fileID: 3495834759357320122}
         m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
         m_MethodName: SetActive
         m_Mode: 6
@@ -6470,7 +6470,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'settings
+  m_text: 'Settings
 
 '
   m_isRightToLeft: 0
@@ -7205,7 +7205,7 @@ GameObject:
   - component: {fileID: 3768966408564781030}
   - component: {fileID: 6017624913274945063}
   m_Layer: 5
-  m_Name: Play - Button (3)
+  m_Name: Quit - Button
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

@@ -34,6 +34,8 @@ public class BaseTurret : MonoBehaviour
     public int maxUpgradeTimes;
     public TMP_Text attackPowerText, intervalTimeText, upgradeText;
 
+    public AudioSource shootingSound;
+
     protected virtual void Awake()
     {
         CheckTurretStats.Instance.AddTurret(transform.parent.gameObject);
@@ -85,6 +87,7 @@ public class BaseTurret : MonoBehaviour
 
     protected virtual void ShootAtEnemy()
     {
+        shootingSound.Play();
         GameObject bulletClone = Instantiate(bullet, spawnPoint.position, transform.rotation, transform.parent);
         bulletClone.GetComponent<BaseBullet>().attackPower = attackPower;
         bulletClone.GetComponent<BaseBullet>().ObjectToGet(enemyToAttack);

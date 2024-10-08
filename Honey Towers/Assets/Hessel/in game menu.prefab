@@ -690,7 +690,7 @@ MonoBehaviour:
       type: 3}
     turretAmount: 99
     turretAmountText: {fileID: 1618775737012417322}
-    showTurret: {fileID: 3609459842569676402, guid: f20a6d5146cca8f4eb9a8c9a0db52ba3,
+    showTurret: {fileID: 4362010024795580479, guid: 03a7fc5402baf7f499a0ebcb409ed61e,
       type: 3}
 --- !u!1 &1090484026535415073
 GameObject:
