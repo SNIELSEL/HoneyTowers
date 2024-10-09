@@ -16,6 +16,7 @@ public class DroppingTurretScript : MonoBehaviour
 
     public GameObject holdingThisTurret;
     public bool isHoldingTurret;
+    public float fallingSpeed;
 
     private void Awake()
     {
@@ -125,6 +126,7 @@ public class DroppingTurretScript : MonoBehaviour
                 holdingThisTurret = hit.transform.GetComponent<GridTile>().turret;
                 holdingThisTurret.GetComponentInChildren<BaseTurret>().attackPower /= 2;
                 hit.transform.GetComponent<GridTile>().turretAlreadyHere = false;
+                hit.transform.GetComponent<GridTile>().turret = null;
                 isHoldingTurret = true;
             }
         }
@@ -139,7 +141,9 @@ public class DroppingTurretScript : MonoBehaviour
             isHoldingTurret = false;
             holdingThisTurret.transform.position = new Vector3(gridDropPlace.position.x, holdingThisTurret.transform.position.y, gridDropPlace.position.z);
             holdingThisTurret.transform.rotation = Quaternion.Euler(0, holdingThisTurret.transform.rotation.y, 0);
-            holdingThisTurret.AddComponent<Rigidbody>();
+            Rigidbody rb = holdingThisTurret.AddComponent<Rigidbody>();
+            rb.useGravity = false;
+            rb.velocity = new Vector3(0, -fallingSpeed, 0);
             holdingThisTurret.GetComponentInChildren<BaseTurret>().attackPower *= 2;
             holdingThisTurret = null;
         }

@@ -1669,6 +1669,7 @@ MonoBehaviour:
   distance: 10
   xSpeed: 120
   ySpeed: 120
+  isMovingCamera: 0
 --- !u!1 &1187786437706922919
 GameObject:
   m_ObjectHideFlags: 0
@@ -8050,6 +8051,7 @@ MonoBehaviour:
     m_Bits: 64
   holdingThisTurret: {fileID: 0}
   isHoldingTurret: 0
+  fallingSpeed: 10
 --- !u!1 &8460198601171041363
 GameObject:
   m_ObjectHideFlags: 0
@@ -9158,7 +9160,7 @@ PrefabInstance:
     - target: {fileID: 8059437534871812880, guid: 8f37b5589a7b3114e8abceecdee70d1b,
         type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: 5.5000153
+      value: 5.500023
       objectReference: {fileID: 0}
     - target: {fileID: 8217932231290509679, guid: 8f37b5589a7b3114e8abceecdee70d1b,
         type: 3}
