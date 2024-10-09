@@ -35,30 +35,12 @@ public class EnemyBehaviour : MonoBehaviour
     {
         hp -= damage;
         hpBar.value = hp;
-        ShowEnemyDamage(damage);
-        
         if (hp <= 0)
         {
             WaveHandler.Instance.EnemyDie(gameObject);
             PlayerStats.Instance.GetCoins(5);
             Destroy(gameObject);
         }
-    }
-
-    private void ShowEnemyDamage(int damage)
-    {
-        if (damageNumberClone == null)
-        {
-            damageNumberClone = Instantiate(damageNumberPrefab, damageNumberSpawnPlace.position, Quaternion.identity, transform);
-            totalDamageNumber = 0;
-        }
-
-        totalDamageNumber += damage;
-        if (hp <= 0)
-        {
-            damageNumberClone.transform.SetParent(transform.parent);
-        }
-        damageNumberClone.GetComponentInChildren<TMP_Text>().text = "-" + totalDamageNumber.ToString();
     }
 
     

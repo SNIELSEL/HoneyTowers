@@ -13,7 +13,7 @@ public class CameraMovement : MonoBehaviour
     private float x = 0.0f;
     private float y = 0.0f;
 
-    private bool isMovingCamera;
+    public bool isMovingCamera;
 
     void Start()
     {

@@ -12,6 +12,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9473e4cb5bd850f4bb8ff0489a7415b6, type: 3}
   m_Name: HoneyBeeSpawner
   m_EditorClassIdentifier: 
-  attackPower: 50
+  attackPower: 20
   intervalSpeed: 5
   price: 5

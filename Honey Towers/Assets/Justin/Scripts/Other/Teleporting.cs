@@ -7,12 +7,22 @@ using UnityEngine.AI;
 public class Teleporting : MonoBehaviour
 {
     public Transform newPosition;
+    public string obj;
      private void OnTriggerEnter(Collider other)
    {
-        if (other.CompareTag("Enemy"))
+        if (other.CompareTag(obj))
         {
             other.transform.GetComponent<NavMeshAgent>().Warp(newPosition.position);
-            other.transform.GetComponent<EnemyMovement>().currentIndex++;
+            if (other.CompareTag("Enemy"))
+            {
+                other.transform.GetComponent<EnemyMovement>().currentIndex++;
+            }
+
+            else
+            {
+                other.transform.GetComponent<HoneyBee>().NextWavePoint();
+            }
+            
         }
     }
 }

@@ -262,7 +262,7 @@ GameObject:
   - component: {fileID: 3146164839125703386}
   - component: {fileID: 6069651695729823341}
   - component: {fileID: 8284770687466655748}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: HoneyBeeSpawner
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -751,12 +751,12 @@ PrefabInstance:
     - target: {fileID: -8679921383154817045, guid: ac80b342daf71f6409e28d74b9719e17,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: -0.52
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: ac80b342daf71f6409e28d74b9719e17,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: 1.75
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: ac80b342daf71f6409e28d74b9719e17,
         type: 3}
@@ -858,4 +858,4 @@ MonoBehaviour:
   shootingSound: {fileID: 0}
   bee: {fileID: 131942282283776753, guid: 235ab32b9484b0e44a95b2851aeecee0, type: 3}
   beeSpawnPlace: {fileID: 486420905542744009}
-  beeAmount: 3
+  beeAmount: 2

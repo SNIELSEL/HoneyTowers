@@ -131,9 +131,7 @@ public class HoneyBee : MonoBehaviour
     {
         if (reachPointIndex > 0)
         {
-            reachPointIndex--;
-            agent.SetDestination(reachPoints[reachPointIndex].position);
-            endPosition = reachPoints[reachPointIndex].position;
+            NextWavePoint();
         }
         else
         {
@@ -141,6 +139,14 @@ public class HoneyBee : MonoBehaviour
             endPosition = startPoint.position;
         }
         
+    }
+
+    public void NextWavePoint()
+    {
+        print("WORK");
+        reachPointIndex--;
+        agent.SetDestination(reachPoints[reachPointIndex].position);
+        endPosition = reachPoints[reachPointIndex].position;
     }
 
     private void OnTriggerEnter(Collider other)

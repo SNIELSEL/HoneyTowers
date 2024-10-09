@@ -340,7 +340,7 @@ GameObject:
   - component: {fileID: 2068799399499868997}
   - component: {fileID: 3175070987902075804}
   - component: {fileID: 8131914026526744805}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: HoneyFlameThrower
   m_TagString: Turret
   m_Icon: {fileID: 0}
@@ -5733,17 +5733,17 @@ PrefabInstance:
     - target: {fileID: -8679921383154817045, guid: 10fc2379bc483524c8f98c4f7bba8653,
         type: 3}
       propertyPath: m_LocalScale.x
-      value: 1
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 10fc2379bc483524c8f98c4f7bba8653,
         type: 3}
       propertyPath: m_LocalScale.y
-      value: 1
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 10fc2379bc483524c8f98c4f7bba8653,
         type: 3}
       propertyPath: m_LocalScale.z
-      value: 1
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 10fc2379bc483524c8f98c4f7bba8653,
         type: 3}

@@ -48,6 +48,7 @@ public class ShowShopMenu : MonoBehaviour
     private void PositionNormalCamera()
     {
         Camera.main.GetComponent<CameraMovement>().enabled = true;
+        Camera.main.GetComponent<CameraMovement>().isMovingCamera = false;
         shopCanvas.SetActive(false);
         normalCanvas.SetActive(true);
     }

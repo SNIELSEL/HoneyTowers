@@ -29,14 +29,13 @@ public class BeeHive : MonoBehaviour
     private void HandleLosingHP(GameObject enemy)
     {
         hp -= enemy.GetComponent<EnemyBehaviour>().attackPower;
-        ShowEnemyDamage(enemy.GetComponent<EnemyBehaviour>().attackPower);
         hpBar.value = hp;
         GameManager.Instance.CheckIfBeehiveDies(this);
         WaveHandler.Instance.EnemyDie(enemy);
         Destroy(enemy);
     }
 
-    private void ShowEnemyDamage(int damage)
+    /*private void ShowEnemyDamage(int damage)
     {
         GameObject damageNumber = Instantiate(damageNumberPrefab, damageNumberSpawnPlace.position, Quaternion.identity, transform);
 
@@ -45,7 +44,7 @@ public class BeeHive : MonoBehaviour
             damageNumber.transform.SetParent(transform.parent);
         }
         damageNumber.GetComponentInChildren<TMP_Text>().text = "-" + damage.ToString();
-    }
+    }*/
 
 
 
