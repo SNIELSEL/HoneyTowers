@@ -4,7 +4,6 @@ using UnityEngine;
 
 public class GridTile : MonoBehaviour
 {
-
     public bool turretAlreadyHere;
     public GameObject turret;
     public void LightUp(Color color)

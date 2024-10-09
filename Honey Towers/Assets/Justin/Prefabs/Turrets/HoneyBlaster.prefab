@@ -950,6 +950,10 @@ PrefabInstance:
         type: 3}
       insertIndex: -1
       addedObject: {fileID: 6054455145861460746}
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: c9791f35d07d1dd45985ad993c802033,
+        type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 5399949119766632006}
   m_SourcePrefab: {fileID: 100100000, guid: c9791f35d07d1dd45985ad993c802033, type: 3}
 --- !u!1 &1571454333806956913 stripped
 GameObject:
@@ -973,7 +977,7 @@ MonoBehaviour:
   range: 10
   enemiesSeen: []
   speed: 5
-  rotateSpeed: 0
+  rotateSpeed: 50
   targetEnemySpeed: 100
   bullet: {fileID: 337504288397111740, guid: 30ab5e0e5b26f5046ad64e318d76990d, type: 3}
   turretStats: {fileID: 11400000, guid: 45579bddf8dd28944bff0a5f9bce8dd3, type: 2}
@@ -989,6 +993,27 @@ MonoBehaviour:
   intervalTimeText: {fileID: 8982598569898136529}
   upgradeText: {fileID: 985022493696312519}
   shootingSound: {fileID: 6595176584121294549}
+--- !u!135 &5399949119766632006
+SphereCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1571454333806956913}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 1
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Radius: 2.832234
+  m_Center: {x: -0.0022826865, y: 0.17572172, z: -0.0022714734}
 --- !u!4 &2199231924826770379 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: c9791f35d07d1dd45985ad993c802033,

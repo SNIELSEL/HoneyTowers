@@ -17,6 +17,10 @@ public class DroppingTurretScript : MonoBehaviour
     public GameObject holdingThisTurret;
     public bool isHoldingTurret;
     public float fallingSpeed;
+    public float minDistance;
+    public float maxDistance;
+
+    public GameObject ballClone;
 
     private void Awake()
     {
@@ -60,8 +64,9 @@ public class DroppingTurretScript : MonoBehaviour
 
     private void CheckIfTurretCanLandHere()
     {
-        if (Physics.Raycast(transform.position, Vector3.down, out RaycastHit hit, 5f, highLightLayer))
+        if (Physics.Raycast(transform.position, Vector3.down, out RaycastHit hit, maxDistance, highLightLayer) && hit.distance >= minDistance)
         {
+
             if (selectedGrid != null & hit.transform != selectedGrid)
             {
                 selectedGrid.GetComponent<GridTile>().LightDown();
@@ -110,7 +115,7 @@ public class DroppingTurretScript : MonoBehaviour
     }
     private void HandleTurretPlacement(RaycastHit hit)
     {
-        if (Input.GetKeyDown(KeyCode.R))
+        if (Input.GetKeyDown(KeyCode.R) && ballClone == null)
         {
             if (selectedTurret.turretAmount > 0 || holdingThisTurret != null)
             {
@@ -118,9 +123,9 @@ public class DroppingTurretScript : MonoBehaviour
             }         
         }
 
-        if (Input.GetKeyDown(KeyCode.Q))
+        if (Input.GetKeyDown(KeyCode.Q) && ballClone == null)
         {
-            if (hit.transform.GetComponent<GridTile>().turretAlreadyHere & hit.transform.GetComponent<GridTile>().turret != null)
+            if (hit.transform.GetComponent<GridTile>().turretAlreadyHere & hit.transform.GetComponent<GridTile>().turret != null && !isHoldingTurret)
             {
                 GetComponentInChildren<Animator>().SetTrigger("PutBack");
                 holdingThisTurret = hit.transform.GetComponent<GridTile>().turret;
@@ -156,7 +161,7 @@ public class DroppingTurretScript : MonoBehaviour
             gridDropPlace.GetComponent<GridTile>().MakeTheTurretHere();
 
             float roundToDegrees = Mathf.Round(transform.eulerAngles.y / 90) * 90;
-            Instantiate(ball, new Vector3(gridDropPlace.position.x, transform.position.y, gridDropPlace.position.z), Quaternion.Euler(0,roundToDegrees,0));
+            ballClone = Instantiate(ball, new Vector3(gridDropPlace.position.x, transform.position.y, gridDropPlace.position.z), Quaternion.Euler(0,roundToDegrees,0));
         }
         
     }

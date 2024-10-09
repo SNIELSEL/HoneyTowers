@@ -8052,6 +8052,8 @@ MonoBehaviour:
   holdingThisTurret: {fileID: 0}
   isHoldingTurret: 0
   fallingSpeed: 10
+  minDistance: 1.2
+  maxDistance: 5
 --- !u!1 &8460198601171041363
 GameObject:
   m_ObjectHideFlags: 0
