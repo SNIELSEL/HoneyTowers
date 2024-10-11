@@ -181,6 +181,14 @@ public class DroppingTurretScript : MonoBehaviour
         turret.transform.rotation = transform.rotation;      
     }
 
+    private void GetTheSellScreen()
+    {
+        if (isHoldingTurret)
+        {
+
+        }
+    }
+
     
     
     

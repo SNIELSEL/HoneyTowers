@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class BallMovement : BaseBullet
 {
+    public GameObject tinyExplosion;
     
     private void Update()
     {
@@ -22,6 +23,7 @@ public class BallMovement : BaseBullet
         if (other.CompareTag("Enemy"))
         {
             other.GetComponent<EnemyBehaviour>().TakeHP(attackPower, transform);
+            Instantiate(tinyExplosion, transform.position, Quaternion.identity);
             Destroy(gameObject);
         }
     }

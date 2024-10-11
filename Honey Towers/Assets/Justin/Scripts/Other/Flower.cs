@@ -50,5 +50,6 @@ public class Flower : MonoBehaviour
     {
         canBePollinated = false;
         FlowerInstantiation.Instance.RemoveFlowerFromArray(transform);
+        currentValue = 0;
     }
 }
