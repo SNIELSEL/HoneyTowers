@@ -28,7 +28,7 @@ public class GridTile : MonoBehaviour
         { 
             if (turret == null)
             {
-                turret = Instantiate(DroppingTurretScript.Instance.selectedTurret.turret, transform.position, other.transform.rotation);
+                turret = Instantiate(other.GetComponent<BallHoldTurretInfo>().turret, transform.position, other.transform.rotation);
             }
             else
             {

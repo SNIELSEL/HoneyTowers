@@ -14,4 +14,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   attackPower: 100
   intervalSpeed: 2
-  price: 75
+  price: 35

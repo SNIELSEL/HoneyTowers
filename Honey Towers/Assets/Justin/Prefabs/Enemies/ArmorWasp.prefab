@@ -549,7 +549,7 @@ GameObject:
   - component: {fileID: 3175851323904648560}
   - component: {fileID: 753746987522318395}
   - component: {fileID: 8862976910681544000}
-  - component: {fileID: 6782948114026707185}
+  - component: {fileID: 7280943978762231449}
   m_Layer: 0
   m_Name: ArmorWasp
   m_TagString: Enemy
@@ -713,7 +713,7 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
---- !u!114 &6782948114026707185
+--- !u!114 &7280943978762231449
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -722,14 +722,15 @@ MonoBehaviour:
   m_GameObject: {fileID: 7680133142993079238}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7419a459f2332c34cb54e0bb225e5b78, type: 3}
+  m_Script: {fileID: 11500000, guid: 6db2c8113e466e7458d76853c97fd386, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   hp: 0
   speed: 0
   attackPower: 0
   hpBar: {fileID: 3052023405101320008}
-  stats: {fileID: 11400000, guid: ec7a92fe54a7538408890995b9a83efe, type: 2}
+  stats: {fileID: 11400000, guid: 428e585ee4de2414c9e225a0a20e65a1, type: 2}
+  tagToGetHit: ExplosionBall
 --- !u!1001 &1973737760959217123
 PrefabInstance:
   m_ObjectHideFlags: 0

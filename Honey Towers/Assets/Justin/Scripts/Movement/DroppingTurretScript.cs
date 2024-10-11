@@ -169,6 +169,7 @@ public class DroppingTurretScript : MonoBehaviour
 
             float roundToDegrees = Mathf.Round(transform.eulerAngles.y / 90) * 90;
             ballClone = Instantiate(ball, new Vector3(gridDropPlace.position.x, transform.position.y, gridDropPlace.position.z), Quaternion.Euler(0,roundToDegrees,0));
+            ballClone.GetComponent<BallHoldTurretInfo>().turret = selectedTurret.turret;
         }
         
     }
@@ -179,17 +180,6 @@ public class DroppingTurretScript : MonoBehaviour
         Vector3 newPos = new Vector3(transform.position.x, minY, transform.position.z);
         turret.transform.position = Vector3.MoveTowards(turret.transform.position, newPos, 0.5f);
         turret.transform.rotation = transform.rotation;      
-    }
-
-    private void GetTheSellScreen()
-    {
-        if (isHoldingTurret)
-        {
-
-        }
-    }
-
-    
-    
+    }   
     
 }
