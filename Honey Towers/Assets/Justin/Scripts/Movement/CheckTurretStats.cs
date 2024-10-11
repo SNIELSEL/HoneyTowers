@@ -27,13 +27,12 @@ public class CheckTurretStats : MonoBehaviour
         hoveringTurret = Physics.Raycast(ray, out hit, Mathf.Infinity, turretMask);
         if (Input.GetMouseButtonDown(0))
         {
-            Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
 
             if (hoveringTurret)
             {
                 foreach (GameObject turret in turrets)
                 {
-                    if (turret == hit.transform.gameObject)
+                    if (turret == hit.transform.parent.gameObject)
                     {
                         turret.GetComponentInChildren<Canvas>().enabled = true;
                     }
@@ -54,20 +53,27 @@ public class CheckTurretStats : MonoBehaviour
 
         if (hoveringTurret)
         {
-            if (previousTurret != null && hit.transform != previousTurret)
+            if (previousTurret != null && hit.transform.parent != previousTurret)
             {
                 foreach (Renderer renderer in previousTurret.GetComponentsInChildren<Renderer>())
                 {
-                    renderer.material.color = Color.white;
+                    foreach (Material material in renderer.materials)
+                    {
+                        material.color = Color.white;
+                    }
                 }
                 
             }
-            previousTurret = hit.transform;
+            previousTurret = hit.transform.parent;
             isRaycasting = true;
 
-            foreach (Renderer renderer in hit.transform.GetComponentsInChildren<Renderer>())
+            foreach (Renderer renderer in hit.transform.parent.GetComponentsInChildren<Renderer>())
             {
-                renderer.material.color = Color.red;
+                foreach (Material material in renderer.materials)
+                {
+                    material.color = Color.red;
+                }
+                
             }
 
         }
@@ -76,7 +82,10 @@ public class CheckTurretStats : MonoBehaviour
         {
             foreach (Renderer renderer in previousTurret.GetComponentsInChildren<Renderer>())
             {
-                renderer.material.color = Color.white;
+                foreach (Material material in renderer.materials)
+                {
+                    material.color = Color.white;
+                }
             }
 
             isRaycasting = false;

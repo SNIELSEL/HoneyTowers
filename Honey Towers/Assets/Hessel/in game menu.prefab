@@ -1077,7 +1077,7 @@ MonoBehaviour:
   turret:
     turret: {fileID: 4362010024795580479, guid: 1d03ebb77ac9fa6468653f083d6e3150,
       type: 3}
-    turretAmount: 0
+    turretAmount: 50
     turretAmountText: {fileID: 1618775737012417322}
     showTurret: {fileID: 4362010024795580479, guid: 03a7fc5402baf7f499a0ebcb409ed61e,
       type: 3}
@@ -2224,7 +2224,7 @@ MonoBehaviour:
   turret:
     turret: {fileID: 3609459842569676402, guid: c1c6caf4d3ab79d4fba6261ffd6348c4,
       type: 3}
-    turretAmount: 0
+    turretAmount: 50
     turretAmountText: {fileID: 6093012499734527014}
     showTurret: {fileID: 3609459842569676402, guid: f20a6d5146cca8f4eb9a8c9a0db52ba3,
       type: 3}
@@ -3149,7 +3149,7 @@ MonoBehaviour:
   turret:
     turret: {fileID: 3609459842569676402, guid: 9f6c116d282c8a741873d9e4aa1237b1,
       type: 3}
-    turretAmount: 0
+    turretAmount: 50
     turretAmountText: {fileID: 1831278105406065405}
     showTurret: {fileID: 3609459842569676402, guid: 1a2778ddfaca417409161d5f8f2a8530,
       type: 3}
@@ -3994,7 +3994,7 @@ MonoBehaviour:
   turret:
     turret: {fileID: 3609459842569676402, guid: 84041dc12449852489ebd0f0a25709e4,
       type: 3}
-    turretAmount: 0
+    turretAmount: 50
     turretAmountText: {fileID: 3266487207192907931}
     showTurret: {fileID: 3609459842569676402, guid: f49ec06b85e4c7747873e44e94f5d969,
       type: 3}
@@ -6073,6 +6073,7 @@ GameObject:
   - component: {fileID: 1745645002389543313}
   - component: {fileID: 746327821636201485}
   - component: {fileID: 4667188205047604905}
+  - component: {fileID: 6265816930752387895}
   m_Layer: 5
   m_Name: HoneyBeeSpawner
   m_TagString: Untagged
@@ -6182,7 +6183,33 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 746327821636201485}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 6265816930752387895}
+        m_TargetAssemblyTypeName: BuyScript, Assembly-CSharp
+        m_MethodName: Buy
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+--- !u!114 &6265816930752387895
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5697853011585978232}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8af6bdcc7cafbe2499039df321a34826, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  inventoryScript: {fileID: 6814040729949113170}
+  price: 150
 --- !u!1 &5921875247474341873
 GameObject:
   m_ObjectHideFlags: 0

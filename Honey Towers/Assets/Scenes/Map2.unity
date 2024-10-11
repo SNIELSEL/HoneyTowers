@@ -2114,7 +2114,7 @@ PrefabInstance:
     - target: {fileID: 809592639636970201, guid: ccbdf8b606ee03d4983c0c3544d0bc1b,
         type: 3}
       propertyPath: turret.turretAmount
-      value: 0
+      value: 50
       objectReference: {fileID: 0}
     - target: {fileID: 1303972187206275648, guid: ccbdf8b606ee03d4983c0c3544d0bc1b,
         type: 3}
@@ -2199,7 +2199,7 @@ PrefabInstance:
     - target: {fileID: 3157870919754586862, guid: ccbdf8b606ee03d4983c0c3544d0bc1b,
         type: 3}
       propertyPath: turret.turretAmount
-      value: 0
+      value: 50
       objectReference: {fileID: 0}
     - target: {fileID: 3200556524612192725, guid: ccbdf8b606ee03d4983c0c3544d0bc1b,
         type: 3}
@@ -2333,6 +2333,16 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Enabled
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5140994811520502232, guid: ccbdf8b606ee03d4983c0c3544d0bc1b,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 11.53
+      objectReference: {fileID: 0}
+    - target: {fileID: 5140994811520502232, guid: ccbdf8b606ee03d4983c0c3544d0bc1b,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 11.9
       objectReference: {fileID: 0}
     - target: {fileID: 5173240051262906483, guid: ccbdf8b606ee03d4983c0c3544d0bc1b,
         type: 3}
@@ -2507,7 +2517,7 @@ PrefabInstance:
     - target: {fileID: 6308697534176139833, guid: ccbdf8b606ee03d4983c0c3544d0bc1b,
         type: 3}
       propertyPath: turret.turretAmount
-      value: 0
+      value: 50
       objectReference: {fileID: 0}
     - target: {fileID: 6627392057701505009, guid: ccbdf8b606ee03d4983c0c3544d0bc1b,
         type: 3}
@@ -2592,7 +2602,7 @@ PrefabInstance:
     - target: {fileID: 7268083880130173722, guid: ccbdf8b606ee03d4983c0c3544d0bc1b,
         type: 3}
       propertyPath: turret.turretAmount
-      value: 0
+      value: 50
       objectReference: {fileID: 0}
     - target: {fileID: 7294439063465610488, guid: ccbdf8b606ee03d4983c0c3544d0bc1b,
         type: 3}
@@ -2665,6 +2675,7 @@ PrefabInstance:
     - {fileID: 6852306010140718208, guid: ccbdf8b606ee03d4983c0c3544d0bc1b, type: 3}
     - {fileID: 6564629712453683492, guid: ccbdf8b606ee03d4983c0c3544d0bc1b, type: 3}
     - {fileID: 2753619431852728261, guid: ccbdf8b606ee03d4983c0c3544d0bc1b, type: 3}
+    - {fileID: 1741692188073456760, guid: ccbdf8b606ee03d4983c0c3544d0bc1b, type: 3}
     m_AddedGameObjects:
     - targetCorrespondingSourceObject: {fileID: 5447270507697338599, guid: ccbdf8b606ee03d4983c0c3544d0bc1b,
         type: 3}
