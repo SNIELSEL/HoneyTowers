@@ -4,14 +4,21 @@ using UnityEngine;
 
 public class SellScreen : MonoBehaviour
 {
-    public void SellTurret()
+
+    private void OnTriggerEnter(Collider other)
     {
-        if (DroppingTurretScript.Instance.holdingThisTurret != null)
+        if (other.CompareTag("Player"))
         {
-            PlayerStats.Instance.GetCoins(DroppingTurretScript.Instance.holdingThisTurret.GetComponentInChildren<BaseTurret>().price);
-            Destroy(DroppingTurretScript.Instance.holdingThisTurret);
-            DroppingTurretScript.Instance.isHoldingTurret = false;
-            DroppingTurretScript.Instance.holdingThisTurret = null;
+            InventoryController.Instance.OpenShop();
         }
     }
+
+    private void OnTriggerExit(Collider other)
+    {
+        if (other.CompareTag("Player"))
+        {
+            InventoryController.Instance.OpenShop();
+        }
+    }
+    
 }
