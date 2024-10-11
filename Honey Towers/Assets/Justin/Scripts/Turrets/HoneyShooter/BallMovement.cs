@@ -21,7 +21,7 @@ public class BallMovement : BaseBullet
     {
         if (other.CompareTag("Enemy"))
         {
-            other.GetComponent<EnemyBehaviour>().TakeHP(attackPower);
+            other.GetComponent<EnemyBehaviour>().TakeHP(attackPower, transform);
             Destroy(gameObject);
         }
     }

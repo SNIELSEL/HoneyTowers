@@ -12,6 +12,8 @@ TagManager:
   - PathFolder
   - StartPoint
   - Bee
+  - EndPoint
+  - ExplosionBall
   layers:
   - Default
   - TransparentFX

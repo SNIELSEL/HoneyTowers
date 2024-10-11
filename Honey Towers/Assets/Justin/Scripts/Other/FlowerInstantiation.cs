@@ -9,6 +9,7 @@ public class FlowerInstantiation : MonoBehaviour
     public List<Transform> allFlowers;
     public List<Transform> pollinatedFlowers;
     public int maxPollinatedFlowers;
+    public int amountAvailableToReset;
 
     private void Awake()
     {
@@ -39,7 +40,7 @@ public class FlowerInstantiation : MonoBehaviour
                 pollinatedFlowers.Add(randomFlower);
                 randomFlower.GetComponent<Flower>().EnablePollinating();            
             }
-            yield return new WaitUntil(() => pollinatedFlowers.Count <= 2);
+            yield return new WaitUntil(() => pollinatedFlowers.Count <= amountAvailableToReset);
             
         }
     }

@@ -44,6 +44,8 @@ public class HoneyBee : MonoBehaviour
             reachPoints.Add(reachPointFolder.GetChild(i).GetComponent<Transform>());
         }
 
+        reachPoints.Add(GameObject.FindGameObjectWithTag("EndPoint").transform);
+
         for (int i = 0; i < pathFolder.childCount; i++)
         {
             pathColliders.Add(pathFolder.GetChild(i).GetComponent<Collider>());
@@ -108,8 +110,8 @@ public class HoneyBee : MonoBehaviour
             }
         }
 
-        int indexChildA = closestObjectA.GetSiblingIndex();
-        int indexChildB = closestObjectB.GetSiblingIndex();
+        int indexChildA = reachPoints.IndexOf(closestObjectA);
+        int indexChildB = reachPoints.IndexOf(closestObjectB);
 
         if (indexChildA < indexChildB)
         {
@@ -143,7 +145,6 @@ public class HoneyBee : MonoBehaviour
 
     public void NextWavePoint()
     {
-        print("WORK");
         reachPointIndex--;
         agent.SetDestination(reachPoints[reachPointIndex].position);
         endPosition = reachPoints[reachPointIndex].position;
@@ -153,7 +154,7 @@ public class HoneyBee : MonoBehaviour
     {
         if (other.CompareTag("Enemy"))
         {
-            other.GetComponent<EnemyBehaviour>().TakeHP(attackPower);
+            other.GetComponent<EnemyBehaviour>().TakeHP(attackPower, transform);
             Destroy(gameObject);
         }
 

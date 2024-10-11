@@ -44,7 +44,7 @@ public class HoneyFlameThrowerBehaviour : BaseTurret
     {
         while (enemiesSeen.Contains(enemy))
         {
-            enemy.GetComponent<EnemyBehaviour>().TakeHP(attackPower);
+            enemy.GetComponent<EnemyBehaviour>().TakeHP(attackPower, transform);
             yield return new WaitForSeconds(intervalTime);
         }
     }

@@ -131,12 +131,13 @@ public class BaseTurret : MonoBehaviour
 
     protected virtual void OnTriggerEnter(Collider other)
     {
-        if (other.CompareTag("Enemy"))
+        if (other.CompareTag("Enemy") && !enemiesSeen.Contains(other.transform))
         {
             enemiesSeen.Add(other.transform);
             SeesEnemy();
         }
     }
+
 
     protected virtual void OnTriggerExit(Collider other)
     {
@@ -151,6 +152,8 @@ public class BaseTurret : MonoBehaviour
 
         }
     }
+
+
 
     public virtual void UpgradePoints()
     {
@@ -174,8 +177,6 @@ public class BaseTurret : MonoBehaviour
         }
 
         upgradeText.text = "UpgradePoints: " + upgradePoints + "/" + maxUpgradePoint;
-
-
     }
 
     protected virtual void UpgradeTurret()
@@ -187,8 +188,6 @@ public class BaseTurret : MonoBehaviour
         attackPowerText.text = "AttackPower: " + attackPower;
         intervalTimeText.text = "IntervalTime: " + intervalTime;
     }
-
-    
 
 
 }

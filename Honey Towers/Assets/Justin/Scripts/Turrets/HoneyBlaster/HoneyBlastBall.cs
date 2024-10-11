@@ -22,7 +22,7 @@ public class HoneyBlastBall : BaseBullet
     {
         if (other.CompareTag("Enemy"))
         {
-            other.GetComponent<EnemyBehaviour>().TakeHP(attackPower);
+            other.GetComponent<EnemyBehaviour>().TakeHP(attackPower, transform);
             Instantiate(explosion, transform.position, Quaternion.identity);
             Destroy(gameObject);
         }

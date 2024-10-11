@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -133,6 +134,11 @@ public class DroppingTurretScript : MonoBehaviour
                 hit.transform.GetComponent<GridTile>().turretAlreadyHere = false;
                 hit.transform.GetComponent<GridTile>().turret = null;
                 isHoldingTurret = true;
+
+                if (holdingThisTurret.GetComponentInChildren<HoneyBeeSpawner>()!= null)
+                {
+                    holdingThisTurret.GetComponentInChildren<HoneyBeeSpawner>().enabled = false;
+                }
             }
         }
     }
@@ -156,6 +162,7 @@ public class DroppingTurretScript : MonoBehaviour
         {
             if (gridDropPlace.GetComponent<GridTile>().turretAlreadyHere &&
                 gridDropPlace.GetComponent<GridTile>().turret.transform.GetChild(0).name != selectedTurret.turret.transform.GetChild(0).name) return;
+            GetComponentInChildren<Animator>().SetTrigger("Open");
             selectedTurret.turretAmount--;
             selectedTurret.turretAmountText.text = selectedTurret.turretAmount.ToString();
             gridDropPlace.GetComponent<GridTile>().MakeTheTurretHere();

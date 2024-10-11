@@ -16,7 +16,7 @@ GameObject:
   - component: {fileID: 6050700458890129096}
   m_Layer: 0
   m_Name: ExplosionBall
-  m_TagString: Untagged
+  m_TagString: ExplosionBall
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -148,5 +148,5 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speed: 100
   attackPower: 3
-  explosion: {fileID: 7441294029910776250, guid: 33f92252f6f5fce418990c0d7d47a2de,
+  explosion: {fileID: 8768234927231795180, guid: 51c1cd65916648546b891716712dd460,
     type: 3}

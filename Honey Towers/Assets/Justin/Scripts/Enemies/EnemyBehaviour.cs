@@ -14,13 +14,6 @@ public class EnemyBehaviour : MonoBehaviour
     public Slider hpBar;
     public EnemyStats stats;
 
-    public Transform damageNumberSpawnPlace;
-    public GameObject damageNumberPrefab;
-
-    private GameObject damageNumberClone;
-
-    private int totalDamageNumber;
-
     private void Awake()
     {
         hp = stats.hp;
@@ -31,8 +24,8 @@ public class EnemyBehaviour : MonoBehaviour
         hpBar.value = stats.hp;
     }
 
-    public void TakeHP(int damage)
-    {
+    public virtual void TakeHP(int damage, Transform objectHit)
+    {   
         hp -= damage;
         hpBar.value = hp;
         if (hp <= 0)

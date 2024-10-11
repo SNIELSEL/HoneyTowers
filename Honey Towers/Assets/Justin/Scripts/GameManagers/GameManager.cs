@@ -1,6 +1,7 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using TMPro;
 using UnityEngine;
 using UnityEngine.Playables;
 
@@ -15,7 +16,7 @@ public class GameManager : MonoBehaviour
     public List<GameObject> enemiesSpawned;
     public Transform enemyFolder;
 
-    public GameObject gameoverScreen;
+    public TMP_Text gameOverText;
 
     public bool isWaveStarted;
     public int waveNumber;
@@ -64,6 +65,8 @@ public class GameManager : MonoBehaviour
         WaveHandler.Instance.StopAllCoroutines();
         WaveHandler.Instance.enabled = false;
         WaveHandler.Instance.battleText.enabled = false;
+        gameOverText.text = "Made it to wave " + waveNumber; 
+
         this.enabled = false;
     }
 

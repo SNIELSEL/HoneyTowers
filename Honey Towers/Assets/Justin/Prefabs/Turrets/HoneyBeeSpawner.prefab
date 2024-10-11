@@ -400,7 +400,7 @@ GameObject:
   - component: {fileID: 8284770687466655748}
   m_Layer: 10
   m_Name: HoneyBeeSpawner
-  m_TagString: Untagged
+  m_TagString: Turret
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -418,8 +418,8 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
-  - {fileID: 2720940395776479714}
   - {fileID: 3991171162437188785}
+  - {fileID: 2720940395776479714}
   - {fileID: 486420905542744009}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -991,9 +991,9 @@ MonoBehaviour:
   spawnPoint: {fileID: 0}
   timesUpgraded: 0
   maxUpgradeTimes: 0
-  attackPowerText: {fileID: 0}
-  intervalTimeText: {fileID: 0}
-  upgradeText: {fileID: 0}
+  attackPowerText: {fileID: 4989646158001830243}
+  intervalTimeText: {fileID: 1312113866294406649}
+  upgradeText: {fileID: 2447894560599182291}
   shootingSound: {fileID: 0}
   bee: {fileID: 131942282283776753, guid: 235ab32b9484b0e44a95b2851aeecee0, type: 3}
   beeSpawnPlace: {fileID: 486420905542744009}

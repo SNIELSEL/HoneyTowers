@@ -49,7 +49,6 @@ public class WaveHandler : MonoBehaviour
             Instance = this;
         }
     }
-    [ContextMenu("StartWave")]
     public void StartWave()
     {    
         ChooseGroup();

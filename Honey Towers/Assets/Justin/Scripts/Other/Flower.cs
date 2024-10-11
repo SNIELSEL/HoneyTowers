@@ -16,7 +16,7 @@ public class Flower : MonoBehaviour
 
     private void Awake()
     {
-        showPollinatedFlower = GetComponent<ParticleSystem>();
+        showPollinatedFlower = GetComponentInChildren<ParticleSystem>();
     }
     public void Pollinate(Slider pollinatingFlower)
     {

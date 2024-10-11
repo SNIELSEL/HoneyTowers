@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using UnityEditor.ShaderKeywordFilter;
 using UnityEngine;
 
 public class GridTile : MonoBehaviour
@@ -34,15 +35,26 @@ public class GridTile : MonoBehaviour
             {
                 turret.GetComponentInChildren<BaseTurret>().UpgradePoints();
             }
-            
+
+            other.GetComponentInChildren<ParticleSystem>().Play();
+            other.GetComponentInChildren<AudioSource>().Play();
+            other.transform.GetChild(0).parent = null;
             Destroy(other.gameObject);
+            DroppingTurretScript.Instance.ballClone = null;
         }
 
         if (other.GetComponent<Rigidbody>() != null & other.CompareTag("Turret"))
         {
             turret = other.gameObject;
             other.transform.position = transform.position;
+
+            if (other.GetComponentInChildren<HoneyBeeSpawner>() != null)
+            {
+                other.GetComponentInChildren<HoneyBeeSpawner>().enabled = true;
+            }
             Destroy(other.GetComponent<Rigidbody>());
+
+            
         }
     }
 }

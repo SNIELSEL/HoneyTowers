@@ -294,7 +294,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &2897929708456887056
 RectTransform:
   m_ObjectHideFlags: 0
@@ -322,7 +322,7 @@ Canvas:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4304937494617042342}
-  m_Enabled: 1
+  m_Enabled: 0
   serializedVersion: 3
   m_RenderMode: 2
   m_Camera: {fileID: 0}
@@ -432,7 +432,8 @@ AudioSource:
   m_GameObject: {fileID: 4492509864180848515}
   m_Enabled: 1
   serializedVersion: 4
-  OutputAudioMixerGroup: {fileID: 0}
+  OutputAudioMixerGroup: {fileID: 6575334775207437645, guid: f4db7cd128caaa0478593895c9d75099,
+    type: 2}
   m_audioClip: {fileID: 8300000, guid: 58912689fbd646e4687d9d31fd236c74, type: 3}
   m_PlayOnAwake: 0
   m_Volume: 0.1
@@ -1128,9 +1129,9 @@ MonoBehaviour:
   spawnPoint: {fileID: 2898540870580407831}
   timesUpgraded: 0
   maxUpgradeTimes: 0
-  attackPowerText: {fileID: 0}
-  intervalTimeText: {fileID: 0}
-  upgradeText: {fileID: 0}
+  attackPowerText: {fileID: 4417177062699888642}
+  intervalTimeText: {fileID: 1319959382259106831}
+  upgradeText: {fileID: 3219071930685080076}
   shootingSound: {fileID: 6595176584121294549}
 --- !u!135 &5399949119766632006
 SphereCollider:
