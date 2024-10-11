@@ -5739,29 +5739,31 @@ MonoBehaviour:
   - groupName: Wave1
     availableEnemies:
     - {fileID: 7680133142993079238, guid: c27f2c39e11cc394e920c6184d6ad93c, type: 3}
+    - {fileID: 7680133142993079238, guid: c27f2c39e11cc394e920c6184d6ad93c, type: 3}
+    - {fileID: 7680133142993079238, guid: c27f2c39e11cc394e920c6184d6ad93c, type: 3}
     minScoreCost: 1
     maxScoreCost: 1
-    enemyCount: 3
-    enemyInterval: 1
+    enemyCount: 6
+    enemyInterval: 0.75
     enemyLayouts: 0
   - groupName: Wave2
     availableEnemies:
-    - {fileID: 7680133142993079238, guid: c27f2c39e11cc394e920c6184d6ad93c, type: 3}
-    - {fileID: 7680133142993079238, guid: c27f2c39e11cc394e920c6184d6ad93c, type: 3}
     - {fileID: 7680133142993079238, guid: 065ec2bdcf9278f489b7f1f629cba81e, type: 3}
     - {fileID: 7680133142993079238, guid: 065ec2bdcf9278f489b7f1f629cba81e, type: 3}
     minScoreCost: 2
     maxScoreCost: 2
     enemyCount: 4
-    enemyInterval: 1
+    enemyInterval: 0.75
     enemyLayouts: 0
   - groupName: Wave3
     availableEnemies:
     - {fileID: 7680133142993079238, guid: c27f2c39e11cc394e920c6184d6ad93c, type: 3}
+    - {fileID: 7680133142993079238, guid: c27f2c39e11cc394e920c6184d6ad93c, type: 3}
+    - {fileID: 7680133142993079238, guid: 065ec2bdcf9278f489b7f1f629cba81e, type: 3}
     minScoreCost: 3
     maxScoreCost: 3
-    enemyCount: 8
-    enemyInterval: 1
+    enemyCount: 9
+    enemyInterval: 0.75
     enemyLayouts: 0
   - groupName: Wave4
     availableEnemies:
@@ -5776,73 +5778,80 @@ MonoBehaviour:
     - {fileID: 7680133142993079238, guid: c27f2c39e11cc394e920c6184d6ad93c, type: 3}
     minScoreCost: 4
     maxScoreCost: 4
-    enemyCount: 8
+    enemyCount: 12
     enemyInterval: 1
     enemyLayouts: 0
   - groupName: Wave5
     availableEnemies:
     - {fileID: 7680133142993079238, guid: ced5f6e86c174494fad29a489c150de3, type: 3}
     - {fileID: 7680133142993079238, guid: ced5f6e86c174494fad29a489c150de3, type: 3}
-    - {fileID: 7680133142993079238, guid: ced5f6e86c174494fad29a489c150de3, type: 3}
-    - {fileID: 7680133142993079238, guid: ced5f6e86c174494fad29a489c150de3, type: 3}
-    - {fileID: 7680133142993079238, guid: 065ec2bdcf9278f489b7f1f629cba81e, type: 3}
     - {fileID: 7680133142993079238, guid: 065ec2bdcf9278f489b7f1f629cba81e, type: 3}
     - {fileID: 7680133142993079238, guid: c27f2c39e11cc394e920c6184d6ad93c, type: 3}
     minScoreCost: 5
     maxScoreCost: 5
-    enemyCount: 7
-    enemyInterval: 1
+    enemyCount: 10
+    enemyInterval: 1.5
     enemyLayouts: 0
   - groupName: Wave6
     availableEnemies:
     - {fileID: 7680133142993079238, guid: ced5f6e86c174494fad29a489c150de3, type: 3}
+    - {fileID: 7680133142993079238, guid: ced5f6e86c174494fad29a489c150de3, type: 3}
+    - {fileID: 7680133142993079238, guid: ced5f6e86c174494fad29a489c150de3, type: 3}
     minScoreCost: 6
     maxScoreCost: 6
-    enemyCount: 5
+    enemyCount: 12
     enemyInterval: 1
     enemyLayouts: 0
   - groupName: Wave7
     availableEnemies:
+    - {fileID: 7680133142993079238, guid: 3aa1294df7a272e44b0e627eaebd2d11, type: 3}
+    - {fileID: 7680133142993079238, guid: c27f2c39e11cc394e920c6184d6ad93c, type: 3}
+    - {fileID: 7680133142993079238, guid: 065ec2bdcf9278f489b7f1f629cba81e, type: 3}
     - {fileID: 7680133142993079238, guid: 065ec2bdcf9278f489b7f1f629cba81e, type: 3}
     minScoreCost: 7
     maxScoreCost: 7
     enemyCount: 10
-    enemyInterval: 1
+    enemyInterval: 3
     enemyLayouts: 0
   - groupName: Wave8
     availableEnemies:
     - {fileID: 7680133142993079238, guid: 065ec2bdcf9278f489b7f1f629cba81e, type: 3}
     - {fileID: 7680133142993079238, guid: 3aa1294df7a272e44b0e627eaebd2d11, type: 3}
+    - {fileID: 7680133142993079238, guid: 3aa1294df7a272e44b0e627eaebd2d11, type: 3}
+    - {fileID: 7680133142993079238, guid: 3aa1294df7a272e44b0e627eaebd2d11, type: 3}
+    - {fileID: 7680133142993079238, guid: c27f2c39e11cc394e920c6184d6ad93c, type: 3}
     minScoreCost: 8
     maxScoreCost: 8
-    enemyCount: 6
-    enemyInterval: 1
+    enemyCount: 12
+    enemyInterval: 3
     enemyLayouts: 0
   - groupName: Wave9
     availableEnemies:
     - {fileID: 7680133142993079238, guid: ced5f6e86c174494fad29a489c150de3, type: 3}
     - {fileID: 7680133142993079238, guid: 3aa1294df7a272e44b0e627eaebd2d11, type: 3}
+    - {fileID: 7680133142993079238, guid: c27f2c39e11cc394e920c6184d6ad93c, type: 3}
+    - {fileID: 7680133142993079238, guid: 065ec2bdcf9278f489b7f1f629cba81e, type: 3}
     minScoreCost: 9
     maxScoreCost: 9
-    enemyCount: 6
-    enemyInterval: 1
+    enemyCount: 16
+    enemyInterval: 4
     enemyLayouts: 0
   - groupName: Wave10
     availableEnemies:
     - {fileID: 7680133142993079238, guid: c27f2c39e11cc394e920c6184d6ad93c, type: 3}
     - {fileID: 7680133142993079238, guid: c27f2c39e11cc394e920c6184d6ad93c, type: 3}
     - {fileID: 7680133142993079238, guid: c27f2c39e11cc394e920c6184d6ad93c, type: 3}
+    - {fileID: 7680133142993079238, guid: 3aa1294df7a272e44b0e627eaebd2d11, type: 3}
     - {fileID: 7680133142993079238, guid: c27f2c39e11cc394e920c6184d6ad93c, type: 3}
     - {fileID: 7680133142993079238, guid: c27f2c39e11cc394e920c6184d6ad93c, type: 3}
-    - {fileID: 7680133142993079238, guid: c27f2c39e11cc394e920c6184d6ad93c, type: 3}
-    - {fileID: 7680133142993079238, guid: c27f2c39e11cc394e920c6184d6ad93c, type: 3}
+    - {fileID: 7680133142993079238, guid: ced5f6e86c174494fad29a489c150de3, type: 3}
     - {fileID: 7680133142993079238, guid: c27f2c39e11cc394e920c6184d6ad93c, type: 3}
     - {fileID: 7680133142993079238, guid: c27f2c39e11cc394e920c6184d6ad93c, type: 3}
     - {fileID: 7680133142993079238, guid: c27f2c39e11cc394e920c6184d6ad93c, type: 3}
     - {fileID: 7680133142993079238, guid: f50210567e33de0409c050ebf4f3f3fc, type: 3}
     minScoreCost: 10
     maxScoreCost: 10
-    enemyCount: 11
+    enemyCount: 14
     enemyInterval: 2
     enemyLayouts: 0
   availableGroups: []
