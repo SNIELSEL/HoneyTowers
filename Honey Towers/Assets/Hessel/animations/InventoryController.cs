@@ -4,8 +4,8 @@ using UnityEngine;
 
 public class InventoryController : MonoBehaviour
 {
-    public GameObject panel;
-
+    public GameObject inventory;
+    public GameObject shop;
 
 
     public void Update()
@@ -14,13 +14,29 @@ public class InventoryController : MonoBehaviour
         {
             OpenPanel();
         }
+        if (Input.GetButtonDown("Z"))
+        {
+            OpenShop();
+        }
     }
     public void OpenPanel()
     {
-        if (panel != null)
-        {
-            Animator animator = panel.GetComponent<Animator>();
+        if (inventory != null)
+        {   
+            var animator = inventory.GetComponent<Animator>();
             if (animator != null )
+            {
+                bool isOpen = animator.GetBool("open");
+                animator.SetBool("open", !isOpen);
+            }
+        }
+    }
+    public void OpenShop()
+    {
+        if (shop != null)
+        {
+            var animator = shop.GetComponent<Animator>();
+            if (animator != null)
             {
                 bool isOpen = animator.GetBool("open");
                 animator.SetBool("open", !isOpen);
