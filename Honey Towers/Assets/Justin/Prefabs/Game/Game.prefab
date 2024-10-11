@@ -5763,7 +5763,7 @@ MonoBehaviour:
     minScoreCost: 3
     maxScoreCost: 3
     enemyCount: 9
-    enemyInterval: 0.75
+    enemyInterval: 1
     enemyLayouts: 0
   - groupName: Wave4
     availableEnemies:
@@ -5800,7 +5800,7 @@ MonoBehaviour:
     minScoreCost: 6
     maxScoreCost: 6
     enemyCount: 12
-    enemyInterval: 1
+    enemyInterval: 1.5
     enemyLayouts: 0
   - groupName: Wave7
     availableEnemies:
@@ -5811,7 +5811,7 @@ MonoBehaviour:
     minScoreCost: 7
     maxScoreCost: 7
     enemyCount: 10
-    enemyInterval: 1.5
+    enemyInterval: 2
     enemyLayouts: 0
   - groupName: Wave8
     availableEnemies:
@@ -5823,7 +5823,7 @@ MonoBehaviour:
     minScoreCost: 8
     maxScoreCost: 8
     enemyCount: 12
-    enemyInterval: 1.5
+    enemyInterval: 2
     enemyLayouts: 0
   - groupName: Wave9
     availableEnemies:
@@ -5852,7 +5852,7 @@ MonoBehaviour:
     minScoreCost: 10
     maxScoreCost: 10
     enemyCount: 14
-    enemyInterval: 1.5
+    enemyInterval: 2
     enemyLayouts: 0
   availableGroups:
   - groupName: Wave1
