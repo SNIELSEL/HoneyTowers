@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 94a8663547cc0644686a2134bc30d4c4
+guid: 8edf0b190e600f74ab72581c6f0aa7fc
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -97,85 +97,85 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: beegame buttons_0
+      name: turrets_0
       rect:
         serializedVersion: 2
-        x: 125
-        y: 576
-        width: 449
-        height: 149
+        x: 91
+        y: 434
+        width: 342
+        height: 293
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: d37c2ab4cfec69f4a886bfc18de73777
-      internalID: -577799305
+      spriteID: df773e55bf3cf0e4b97b0763055a3ad3
+      internalID: -995057411
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: beegame buttons_1
+      name: turrets_1
       rect:
         serializedVersion: 2
-        x: 128
-        y: 377
-        width: 448
-        height: 149
+        x: 533
+        y: 434
+        width: 414
+        height: 302
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 3c4a201ba37c98e43be1d5d9c946735b
-      internalID: -306446946
+      spriteID: 886138a1ebec43b4f803c9e8e82592de
+      internalID: 1006367123
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: beegame buttons_2
+      name: turrets_2
       rect:
         serializedVersion: 2
-        x: 625
-        y: 574
-        width: 151
-        height: 151
+        x: 567
+        y: 47
+        width: 367
+        height: 320
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 8697454eb48357842b6817fb6c31249b
-      internalID: 321720151
+      spriteID: 3e9753689a2c8154bbcc8e8ca519471e
+      internalID: 432942163
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: beegame buttons_3
+      name: turrets_3
       rect:
         serializedVersion: 2
-        x: 625
-        y: 373
-        width: 151
-        height: 151
+        x: 50
+        y: 33
+        width: 367
+        height: 307
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 63c76e5460e857b4fa83149e94c7a280
-      internalID: 156017986
+      spriteID: 238e9daeb3213164785c6f9b5eb47b2e
+      internalID: 279822423
       vertices: []
       indices: 
       edges: []
@@ -183,7 +183,7 @@ TextureImporter:
     outline: []
     physicsShape: []
     bones: []
-    spriteID: 6047c0e8047707d47a6fb816d7be4265
+    spriteID: 5e97eb03825dee720800000000000000
     internalID: 0
     vertices: []
     indices: 
@@ -191,10 +191,10 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      beegame buttons_0: -577799305
-      beegame buttons_1: -306446946
-      beegame buttons_2: 321720151
-      beegame buttons_3: 156017986
+      turrets_0: -995057411
+      turrets_1: 1006367123
+      turrets_2: 432942163
+      turrets_3: 279822423
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
