@@ -2114,7 +2114,7 @@ PrefabInstance:
     - target: {fileID: 809592639636970201, guid: ccbdf8b606ee03d4983c0c3544d0bc1b,
         type: 3}
       propertyPath: turret.turretAmount
-      value: 50
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1303972187206275648, guid: ccbdf8b606ee03d4983c0c3544d0bc1b,
         type: 3}
@@ -2199,7 +2199,7 @@ PrefabInstance:
     - target: {fileID: 3157870919754586862, guid: ccbdf8b606ee03d4983c0c3544d0bc1b,
         type: 3}
       propertyPath: turret.turretAmount
-      value: 50
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3200556524612192725, guid: ccbdf8b606ee03d4983c0c3544d0bc1b,
         type: 3}
@@ -2517,7 +2517,7 @@ PrefabInstance:
     - target: {fileID: 6308697534176139833, guid: ccbdf8b606ee03d4983c0c3544d0bc1b,
         type: 3}
       propertyPath: turret.turretAmount
-      value: 50
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6627392057701505009, guid: ccbdf8b606ee03d4983c0c3544d0bc1b,
         type: 3}
@@ -2602,7 +2602,7 @@ PrefabInstance:
     - target: {fileID: 7268083880130173722, guid: ccbdf8b606ee03d4983c0c3544d0bc1b,
         type: 3}
       propertyPath: turret.turretAmount
-      value: 50
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7294439063465610488, guid: ccbdf8b606ee03d4983c0c3544d0bc1b,
         type: 3}
