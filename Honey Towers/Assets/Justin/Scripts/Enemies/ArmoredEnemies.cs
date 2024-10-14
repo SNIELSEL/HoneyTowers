@@ -4,10 +4,10 @@ using UnityEngine;
 
 public class ArmoredEnemies : EnemyBehaviour
 {
-    public string tagToGetHit;
+    public List<string> tagsToGetHit;
     public override void TakeHP(int damage, Transform objectToHit)
     {
-        if (objectToHit.tag != tagToGetHit) return;
+        if (!tagsToGetHit.Contains(objectToHit.tag)) return;
         base.TakeHP(damage, objectToHit);
     }
 }
