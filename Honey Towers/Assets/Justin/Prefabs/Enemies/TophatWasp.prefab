@@ -731,7 +731,9 @@ MonoBehaviour:
   hpBar: {fileID: 3052023405101320008}
   stats: {fileID: 11400000, guid: 428e585ee4de2414c9e225a0a20e65a1, type: 2}
   tagsToGetHit:
-  - 
+  - Untagged
+  - HoneyBullet
+  - Bee
 --- !u!1001 &1973737760959217123
 PrefabInstance:
   m_ObjectHideFlags: 0

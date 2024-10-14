@@ -12,6 +12,7 @@ public class SellOptions : MonoBehaviour
             Destroy(DroppingTurretScript.Instance.holdingThisTurret);
             DroppingTurretScript.Instance.isHoldingTurret = false;
             DroppingTurretScript.Instance.holdingThisTurret = null;
+            DroppingTurretScript.Instance.animator.SetTrigger("PutFront");
         }
     }
 }

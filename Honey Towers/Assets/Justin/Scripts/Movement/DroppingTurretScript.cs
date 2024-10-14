@@ -21,6 +21,7 @@ public class DroppingTurretScript : MonoBehaviour
     public float minDistance;
     public float maxDistance;
 
+    public Animator animator;
     public GameObject ballClone;
 
     private void Awake()
@@ -29,6 +30,8 @@ public class DroppingTurretScript : MonoBehaviour
         {
             Instance = this;
         }
+
+        animator = GetComponentInChildren<Animator>();
     }
 
     private void Start()
@@ -38,16 +41,6 @@ public class DroppingTurretScript : MonoBehaviour
 
     private void Update()
     {
-        if (MovementScript.Instance.isWalking)
-        {
-            if (showTurretClone != null)
-            {
-                Destroy(showTurretClone);
-                selectedGrid.GetComponent<GridTile>().LightDown();
-            }
-
-            return;
-        }
         CheckIfTurretCanLandHere();
 
         if (isHoldingTurret)
@@ -128,7 +121,7 @@ public class DroppingTurretScript : MonoBehaviour
         {
             if (hit.transform.GetComponent<GridTile>().turretAlreadyHere & hit.transform.GetComponent<GridTile>().turret != null && !isHoldingTurret)
             {
-                GetComponentInChildren<Animator>().SetTrigger("PutBack");
+                animator.SetTrigger("PutBack");
                 holdingThisTurret = hit.transform.GetComponent<GridTile>().turret;
                 holdingThisTurret.GetComponentInChildren<BaseTurret>().attackPower /= 2;
                 hit.transform.GetComponent<GridTile>().turretAlreadyHere = false;
@@ -147,7 +140,7 @@ public class DroppingTurretScript : MonoBehaviour
         if (isHoldingTurret)
         {
             if (gridDropPlace.GetComponent<GridTile>().turretAlreadyHere) return;
-            GetComponentInChildren<Animator>().SetTrigger("PutFront");
+            animator.SetTrigger("PutFront");
             gridDropPlace.GetComponent<GridTile>().MakeTheTurretHere();
             isHoldingTurret = false;
             holdingThisTurret.transform.position = new Vector3(gridDropPlace.position.x, holdingThisTurret.transform.position.y, gridDropPlace.position.z);
@@ -162,7 +155,7 @@ public class DroppingTurretScript : MonoBehaviour
         {
             if (gridDropPlace.GetComponent<GridTile>().turretAlreadyHere &&
                 gridDropPlace.GetComponent<GridTile>().turret.transform.GetChild(0).name != selectedTurret.turret.transform.GetChild(0).name) return;
-            GetComponentInChildren<Animator>().SetTrigger("Open");
+            animator.SetTrigger("Open");
             selectedTurret.turretAmount--;
             selectedTurret.turretAmountText.text = selectedTurret.turretAmount.ToString();
             gridDropPlace.GetComponent<GridTile>().MakeTheTurretHere();

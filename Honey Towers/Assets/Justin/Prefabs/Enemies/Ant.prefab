@@ -663,9 +663,6 @@ MonoBehaviour:
   attackPower: 0
   hpBar: {fileID: 1564049803149885268}
   stats: {fileID: 11400000, guid: ec7a92fe54a7538408890995b9a83efe, type: 2}
-  damageNumberSpawnPlace: {fileID: 7619148080877141977}
-  damageNumberPrefab: {fileID: 3333786816735886652, guid: 4d7cc3942cc18a14c8edda15805b8414,
-    type: 3}
 --- !u!1 &8319626883552738268
 GameObject:
   m_ObjectHideFlags: 0
@@ -795,6 +792,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: ant
+      objectReference: {fileID: 0}
+    - target: {fileID: 7859700700568881072, guid: 9798627836e26e54f842b6d8120ae256,
+        type: 3}
+      propertyPath: m_StaticShadowCaster
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7859700700568881072, guid: 9798627836e26e54f842b6d8120ae256,
         type: 3}

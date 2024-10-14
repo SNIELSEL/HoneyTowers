@@ -694,7 +694,10 @@ MonoBehaviour:
   attackPower: 0
   hpBar: {fileID: 1564049803149885268}
   stats: {fileID: 11400000, guid: 32c3f058ba9e40a419ab9c92173537f5, type: 2}
-  tagToGetHit: HoneyBullet
+  tagsToGetHit:
+  - HoneyBullet
+  - Untagged
+  - Bee
 --- !u!1 &8319626883552738268
 GameObject:
   m_ObjectHideFlags: 0

@@ -5852,18 +5852,10 @@ MonoBehaviour:
     - {fileID: 7680133142993079238, guid: f50210567e33de0409c050ebf4f3f3fc, type: 3}
     minScoreCost: 10
     maxScoreCost: 10
-    enemyCount: 14
+    enemyCount: 11
     enemyInterval: 2
     enemyLayouts: 0
-  availableGroups:
-  - groupName: Wave1
-    availableEnemies:
-    - {fileID: 7680133142993079238, guid: ced5f6e86c174494fad29a489c150de3, type: 3}
-    minScoreCost: 1
-    maxScoreCost: 1
-    enemyCount: 3
-    enemyInterval: 1
-    enemyLayouts: 0
+  availableGroups: []
   chosenEnemyGroup:
     groupName: Wave1
     availableEnemies:

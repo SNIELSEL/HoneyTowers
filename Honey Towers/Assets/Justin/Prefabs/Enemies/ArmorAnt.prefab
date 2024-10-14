@@ -694,7 +694,8 @@ MonoBehaviour:
   attackPower: 0
   hpBar: {fileID: 1564049803149885268}
   stats: {fileID: 11400000, guid: 32c3f058ba9e40a419ab9c92173537f5, type: 2}
-  tagToGetHit: ExplosionBall
+  tagsToGetHit:
+  - ExplosionBall
 --- !u!1 &8319626883552738268
 GameObject:
   m_ObjectHideFlags: 0
@@ -793,6 +794,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: ant
+      objectReference: {fileID: 0}
+    - target: {fileID: 7859700700568881072, guid: 9798627836e26e54f842b6d8120ae256,
+        type: 3}
+      propertyPath: m_StaticShadowCaster
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7859700700568881072, guid: 9798627836e26e54f842b6d8120ae256,
         type: 3}
