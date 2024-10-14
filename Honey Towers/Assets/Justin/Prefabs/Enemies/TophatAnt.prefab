@@ -698,6 +698,7 @@ MonoBehaviour:
   - HoneyBullet
   - Untagged
   - Bee
+  damageTakenOff: 2
 --- !u!1 &8319626883552738268
 GameObject:
   m_ObjectHideFlags: 0

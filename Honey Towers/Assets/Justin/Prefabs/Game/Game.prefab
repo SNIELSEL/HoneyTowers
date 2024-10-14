@@ -5871,6 +5871,7 @@ MonoBehaviour:
   enemyFolder: {fileID: 108801827479240157}
   startPoint: {fileID: 2516801285069968954}
   enemiesSpawned: []
+  startWaveInterval: 30
   waveInterval: 5
   battleText: {fileID: 8402740136708456121}
 --- !u!1 &5913515930115710019
@@ -7936,6 +7937,7 @@ MonoBehaviour:
   fallingSpeed: 10
   minDistance: 1.2
   maxDistance: 5
+  animator: {fileID: 0}
   ballClone: {fileID: 0}
 --- !u!1 &8460198601171041363
 GameObject:
@@ -8446,10 +8448,6 @@ MonoBehaviour:
   normalSpeed: 0
   slowerSpeed: 0
   animator: {fileID: 6424764712539209532}
-  isWalking: 0
-  isTogglingMovement: 0
-  moveChestAnimator: {fileID: 146031039022945062}
-  startFlyingSpeed: 5
 --- !u!54 &781484616386702054
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -8908,12 +8906,6 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 525b968fd76945140916b3f7d4db3a81, type: 3}
---- !u!95 &146031039022945062 stripped
-Animator:
-  m_CorrespondingSourceObject: {fileID: 2703299843826835873, guid: 525b968fd76945140916b3f7d4db3a81,
-    type: 3}
-  m_PrefabInstance: {fileID: 2847051865824047751}
-  m_PrefabAsset: {fileID: 0}
 --- !u!4 &6117826321899391324 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 8314806228967963611, guid: 525b968fd76945140916b3f7d4db3a81,

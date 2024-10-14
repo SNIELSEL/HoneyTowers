@@ -734,6 +734,7 @@ MonoBehaviour:
   - Untagged
   - HoneyBullet
   - Bee
+  damageTakenOff: 2
 --- !u!1001 &1973737760959217123
 PrefabInstance:
   m_ObjectHideFlags: 0

@@ -38,6 +38,7 @@ public class WaveHandler : MonoBehaviour
     public Transform startPoint;
     public List<GameObject> enemiesSpawned;
 
+    public float startWaveInterval;
     public float waveInterval;
 
     public TMP_Text battleText;
@@ -48,6 +49,8 @@ public class WaveHandler : MonoBehaviour
         {
             Instance = this;
         }
+
+        StartCoroutine(HandleWaveLength(startWaveInterval));
     }
     public void StartWave()
     {    
@@ -115,10 +118,10 @@ public class WaveHandler : MonoBehaviour
         }
     }
 
-    public IEnumerator HandleWaveLength()
+    public IEnumerator HandleWaveLength(float interval)
     {
-        StartCoroutine(TextChanging());
-        yield return new WaitForSeconds(waveInterval);
+        StartCoroutine(TextChanging(interval));
+        yield return new WaitForSeconds(interval);
         StartWave();
     }
     public void EnemyDie(GameObject enemy)
@@ -126,9 +129,9 @@ public class WaveHandler : MonoBehaviour
         enemiesSpawned.Remove(enemy);
     }
 
-    private IEnumerator TextChanging()
+    private IEnumerator TextChanging(float interval)
     {
-        float time = waveInterval;
+        float time = interval;
 
         while (time > 0)
         {

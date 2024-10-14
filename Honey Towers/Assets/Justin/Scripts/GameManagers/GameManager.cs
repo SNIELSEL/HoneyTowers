@@ -47,7 +47,7 @@ public class GameManager : MonoBehaviour
         {
             isWaveStarted = false;
             waveNumber++;
-            StartCoroutine(WaveHandler.Instance.HandleWaveLength());
+            StartCoroutine(WaveHandler.Instance.HandleWaveLength(WaveHandler.Instance.waveInterval));
         }
     }
 
