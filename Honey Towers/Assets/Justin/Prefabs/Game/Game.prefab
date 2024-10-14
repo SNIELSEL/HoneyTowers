@@ -5776,6 +5776,7 @@ MonoBehaviour:
     - {fileID: 7680133142993079238, guid: 065ec2bdcf9278f489b7f1f629cba81e, type: 3}
     - {fileID: 7680133142993079238, guid: c27f2c39e11cc394e920c6184d6ad93c, type: 3}
     - {fileID: 7680133142993079238, guid: c27f2c39e11cc394e920c6184d6ad93c, type: 3}
+    - {fileID: 7680133142993079238, guid: 3b490fa4a41120348a5a21a91183ef26, type: 3}
     minScoreCost: 4
     maxScoreCost: 4
     enemyCount: 12
@@ -5807,7 +5808,7 @@ MonoBehaviour:
     - {fileID: 7680133142993079238, guid: 3aa1294df7a272e44b0e627eaebd2d11, type: 3}
     - {fileID: 7680133142993079238, guid: c27f2c39e11cc394e920c6184d6ad93c, type: 3}
     - {fileID: 7680133142993079238, guid: 065ec2bdcf9278f489b7f1f629cba81e, type: 3}
-    - {fileID: 7680133142993079238, guid: 065ec2bdcf9278f489b7f1f629cba81e, type: 3}
+    - {fileID: 7680133142993079238, guid: 289cea4ac0491124f8df509574af222a, type: 3}
     minScoreCost: 7
     maxScoreCost: 7
     enemyCount: 10
@@ -5816,10 +5817,8 @@ MonoBehaviour:
   - groupName: Wave8
     availableEnemies:
     - {fileID: 7680133142993079238, guid: 065ec2bdcf9278f489b7f1f629cba81e, type: 3}
-    - {fileID: 7680133142993079238, guid: 3aa1294df7a272e44b0e627eaebd2d11, type: 3}
-    - {fileID: 7680133142993079238, guid: 3aa1294df7a272e44b0e627eaebd2d11, type: 3}
-    - {fileID: 7680133142993079238, guid: 3aa1294df7a272e44b0e627eaebd2d11, type: 3}
-    - {fileID: 7680133142993079238, guid: c27f2c39e11cc394e920c6184d6ad93c, type: 3}
+    - {fileID: 7680133142993079238, guid: 3b490fa4a41120348a5a21a91183ef26, type: 3}
+    - {fileID: 7680133142993079238, guid: 289cea4ac0491124f8df509574af222a, type: 3}
     minScoreCost: 8
     maxScoreCost: 8
     enemyCount: 12
@@ -5831,6 +5830,8 @@ MonoBehaviour:
     - {fileID: 7680133142993079238, guid: 3aa1294df7a272e44b0e627eaebd2d11, type: 3}
     - {fileID: 7680133142993079238, guid: c27f2c39e11cc394e920c6184d6ad93c, type: 3}
     - {fileID: 7680133142993079238, guid: 065ec2bdcf9278f489b7f1f629cba81e, type: 3}
+    - {fileID: 7680133142993079238, guid: 3b490fa4a41120348a5a21a91183ef26, type: 3}
+    - {fileID: 7680133142993079238, guid: 289cea4ac0491124f8df509574af222a, type: 3}
     minScoreCost: 9
     maxScoreCost: 9
     enemyCount: 16
@@ -5842,8 +5843,8 @@ MonoBehaviour:
     - {fileID: 7680133142993079238, guid: c27f2c39e11cc394e920c6184d6ad93c, type: 3}
     - {fileID: 7680133142993079238, guid: c27f2c39e11cc394e920c6184d6ad93c, type: 3}
     - {fileID: 7680133142993079238, guid: 3aa1294df7a272e44b0e627eaebd2d11, type: 3}
-    - {fileID: 7680133142993079238, guid: c27f2c39e11cc394e920c6184d6ad93c, type: 3}
-    - {fileID: 7680133142993079238, guid: c27f2c39e11cc394e920c6184d6ad93c, type: 3}
+    - {fileID: 7680133142993079238, guid: 289cea4ac0491124f8df509574af222a, type: 3}
+    - {fileID: 7680133142993079238, guid: 3b490fa4a41120348a5a21a91183ef26, type: 3}
     - {fileID: 7680133142993079238, guid: ced5f6e86c174494fad29a489c150de3, type: 3}
     - {fileID: 7680133142993079238, guid: c27f2c39e11cc394e920c6184d6ad93c, type: 3}
     - {fileID: 7680133142993079238, guid: 3aa1294df7a272e44b0e627eaebd2d11, type: 3}
