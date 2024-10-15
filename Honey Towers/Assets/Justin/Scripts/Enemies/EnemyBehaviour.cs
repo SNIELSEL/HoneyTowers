@@ -31,7 +31,7 @@ public class EnemyBehaviour : MonoBehaviour
         if (hp <= 0)
         {
             WaveHandler.Instance.EnemyDie(gameObject);
-            PlayerStats.Instance.GetCoins(5);
+            PlayerStats.Instance.GetCoins(stats.honeyAmount);
             Destroy(gameObject);
         }
     }
