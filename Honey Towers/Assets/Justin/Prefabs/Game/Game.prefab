@@ -8439,7 +8439,7 @@ MonoBehaviour:
   amplitude: 0.1
   frequency: 0.2
   speed: 500
-  accelerationSpeed: 1000
+  accelerationSpeed: 2000
   currentSpeed: 0
   rotationSpeed: 10
   hor: 0

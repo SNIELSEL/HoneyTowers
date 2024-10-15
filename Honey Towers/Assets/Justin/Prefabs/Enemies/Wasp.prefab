@@ -730,9 +730,6 @@ MonoBehaviour:
   attackPower: 0
   hpBar: {fileID: 3052023405101320008}
   stats: {fileID: 11400000, guid: 12060c629741d0c49bceb13112d58724, type: 2}
-  damageNumberSpawnPlace: {fileID: 3510734467129918437}
-  damageNumberPrefab: {fileID: 3333786816735886652, guid: 4d7cc3942cc18a14c8edda15805b8414,
-    type: 3}
 --- !u!1001 &1973737760959217123
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -882,7 +879,7 @@ Animator:
   m_GameObject: {fileID: 9175764847552975605}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: fadee1f74433eae49b8e2d8a3d2a6bab, type: 2}
+  m_Controller: {fileID: 9100000, guid: 95c4fd87320359940877ff6c9ec66ddc, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
