@@ -25,5 +25,6 @@ public class MainMenuManager : MonoBehaviour
     public void QuitLevel()
     {
         SceneManager.LoadScene("MainMenu");
+        Time.timeScale = 1;
     }
 }

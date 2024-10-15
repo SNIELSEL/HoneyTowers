@@ -97,7 +97,8 @@ LightmapSettings:
     m_ExportTrainingData: 0
     m_TrainingDataDestination: TrainingData
     m_LightProbeSampleCountMultiplier: 4
-  m_LightingDataAsset: {fileID: 0}
+  m_LightingDataAsset: {fileID: 112000000, guid: 24eb5efa1cf1e8f43888c5e319e61554,
+    type: 2}
   m_LightingSettings: {fileID: 0}
 --- !u!196 &4
 NavMeshSettings:
@@ -1113,10 +1114,65 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1471865088819708741, guid: 7ad8f2cc7d027a64ebd9a0ca7e2365f2,
+        type: 3}
+      propertyPath: m_Cookie
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 1471865088819708741, guid: 7ad8f2cc7d027a64ebd9a0ca7e2365f2,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1471865088819708741, guid: 7ad8f2cc7d027a64ebd9a0ca7e2365f2,
+        type: 3}
+      propertyPath: m_Intensity
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 1471865088819708741, guid: 7ad8f2cc7d027a64ebd9a0ca7e2365f2,
+        type: 3}
+      propertyPath: m_Shadows.m_Type
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1471865088819708741, guid: 7ad8f2cc7d027a64ebd9a0ca7e2365f2,
+        type: 3}
+      propertyPath: m_BounceIntensity
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 1471865088819708741, guid: 7ad8f2cc7d027a64ebd9a0ca7e2365f2,
+        type: 3}
+      propertyPath: m_UseColorTemperature
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2468017328035617451, guid: 7ad8f2cc7d027a64ebd9a0ca7e2365f2,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 7.72
+      objectReference: {fileID: 0}
+    - target: {fileID: 2468017328035617451, guid: 7ad8f2cc7d027a64ebd9a0ca7e2365f2,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -0.92
+      objectReference: {fileID: 0}
+    - target: {fileID: 3001845070974519160, guid: 7ad8f2cc7d027a64ebd9a0ca7e2365f2,
+        type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 46864a196c2f41d429403acf5431a2c6, type: 2}
+    - target: {fileID: 3237507818441611075, guid: 7ad8f2cc7d027a64ebd9a0ca7e2365f2,
+        type: 3}
+      propertyPath: m_LightCookieSize.x
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 3650253535584331437, guid: 7ad8f2cc7d027a64ebd9a0ca7e2365f2,
         type: 3}
       propertyPath: m_Name
       value: Honey Hive (bee game)
+      objectReference: {fileID: 0}
+    - target: {fileID: 3673307350133580746, guid: 7ad8f2cc7d027a64ebd9a0ca7e2365f2,
+        type: 3}
+      propertyPath: m_Intensity
+      value: 0.5
       objectReference: {fileID: 0}
     - target: {fileID: 4171352419179854871, guid: 7ad8f2cc7d027a64ebd9a0ca7e2365f2,
         type: 3}
@@ -1167,6 +1223,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5746185922465956095, guid: 7ad8f2cc7d027a64ebd9a0ca7e2365f2,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
