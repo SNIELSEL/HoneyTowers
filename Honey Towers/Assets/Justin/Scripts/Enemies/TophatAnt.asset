@@ -15,4 +15,3 @@ MonoBehaviour:
   hp: 200
   speed: 2
   attackPower: 15
-  honeyAmount: 10
