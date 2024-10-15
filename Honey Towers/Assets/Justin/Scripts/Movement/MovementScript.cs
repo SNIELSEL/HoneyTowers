@@ -22,6 +22,9 @@ public class MovementScript : MonoBehaviour
     private Vector3 dir;
     private Rigidbody rb;
 
+    private bool tButton;
+    private bool isFlyingSlow;
+
     private void Awake()
     {
         if (Instance == null)
@@ -36,6 +39,7 @@ public class MovementScript : MonoBehaviour
         InputCheck();
         FlyMovement();
         RotationFlyChange();
+        ToggleSpeed();
     }
 
     private void InputCheck()
@@ -43,6 +47,7 @@ public class MovementScript : MonoBehaviour
         hor = Input.GetAxisRaw("Horizontal");
         vert = Input.GetAxisRaw("Vertical");
         upAndDown = Input.GetAxisRaw("UpAndDown");
+        tButton = Input.GetKeyDown(KeyCode.T);
     }
 
     private void FlyMovement()
@@ -69,5 +74,20 @@ public class MovementScript : MonoBehaviour
     public void MakeSpeedNormal()
     {
         accelerationSpeed = normalSpeed;
+    }
+
+    private void ToggleSpeed()
+    {
+        if (tButton && !isFlyingSlow)
+        {
+            isFlyingSlow = true;
+            accelerationSpeed = 1000;
+        }
+
+        else if (tButton && isFlyingSlow)
+        {
+            isFlyingSlow = false;
+            accelerationSpeed = 2000;
+        }
     }
 }
