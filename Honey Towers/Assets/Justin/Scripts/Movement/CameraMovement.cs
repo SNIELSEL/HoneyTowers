@@ -6,7 +6,9 @@ using UnityEngine;
 public class CameraMovement : MonoBehaviour
 {
     public Transform target;  // The object the camera will rotate around
-    public float distance = 10.0f;  // Distance between the camera and the object
+    public float distance = 10.0f;
+    public float minDistance;
+    public float maxDistance = 10.0f;// Distance between the camera and the object
     public float xSpeed = 120.0f;  // Horizontal rotation speed
     public float ySpeed = 120.0f;  // Vertical rotation speed
 
@@ -15,12 +17,25 @@ public class CameraMovement : MonoBehaviour
 
     public bool isMovingCamera;
 
+    public LayerMask mapLayer;
+
+    public float zoomSpeed;
+    public float collisionOffset;
+
+    public int layerNumber;
+    public Collider mapCollider;
+
+    public Transform cameraHolder;
+    public float howMuchBeforeCamera;
+    public float raycastLength;
+
     void Start()
     {
         // Initialize camera angles based on its current position
         Vector3 angles = transform.eulerAngles;
         x = angles.y;
         y = angles.x;
+
     }
 
     private void Update()
@@ -30,7 +45,8 @@ public class CameraMovement : MonoBehaviour
 
     void LateUpdate()
     {
-        MoveAndRotateCamera();      
+        CheckingForWall();
+        MoveAndRotateCamera();
     }
 
     private void CheckIfRightMouseClick()
@@ -59,8 +75,27 @@ public class CameraMovement : MonoBehaviour
 
         Quaternion rotation = Quaternion.Euler(y, x, 0);
         Vector3 position = rotation * new Vector3(0.0f, 0.0f, -distance) + target.position;
-
         transform.rotation = rotation;
         transform.position = position;
+    }
+
+    private void CheckingForWall()
+    {
+        RaycastHit hit;
+
+        Vector3 directionToCamera = transform.position - target.position;
+        Debug.DrawRay(transform.position, directionToCamera * maxDistance, Color.green);
+        if (Physics.Raycast(transform.position + transform.forward * howMuchBeforeCamera, directionToCamera.normalized, out hit, raycastLength, mapLayer))
+        {
+            float targetDistance = Mathf.Clamp(hit.distance - collisionOffset, minDistance, maxDistance);
+
+            distance = Mathf.Lerp(distance, targetDistance, zoomSpeed * Time.deltaTime);
+
+        }
+
+        else
+        {
+            distance = Mathf.Lerp(distance, maxDistance, zoomSpeed * Time.deltaTime);
+        }
     }
 }

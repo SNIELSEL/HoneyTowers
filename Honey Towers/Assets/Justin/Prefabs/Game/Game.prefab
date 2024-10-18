@@ -1528,6 +1528,7 @@ GameObject:
   - component: {fileID: 950725396157850016}
   - component: {fileID: 6841419230647419677}
   - component: {fileID: 8847356583180800631}
+  - component: {fileID: 178885246947392775}
   m_Layer: 0
   m_Name: Main Camera (1)
   m_TagString: MainCamera
@@ -1667,9 +1668,46 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   target: {fileID: 6000625239176586535}
   distance: 10
+  minDistance: 0
+  maxDistance: 10
   xSpeed: 120
   ySpeed: 120
   isMovingCamera: 0
+  mapLayer:
+    serializedVersion: 2
+    m_Bits: 2048
+  zoomSpeed: 10
+  collisionOffset: 0.2
+  layerNumber: 0
+  mapCollider: {fileID: 0}
+  cameraHolder: {fileID: 0}
+--- !u!54 &178885246947392775
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1187534096086162612}
+  serializedVersion: 4
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_CenterOfMass: {x: 0, y: 0, z: 0}
+  m_InertiaTensor: {x: 1, y: 1, z: 1}
+  m_InertiaRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ImplicitCom: 1
+  m_ImplicitTensor: 1
+  m_UseGravity: 0
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
 --- !u!1 &1187786437706922919
 GameObject:
   m_ObjectHideFlags: 0
@@ -5074,6 +5112,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 5140994811520502232}
+  - {fileID: 2088938056583522634}
   - {fileID: 6000625239176586535}
   - {fileID: 2259340163776287406}
   - {fileID: 108801827479240157}
@@ -5088,7 +5127,6 @@ Transform:
   - {fileID: 7984807158032138391}
   - {fileID: 4460558715571272264}
   - {fileID: 1396234071926943426}
-  - {fileID: 2088938056583522634}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &5674523789045976409
@@ -8487,7 +8525,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 99fc9599985794b4098b1a39caf172d4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  coins: 50
+  coins: 900000
   coinText: {fileID: 175105880462692271}
 --- !u!114 &3263436689141546869
 MonoBehaviour:
@@ -9119,10 +9157,35 @@ PrefabInstance:
       propertyPath: turret.turretAmount
       value: 50
       objectReference: {fileID: 0}
+    - target: {fileID: 3745096140514492061, guid: 8f37b5589a7b3114e8abceecdee70d1b,
+        type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 134.415
+      objectReference: {fileID: 0}
+    - target: {fileID: 3745096140514492061, guid: 8f37b5589a7b3114e8abceecdee70d1b,
+        type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3745096140514492061, guid: 8f37b5589a7b3114e8abceecdee70d1b,
+        type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 67.20752
+      objectReference: {fileID: 0}
+    - target: {fileID: 3745096140514492061, guid: 8f37b5589a7b3114e8abceecdee70d1b,
+        type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 3972989262350734728, guid: 8f37b5589a7b3114e8abceecdee70d1b,
         type: 3}
       propertyPath: m_Name
       value: in game menu
+      objectReference: {fileID: 0}
+    - target: {fileID: 4045120768269377511, guid: 8f37b5589a7b3114e8abceecdee70d1b,
+        type: 3}
+      propertyPath: m_text
+      value: 900000
       objectReference: {fileID: 0}
     - target: {fileID: 5029172685761199936, guid: 8f37b5589a7b3114e8abceecdee70d1b,
         type: 3}
