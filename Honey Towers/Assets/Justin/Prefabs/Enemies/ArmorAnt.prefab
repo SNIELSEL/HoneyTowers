@@ -696,7 +696,7 @@ MonoBehaviour:
   stats: {fileID: 11400000, guid: 32c3f058ba9e40a419ab9c92173537f5, type: 2}
   tagsToGetHit:
   - ExplosionBall
-  damageTakenOff: 0
+  damageTakenOff: 2
 --- !u!1 &8319626883552738268
 GameObject:
   m_ObjectHideFlags: 0
