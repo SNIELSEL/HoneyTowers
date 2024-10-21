@@ -4609,6 +4609,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fa9cf20732ebd134796306f513ddf42d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  inputText: {fileID: 3162290044563956707}
 --- !u!114 &2605431993453101056
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6853,7 +6854,7 @@ MonoBehaviour:
   m_OnEndEdit:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 3902976866470151715}
         m_TargetAssemblyTypeName: FpsManager, Assembly-CSharp
         m_MethodName: ChangeFPS
         m_Mode: 0

@@ -1,14 +1,17 @@
 using System.Collections;
 using System.Collections.Generic;
+using TMPro;
 using UnityEngine;
 
 public class FpsManager : MonoBehaviour
 {
+    public TMP_InputField inputText;
     private const string FrameRateKey = "TargetFrameRate";
     private void Start()
     {
         int savedFPS = PlayerPrefs.GetInt("TargetFPS", -1);
-        Application.targetFrameRate = savedFPS;
+        inputText.text = savedFPS.ToString();
+        ChangeFPS(savedFPS.ToString());
     }
     public void ChangeFPS(string target)
     {
@@ -22,6 +25,5 @@ public class FpsManager : MonoBehaviour
             Application.targetFrameRate = fps;
         }
         PlayerPrefs.SetInt("TargetFPS", Application.targetFrameRate);
-        PlayerPrefs.Save();
     }
 }
