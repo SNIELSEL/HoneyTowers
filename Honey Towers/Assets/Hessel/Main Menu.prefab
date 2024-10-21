@@ -36,8 +36,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0, y: -13.900993}
-  m_SizeDelta: {x: 0, y: 27.802}
+  m_AnchoredPosition: {x: 0, y: -0.000015258789}
+  m_SizeDelta: {x: 0, y: -0.000034332275}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &63958153847017697
 MonoBehaviour:
@@ -2445,6 +2445,7 @@ GameObject:
   - component: {fileID: 7476250863326783247}
   - component: {fileID: 3287980045445402025}
   - component: {fileID: 3291016510497092657}
+  - component: {fileID: 3305967534183769779}
   m_Layer: 5
   m_Name: Button
   m_TagString: Untagged
@@ -2567,6 +2568,21 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+--- !u!114 &3305967534183769779
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2369071794219795121}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 15ca1aefef04eb347a3f4e6114ee3472, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  color: {r: 0, g: 0, b: 0, a: 0}
+  colorReference: {fileID: 723622422898721341, guid: 740accecce5359d43979a2ac95d74fe7,
+    type: 3}
 --- !u!1 &2603674227358137489
 GameObject:
   m_ObjectHideFlags: 0
@@ -6950,6 +6966,7 @@ GameObject:
   - component: {fileID: 6943125287496375743}
   - component: {fileID: 866345265495632208}
   - component: {fileID: 9053906544452069158}
+  - component: {fileID: 4198213112822446623}
   m_Layer: 5
   m_Name: Button (1)
   m_TagString: Untagged
@@ -7072,6 +7089,21 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+--- !u!114 &4198213112822446623
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5424949452285768801}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 15ca1aefef04eb347a3f4e6114ee3472, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  color: {r: 0, g: 0, b: 0, a: 0}
+  colorReference: {fileID: 723622422898721341, guid: 740accecce5359d43979a2ac95d74fe7,
+    type: 3}
 --- !u!1 &5555870928189424355
 GameObject:
   m_ObjectHideFlags: 0
@@ -10224,8 +10256,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0.96666664}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0, y: -0.000032424927}
-  m_SizeDelta: {x: 0, y: 23}
+  m_AnchoredPosition: {x: 0, y: -0.00003194809}
+  m_SizeDelta: {x: 0, y: 49.99997}
   m_Pivot: {x: 0.5, y: 1}
 --- !u!1 &8862871779260785534
 GameObject:
@@ -10777,7 +10809,7 @@ MonoBehaviour:
   m_Content: {fileID: 4872763538526645104}
   m_Horizontal: 0
   m_Vertical: 1
-  m_MovementType: 0
+  m_MovementType: 2
   m_Elasticity: 5
   m_Inertia: 1
   m_DecelerationRate: 0.135

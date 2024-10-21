@@ -1425,10 +1425,25 @@ PrefabInstance:
 
         Toggle speed'
       objectReference: {fileID: 0}
+    - target: {fileID: 5903513403329667023, guid: 55989c4caaf6a55409211dc16926375f,
+        type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 22.999996
+      objectReference: {fileID: 0}
+    - target: {fileID: 5903513403329667023, guid: 55989c4caaf6a55409211dc16926375f,
+        type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: -11.500031
+      objectReference: {fileID: 0}
     - target: {fileID: 8002827118397112960, guid: 55989c4caaf6a55409211dc16926375f,
         type: 3}
       propertyPath: Loop
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 9209151113768195967, guid: 55989c4caaf6a55409211dc16926375f,
+        type: 3}
+      propertyPath: m_MovementType
+      value: 2
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

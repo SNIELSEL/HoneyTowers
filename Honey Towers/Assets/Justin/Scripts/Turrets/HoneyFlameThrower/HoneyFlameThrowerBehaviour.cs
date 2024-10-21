@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using System.Runtime.CompilerServices;
 using UnityEngine;
 using UnityEngine.Rendering;
 
@@ -7,16 +8,31 @@ public class HoneyFlameThrowerBehaviour : BaseTurret
 {
     public float distance;
     public LayerMask enemy;
+    public ParticleSystem flames;
+    public bool seesEnemy;
 
-    
+
     protected override void Start()
     {
         base.Start();
+        flames = GetComponent<ParticleSystem>();
 
     }
     protected override void Update()
     {
         CheckIfEnemyAlive();
+        
+        if (enemiesSeen.Count > 0 && !seesEnemy)
+        {
+            flames.Play();
+            seesEnemy = true;
+        }
+
+        else if (enemiesSeen.Count == 0 && seesEnemy)
+        {
+            flames.Stop();
+            seesEnemy = false;
+        }
     }
 
     

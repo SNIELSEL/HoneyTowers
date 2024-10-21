@@ -206,6 +206,8 @@ MonoBehaviour:
   enemy:
     serializedVersion: 2
     m_Bits: 0
+  flames: {fileID: 0}
+  seesEnemy: 0
 --- !u!65 &1497447122435550495
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -244,7 +246,7 @@ ParticleSystem:
   emitterVelocityMode: 1
   looping: 1
   prewarm: 0
-  playOnAwake: 1
+  playOnAwake: 0
   useUnscaledTime: 0
   autoRandomSeed: 1
   startDelay:
