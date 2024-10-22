@@ -121,9 +121,9 @@ TextureImporter:
       name: beegame buttons_1
       rect:
         serializedVersion: 2
-        x: 128
+        x: 127
         y: 377
-        width: 448
+        width: 449
         height: 149
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
