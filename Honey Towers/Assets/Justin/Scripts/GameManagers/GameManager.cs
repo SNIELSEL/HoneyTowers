@@ -65,7 +65,11 @@ public class GameManager : MonoBehaviour
         WaveHandler.Instance.StopAllCoroutines();
         WaveHandler.Instance.enabled = false;
         WaveHandler.Instance.battleText.enabled = false;
-        gameOverText.text = "Made it to wave " + waveNumber; 
+        gameOverText.text = "Made it to wave " + waveNumber;
+        MovementScript.Instance.enabled = false;
+        CameraMovement.Instance.enabled = false;
+        OpenMenu.Instance.enabled = false;
+
 
         this.enabled = false;
     }
@@ -78,6 +82,10 @@ public class GameManager : MonoBehaviour
             WaveHandler.Instance.StopAllCoroutines();
             WaveHandler.Instance.enabled = false;
             WaveHandler.Instance.battleText.enabled = false;
+
+            MovementScript.Instance.enabled = false;
+            CameraMovement.Instance.enabled = false;
+            OpenMenu.Instance.enabled = false;
             this.enabled = false;
         }
     }

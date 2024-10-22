@@ -5,6 +5,7 @@ using UnityEngine;
 
 public class CameraMovement : MonoBehaviour
 {
+    public static CameraMovement Instance;
     public Transform target;  // The object the camera will rotate around
     public float distance = 10.0f;
     public float minDistance;
@@ -29,6 +30,13 @@ public class CameraMovement : MonoBehaviour
     public float howMuchBeforeCamera;
     public float raycastLength;
 
+    private void Awake()
+    {
+        if (Instance == null)
+        {
+            Instance = this;
+        }
+    }
     void Start()
     {
         // Initialize camera angles based on its current position

@@ -514,7 +514,7 @@ GameObject:
   - component: {fileID: 753746987522318395}
   - component: {fileID: 8862976910681544000}
   - component: {fileID: 3133812960221066932}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: ArmorAnt
   m_TagString: Enemy
   m_Icon: {fileID: 0}

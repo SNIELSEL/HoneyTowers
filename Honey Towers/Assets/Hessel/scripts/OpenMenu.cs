@@ -4,8 +4,17 @@ using UnityEngine;
 
 public class OpenMenu : MonoBehaviour
 {
+    public static OpenMenu Instance;
     public GameObject menu;
     public bool isOpen;
+
+    private void Awake()
+    {
+        if (Instance == null)
+        {
+            Instance = this;
+        }
+    }
     public void Update()
     {
         if (Input.GetButtonDown("esc") && !isOpen)

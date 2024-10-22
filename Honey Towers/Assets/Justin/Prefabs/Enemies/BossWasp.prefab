@@ -550,7 +550,7 @@ GameObject:
   - component: {fileID: 753746987522318395}
   - component: {fileID: 8862976910681544000}
   - component: {fileID: 6782948114026707185}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: BossWasp
   m_TagString: Enemy
   m_Icon: {fileID: 0}
@@ -730,9 +730,6 @@ MonoBehaviour:
   attackPower: 0
   hpBar: {fileID: 3052023405101320008}
   stats: {fileID: 11400000, guid: d93f8cb54ac7a07408e49b2dd6819a70, type: 2}
-  damageNumberSpawnPlace: {fileID: 3510734467129918437}
-  damageNumberPrefab: {fileID: 3333786816735886652, guid: 4d7cc3942cc18a14c8edda15805b8414,
-    type: 3}
 --- !u!1001 &1973737760959217123
 PrefabInstance:
   m_ObjectHideFlags: 0

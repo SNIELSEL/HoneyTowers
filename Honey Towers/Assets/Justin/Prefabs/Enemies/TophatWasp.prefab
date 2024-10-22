@@ -550,7 +550,7 @@ GameObject:
   - component: {fileID: 753746987522318395}
   - component: {fileID: 8862976910681544000}
   - component: {fileID: 7280943978762231449}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: TophatWasp
   m_TagString: Enemy
   m_Icon: {fileID: 0}
