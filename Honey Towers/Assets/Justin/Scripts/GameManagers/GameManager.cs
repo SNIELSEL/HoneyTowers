@@ -69,6 +69,7 @@ public class GameManager : MonoBehaviour
         MovementScript.Instance.enabled = false;
         CameraMovement.Instance.enabled = false;
         OpenMenu.Instance.enabled = false;
+        Cursor.lockState = CursorLockMode.None;
 
 
         this.enabled = false;
@@ -86,6 +87,7 @@ public class GameManager : MonoBehaviour
             MovementScript.Instance.enabled = false;
             CameraMovement.Instance.enabled = false;
             OpenMenu.Instance.enabled = false;
+            Cursor.lockState = CursorLockMode.None;
             this.enabled = false;
         }
     }

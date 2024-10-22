@@ -144,7 +144,9 @@ public class DroppingTurretScript : MonoBehaviour
             gridDropPlace.GetComponent<GridTile>().MakeTheTurretHere();
             isHoldingTurret = false;
             holdingThisTurret.transform.position = new Vector3(gridDropPlace.position.x, holdingThisTurret.transform.position.y, gridDropPlace.position.z);
-            holdingThisTurret.transform.rotation = Quaternion.Euler(0, holdingThisTurret.transform.rotation.y, 0);
+
+            float roundToDegrees = Mathf.Round(transform.eulerAngles.y / 90) * 90;
+            holdingThisTurret.transform.rotation = Quaternion.Euler(0, roundToDegrees, 0);
             Rigidbody rb = holdingThisTurret.AddComponent<Rigidbody>();
             rb.useGravity = false;
             rb.velocity = new Vector3(0, -fallingSpeed, 0);
