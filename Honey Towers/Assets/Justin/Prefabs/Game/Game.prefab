@@ -1677,12 +1677,12 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 2048
   zoomSpeed: 10
-  collisionOffset: 0.2
-  layerNumber: 0
+  collisionOffset: 1
+  layerNumber: 11
   mapCollider: {fileID: 0}
   cameraHolder: {fileID: 0}
-  howMuchBeforeCamera: 0
-  raycastLength: 0
+  howMuchBeforeCamera: 5
+  raycastLength: 10
 --- !u!54 &178885246947392775
 Rigidbody:
   m_ObjectHideFlags: 0

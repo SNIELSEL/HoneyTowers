@@ -91,7 +91,8 @@ public class DroppingTurretScript : MonoBehaviour
 
     private void HandleColorOfTile()
     {
-        if (selectedGrid.GetComponent<GridTile>().turretAlreadyHere)
+        if (selectedGrid.GetComponent<GridTile>().turretAlreadyHere && 
+            selectedGrid.GetComponent<GridTile>().turret != null && selectedGrid.GetComponent<GridTile>().turret.transform.GetChild(0).name != selectedTurret.turret.transform.GetChild(0).name)
         {
             selectedGrid.GetComponent<GridTile>().LightUp(Color.red);
         }
