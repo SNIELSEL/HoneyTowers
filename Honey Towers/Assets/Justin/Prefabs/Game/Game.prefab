@@ -7979,6 +7979,9 @@ MonoBehaviour:
   maxDistance: 5
   animator: {fileID: 0}
   ballClone: {fileID: 0}
+  honeyComb:
+    serializedVersion: 2
+    m_Bits: 16384
 --- !u!1 &8460198601171041363
 GameObject:
   m_ObjectHideFlags: 0

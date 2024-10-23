@@ -9,7 +9,6 @@ public class DroppingTurretScript : MonoBehaviour
     public Transform selectedGrid;
     public bool isDropping;
     public GameObject ball;
-
     public Transform firstSelectedTurret;
     public TurretInfo selectedTurret;
     public GameObject showTurretClone;
@@ -60,6 +59,7 @@ public class DroppingTurretScript : MonoBehaviour
     {
         if (Physics.Raycast(transform.position, Vector3.down, out RaycastHit hit, maxDistance, highLightLayer) && hit.distance >= minDistance)
         {
+            
 
             if (selectedGrid != null & hit.transform != selectedGrid)
             {
