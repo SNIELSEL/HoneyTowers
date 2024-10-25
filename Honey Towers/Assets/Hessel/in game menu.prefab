@@ -315,8 +315,8 @@ RectTransform:
   - {fileID: 4158088247858836550}
   m_Father: {fileID: 6189745623478861829}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5555555, y: 0.42364782}
-  m_AnchorMax: {x: 0.93333346, y: 0.5758826}
+  m_AnchorMin: {x: 0.5555557, y: 0.27929565}
+  m_AnchorMax: {x: 0.93333346, y: 0.43217826}
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
@@ -917,8 +917,8 @@ RectTransform:
   - {fileID: 6448914589919739125}
   m_Father: {fileID: 6189745623478861829}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.06666667, y: 0.42364782}
-  m_AnchorMax: {x: 0.44444454, y: 0.5758826}
+  m_AnchorMin: {x: 0.06666667, y: 0.27929565}
+  m_AnchorMax: {x: 0.44444445, y: 0.43217826}
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
@@ -13930,8 +13930,8 @@ RectTransform:
   m_Children: []
   m_Father: {fileID: 6189745623478861829}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0.70746964}
-  m_AnchorMax: {x: 1, y: 1}
+  m_AnchorMin: {x: 0.044444446, y: 0.70746964}
+  m_AnchorMax: {x: 0.95555556, y: 0.95753044}
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
@@ -13963,7 +13963,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "are you sure you want to\n sell this tower?"
+  m_text: are you sure you want to sell this tower?
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 3cc12dd3eefb1b34a92e741a3e879a31, type: 2}
   m_sharedMaterial: {fileID: -6044433797335555884, guid: 3cc12dd3eefb1b34a92e741a3e879a31,
@@ -14096,15 +14096,15 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 0.47058824}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 0}
-  m_Type: 1
+  m_Sprite: {fileID: 21300000, guid: 96358b83c5ce8444db46410ad48206e6, type: 3}
+  m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
   m_FillMethod: 4
