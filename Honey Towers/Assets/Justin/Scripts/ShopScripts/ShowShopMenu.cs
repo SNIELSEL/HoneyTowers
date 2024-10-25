@@ -32,6 +32,7 @@ public class ShowShopMenu : MonoBehaviour
         Camera.main.GetComponent<CameraMovement>().enabled = false;
         StartCoroutine(MoveTheCamera());
         Camera.main.transform.rotation = shopCamera.rotation;
+        
         shopCanvas.SetActive(true);
         normalCanvas.SetActive(false);
     }
@@ -62,6 +63,7 @@ public class ShowShopMenu : MonoBehaviour
                 renderer.enabled = false;
             }
             isShopping = true;
+            WaveHandler.Instance.battleText.gameObject.SetActive(false);
             PositionShopCamera();
         }
     }
@@ -74,6 +76,7 @@ public class ShowShopMenu : MonoBehaviour
                 renderer.enabled = true;
             }
             isShopping = false;
+            WaveHandler.Instance.battleText.gameObject.SetActive(true);
             PositionNormalCamera();
         }
     }

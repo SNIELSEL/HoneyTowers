@@ -375,7 +375,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'UpgradePoints: 0/3'
+  m_text: 'UpgradePoints: 0/2'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 3cc12dd3eefb1b34a92e741a3e879a31, type: 2}
   m_sharedMaterial: {fileID: -6044433797335555884, guid: 3cc12dd3eefb1b34a92e741a3e879a31,
@@ -6050,7 +6050,7 @@ MonoBehaviour:
   intervalTime: 0
   price: 0
   upgradePoints: 0
-  maxUpgradePoint: 3
+  maxUpgradePoint: 2
   spawnPoint: {fileID: 4375012673143948146}
   timesUpgraded: 0
   maxUpgradeTimes: 0
