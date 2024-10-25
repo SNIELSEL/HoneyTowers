@@ -10,6 +10,7 @@ public class HoneyFlameThrowerBehaviour : BaseTurret
     public LayerMask enemy;
     public ParticleSystem flames;
     public bool seesEnemy;
+    public AudioSource flameSound;
 
 
     protected override void Start()
@@ -25,12 +26,14 @@ public class HoneyFlameThrowerBehaviour : BaseTurret
         if (enemiesSeen.Count > 0 && !seesEnemy)
         {
             flames.Play();
+            flameSound.Play();
             seesEnemy = true;
         }
 
         else if (enemiesSeen.Count == 0 && seesEnemy)
         {
             flames.Stop();
+            flameSound.Stop();
             seesEnemy = false;
         }
     }

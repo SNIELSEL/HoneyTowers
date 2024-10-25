@@ -23,6 +23,8 @@ public class GameManager : MonoBehaviour
 
     public PlayableDirector winDirector;
     public PlayableDirector loseDirector;
+
+    public AudioSource winSound, loseSound, normalMusic;
     private void Awake()
     {
         if (Instance == null)
@@ -70,6 +72,8 @@ public class GameManager : MonoBehaviour
         CameraMovement.Instance.enabled = false;
         OpenMenu.Instance.enabled = false;
         Cursor.lockState = CursorLockMode.None;
+        loseSound.Play();
+        normalMusic.Stop();
 
 
         this.enabled = false;
@@ -88,6 +92,8 @@ public class GameManager : MonoBehaviour
             CameraMovement.Instance.enabled = false;
             OpenMenu.Instance.enabled = false;
             Cursor.lockState = CursorLockMode.None;
+            winSound.Play();
+            normalMusic.Stop();
             this.enabled = false;
         }
     }

@@ -208,6 +208,7 @@ MonoBehaviour:
     m_Bits: 0
   flames: {fileID: 0}
   seesEnemy: 0
+  flameSound: {fileID: 3033533909071559451}
 --- !u!65 &1497447122435550495
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -5885,8 +5886,8 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 6575334775207437645, guid: f4db7cd128caaa0478593895c9d75099,
     type: 2}
   m_audioClip: {fileID: 8300000, guid: 6797776fcb7e2ff49a680e4241a74c03, type: 3}
-  m_PlayOnAwake: 1
-  m_Volume: 1
+  m_PlayOnAwake: 0
+  m_Volume: 0.381
   m_Pitch: 1
   Loop: 1
   Mute: 0

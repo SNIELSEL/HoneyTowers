@@ -9,7 +9,7 @@ public class BeeHive : MonoBehaviour
     public int hp;
     public int maxHp;
     public Slider hpBar;
-
+    public AudioSource damageSound;
     public GameObject damageNumberPrefab;
     public Transform damageNumberSpawnPlace;
 
@@ -22,7 +22,13 @@ public class BeeHive : MonoBehaviour
     {
         if (other.CompareTag("Enemy"))
         {
-            HandleLosingHP(other.gameObject);
+            if (hp > 0)
+            {
+                HandleLosingHP(other.gameObject);
+            }
+
+            Destroy(other.gameObject);
+
         }
     }
 
@@ -32,7 +38,9 @@ public class BeeHive : MonoBehaviour
         hpBar.value = hp;
         GameManager.Instance.CheckIfBeehiveDies(this);
         WaveHandler.Instance.EnemyDie(enemy);
-        Destroy(enemy);
+        damageSound.Play();
+        
+        
     }
 
     /*private void ShowEnemyDamage(int damage)

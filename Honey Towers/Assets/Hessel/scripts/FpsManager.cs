@@ -24,6 +24,6 @@ public class FpsManager : MonoBehaviour
         {
             Application.targetFrameRate = fps;
         }
-        PlayerPrefs.SetInt("TargetFPS", Application.targetFrameRate);
+        PlayerPrefs.SetInt("TargetFPS", fps);
     }
 }
