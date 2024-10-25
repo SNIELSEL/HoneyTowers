@@ -9543,6 +9543,17 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1085541274633925498, guid: 8f37b5589a7b3114e8abceecdee70d1b,
+        type: 3}
+      propertyPath: m_text
+      value: '50
+
+        100
+
+        20
+
+        20x2'
+      objectReference: {fileID: 0}
     - target: {fileID: 1269519112830044838, guid: 8f37b5589a7b3114e8abceecdee70d1b,
         type: 3}
       propertyPath: turret.turretAmount
