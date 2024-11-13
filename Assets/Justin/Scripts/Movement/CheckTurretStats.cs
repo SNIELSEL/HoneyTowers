@@ -23,7 +23,7 @@ public class CheckTurretStats : MonoBehaviour
     }
     private void Update()
     {
-        ray = Camera.main.ScreenPointToRay(Input.mousePosition);
+       /* ray = Camera.main.ScreenPointToRay(Input.mousePosition);
         hoveringTurret = Physics.Raycast(ray, out hit, Mathf.Infinity, turretMask);
         if (Input.GetMouseButtonDown(0))
         {
@@ -90,7 +90,7 @@ public class CheckTurretStats : MonoBehaviour
 
             isRaycasting = false;
         }
-       
+       */
     }
 
     public void AddTurret(GameObject turret)

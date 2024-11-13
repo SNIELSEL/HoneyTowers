@@ -6,6 +6,7 @@ using UnityEngine.UIElements;
 public class GridSystem : MonoBehaviour
 {
     public List<Transform> grounds = new List<Transform>();
+    public Transform gridTilesParent;
     public GameObject grid;
 
     public LayerMask path;
@@ -22,7 +23,7 @@ public class GridSystem : MonoBehaviour
             {
                 for (int z = 0; z < ground.localScale.z; z++)
                 {
-                    tileClone = Instantiate(grid, new Vector3(bounds.min.x + x, bounds.max.y, bounds.min.z + z), Quaternion.identity);
+                    tileClone = Instantiate(grid, new Vector3(bounds.min.x + x, bounds.max.y, bounds.min.z + z), Quaternion.identity, gridTilesParent);
 
                     Collider[] hitColliders = Physics.OverlapBox(tileClone.transform.position, tileClone.transform.lossyScale, Quaternion.identity, path);
 
