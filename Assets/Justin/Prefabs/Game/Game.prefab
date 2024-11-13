@@ -8814,7 +8814,7 @@ GameObject:
   - component: {fileID: 8093303174093791474}
   - component: {fileID: 5100415850753688524}
   m_Layer: 0
-  m_Name: Bee
+  m_Name: Player
   m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -8855,8 +8855,8 @@ MonoBehaviour:
   accelerationSpeed: 2000
   currentSpeed: 0
   rotationSpeed: 10
-  hor: 0
-  vert: 0
+  horisontal: 0
+  verttical: 0
   upAndDown: 0
   normalSpeed: 0
   slowerSpeed: 0
@@ -9559,6 +9559,33 @@ PrefabInstance:
       propertyPath: turret.turretAmount
       value: 50
       objectReference: {fileID: 0}
+    - target: {fileID: 2208155911422014449, guid: 8f37b5589a7b3114e8abceecdee70d1b,
+        type: 3}
+      propertyPath: m_text
+      value: 'W,A,S,D
+
+        E
+
+        Q
+
+        Space Bar
+
+        P
+
+        I
+
+        Left
+        Mouse Button
+
+        Hold Right Mouse Button
+
+        Left CTRL'
+      objectReference: {fileID: 0}
+    - target: {fileID: 2208155911422014449, guid: 8f37b5589a7b3114e8abceecdee70d1b,
+        type: 3}
+      propertyPath: m_margin.z
+      value: -39.878906
+      objectReference: {fileID: 0}
     - target: {fileID: 3562767325589064337, guid: 8f37b5589a7b3114e8abceecdee70d1b,
         type: 3}
       propertyPath: turret.turretAmount
@@ -9598,6 +9625,29 @@ PrefabInstance:
         type: 3}
       propertyPath: m_AnchoredPosition.x
       value: 5.0000076
+      objectReference: {fileID: 0}
+    - target: {fileID: 6106006829927056082, guid: 8f37b5589a7b3114e8abceecdee70d1b,
+        type: 3}
+      propertyPath: m_text
+      value: 'Movement
+
+        Going Up
+
+        Going Down
+
+        Place/Drop
+        Tower
+
+        Pick Up
+
+        Inventory
+
+        Pollinate
+
+        Move
+        camera
+
+        Toggle walking'
       objectReference: {fileID: 0}
     - target: {fileID: 6814040729949113170, guid: 8f37b5589a7b3114e8abceecdee70d1b,
         type: 3}

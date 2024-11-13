@@ -14,13 +14,13 @@ public class MovementScript : MonoBehaviour
     public float accelerationSpeed;
     public float currentSpeed;
     public float rotationSpeed;
-    public float hor, vert, upAndDown;
+    public float horisontal, verttical, upAndDown;
     public float normalSpeed;
     public float slowerSpeed;
     public Animator animator;
-    private Transform cam;
-    private Vector3 dir;
-    private Rigidbody rb;
+    private Transform camera;
+    private Vector3 direction;
+    private Rigidbody rigidBody;
 
     private bool tButton;
     private bool isFlyingSlow;
@@ -31,8 +31,8 @@ public class MovementScript : MonoBehaviour
         {
             Instance = this;
         }
-        cam = Camera.main.transform;
-        rb = GetComponent<Rigidbody>();
+        camera = Camera.main.transform;
+        rigidBody = GetComponent<Rigidbody>();
     }
     private void Update()
     {
@@ -44,25 +44,25 @@ public class MovementScript : MonoBehaviour
 
     private void InputCheck()
     {
-        hor = Input.GetAxisRaw("Horizontal");
-        vert = Input.GetAxisRaw("Vertical");
+        horisontal = Input.GetAxisRaw("Horizontal");
+        verttical = Input.GetAxisRaw("Vertical");
         upAndDown = Input.GetAxisRaw("UpAndDown");
         tButton = Input.GetKeyDown(KeyCode.T);
     }
 
     private void FlyMovement()
     {
-        currentSpeed = rb.velocity.magnitude;
-        dir = cam.transform.forward * vert + cam.transform.right * hor + Vector3.up * upAndDown;
-        dir.Normalize();
-        rb.AddForce(dir * accelerationSpeed * Time.deltaTime, ForceMode.Acceleration);
+        currentSpeed = rigidBody.velocity.magnitude;
+        direction = camera.transform.forward * verttical + camera.transform.right * horisontal + Vector3.up * upAndDown;
+        direction.Normalize();
+        rigidBody.AddForce(direction * accelerationSpeed * Time.deltaTime, ForceMode.Acceleration);
     }
 
     private void RotationFlyChange()
     {
-        if (dir.magnitude != 0)
+        if (direction.magnitude != 0)
         {
-            transform.rotation = Quaternion.Slerp(transform.rotation, cam.rotation, rotationSpeed * Time.deltaTime);
+            transform.rotation = Quaternion.Slerp(transform.rotation, camera.rotation, rotationSpeed * Time.deltaTime);
         }
     }
 

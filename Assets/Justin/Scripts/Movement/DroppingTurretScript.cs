@@ -110,7 +110,7 @@ public class DroppingTurretScript : MonoBehaviour
     }
     private void HandleTurretPlacement(RaycastHit hit)
     {
-        if (Input.GetKeyDown(KeyCode.R) && ballClone == null)
+        if (Input.GetKeyDown(KeyCode.Space) && ballClone == null)
         {
             if (selectedTurret.turretAmount > 0 || holdingThisTurret != null)
             {
@@ -118,7 +118,7 @@ public class DroppingTurretScript : MonoBehaviour
             }         
         }
 
-        if (Input.GetKeyDown(KeyCode.Q) && ballClone == null)
+        if (Input.GetKeyDown(KeyCode.P) && ballClone == null)
         {
             if (hit.transform.GetComponent<GridTile>().turretAlreadyHere & hit.transform.GetComponent<GridTile>().turret != null && !isHoldingTurret)
             {
