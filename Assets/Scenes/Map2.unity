@@ -4110,7 +4110,7 @@ PrefabInstance:
     - target: {fileID: 3150875263885323943, guid: ccbdf8b606ee03d4983c0c3544d0bc1b,
         type: 3}
       propertyPath: m_Name
-      value: CubeTop
+      value: CrateTop
       objectReference: {fileID: 0}
     - target: {fileID: 3157870919754586862, guid: ccbdf8b606ee03d4983c0c3544d0bc1b,
         type: 3}
