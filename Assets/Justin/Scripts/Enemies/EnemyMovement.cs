@@ -1,4 +1,3 @@
-using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.AI;
@@ -34,7 +33,7 @@ public class EnemyMovement : MonoBehaviour
     }
 
     private void Movement()
-    {       
+    {
         if (currentIndex < targets.Count && Vector3.Distance(transform.position, targets[currentIndex].position) < 0.01f)
         {
             currentIndex++;

@@ -9,7 +9,11 @@ public class InventoryScript : MonoBehaviour
     public TurretInfo turret;
     public void ChangingTurret()
     {
-        DroppingTurretScript.Instance.TurretChange(turret);
+        if(turret.turretAmount >= 1)
+        {
+            GameObject.Find("DroppingCrate").GetComponent<DroppingTurretScript>().enabled = true;
+            DroppingTurretScript.Instance.TurretChange(turret);
+        }
     }
 
     public void AmountGoesUp()

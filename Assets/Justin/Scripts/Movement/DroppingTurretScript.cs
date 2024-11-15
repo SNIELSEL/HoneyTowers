@@ -47,6 +47,19 @@ public class DroppingTurretScript : MonoBehaviour
             PickUpTurret(holdingThisTurret);
         }
 
+        if(selectedTurret.turretAmount >= 1)
+        {
+            GameObject.Find("CrateTop").SetActive(true);
+            GameObject.Find("CrateBottom").SetActive(true);
+        }
+        else if(GameObject.Find("CrateTop").activeSelf == true)
+        {
+            GameObject.Find("CrateTop").SetActive(false);
+            GameObject.Find("CrateBottom").SetActive(false);
+            Destroy(showTurretClone);
+            selectedGrid.GetComponent<MeshRenderer>().enabled = false;
+            DroppingTurretScript.Instance.enabled= false;
+        }
     }
 
     public void TurretChange(TurretInfo turret)

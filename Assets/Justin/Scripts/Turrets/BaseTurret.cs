@@ -1,4 +1,3 @@
-using System.Collections;
 using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
@@ -162,7 +161,7 @@ public class BaseTurret : MonoBehaviour
     {
         upgradePoints++;
 
-        
+
         if (upgradePoints >= maxUpgradePoint)
         {
             UpgradeTurret();

@@ -1,7 +1,6 @@
-using System.Collections;
 using System.Collections.Generic;
-using UnityEngine;
 using TMPro;
+using UnityEngine;
 
 public class ResolutionManager : MonoBehaviour
 {
@@ -64,7 +63,7 @@ public class ResolutionManager : MonoBehaviour
     }
     private void ApplyResolution(int resolutionIndex)
     {
-/*        Resolution resolution = resolutionList[resolutionIndex];
-        Screen.SetResolution(resolution.width, resolution.height, true);*/
+        /*        Resolution resolution = resolutionList[resolutionIndex];
+                Screen.SetResolution(resolution.width, resolution.height, true);*/
     }
 }
