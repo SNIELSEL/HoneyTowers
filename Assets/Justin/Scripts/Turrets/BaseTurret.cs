@@ -31,6 +31,8 @@ public class BaseTurret : MonoBehaviour
     public Transform spawnPoint;
 
     public int timesUpgraded;
+    public int currentLevel;
+    public TMP_Text levelText;
     public int maxUpgradeTimes;
     public TMP_Text attackPowerText, intervalTimeText, upgradeText;
 
@@ -68,7 +70,8 @@ public class BaseTurret : MonoBehaviour
             LookAtEnemy();
             Reload();
         }
-        
+
+        ShowCurrentLevel();
     }
 
     protected virtual void CheckingForEnemy()
@@ -187,6 +190,15 @@ public class BaseTurret : MonoBehaviour
         upgradePoints = 0;
         attackPowerText.text = "AttackPower: " + attackPower;
         intervalTimeText.text = "IntervalTime: " + intervalTime;
+    }
+
+
+    public virtual void ShowCurrentLevel()
+    {
+        currentLevel = timesUpgraded + 1;
+
+
+        levelText.text = "Level " + currentLevel.ToString();
     }
 
 
